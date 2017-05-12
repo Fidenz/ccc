@@ -47,7 +47,7 @@ boot(app, {
 setupPassport(app);
 
 app.start = _.once(function() {
-  app.listen(app.get('port'), function() {
+  app.listen( app.get('port'), function() {
     app.emit('started');
     console.log(
       'freeCodeCamp server listening on port %d in %s',

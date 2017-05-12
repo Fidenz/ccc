@@ -5,8 +5,8 @@
   "scripts": {
     "only-once": "npm run create-rev && echo '/****/' && echo 'Seeding Database' && echo '/****/' && node seed && echo '/****/' && echo 'Seeding Completed' && echo '/****/'",
     "create-rev": "node -e \"var fs = require('fs'); fs.access('./server/rev-manifest.json', function(err) { if (err) { console.log('\\n\\ncreating manifest\\n\\n'); return fs.writeFileSync('server/rev-manifest.json', '{}'); } console.log('\\n\\nrev-manifest present\\n\\n'); });\"",
-    "build": "NODE_ENV=production gulp build -p",
-    "start": "babel-node server/server.js",
+    "build": "NODE_ENV=production gulp build --production",
+    "start": "gulp --production",
     "prestart-production": "gulp build -p",
     "start-production": "node pm2Start",
     "lint": "npm run lint-js && npm run lint-json",
@@ -178,8 +178,5 @@
     "webpack-stream": "^3.1.0",
     "yargs": "^7.0.1"
   },
-  "snyk": true,
-  "engines": {
-    "node": "6.10.0"
-  }
+  "snyk": true
 }
