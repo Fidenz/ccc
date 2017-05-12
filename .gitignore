@@ -38,8 +38,8 @@ public/js/bundle*
 *.map
 
 // revision manifest
-server/rev-manifest.json
-server/manifests/*
+//server/rev-manifest.json
+//server/manifests/*
 !server/manifests/README.md
 
 public/js/main*
@@ -53,5 +53,6 @@ public/js/faux*
 public/js/frame-runner*
 public/css/main*
 
-server/rev-manifest.json
+//server/rev-manifest.json
 google-credentials.json
+/nbproject/private/

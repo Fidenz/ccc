@@ -106,17 +106,13 @@ block content
                                   th.col-xs-5 Projects
                                   th.col-xs-2.hidden-xs Completed
                                   th.col-xs-2.hidden-xs Last Updated
-                                  th.col-xs-2.hidden-xs Link
                           for challenge in projects
                               tr
                                   td.col-xs-5.hidden-xs
                                     a(href='/challenges/#{challenge.block}/#{challenge.dashedName}', target='_blank')= challenge.name
                                   td.col-xs-2.hidden-xs= challenge.completedDate ? challenge.completedDate : 'Not Available'
                                   td.col-xs-2.hidden-xs= challenge.lastUpdated ? challenge.lastUpdated : ''
-                                  td.col-xs-2.hidden-xs
-                                      a(href=challenge.solution, target='_blank') View project
-                                  td.col-xs-12.visible-xs
-                                      a(href=challenge.solution, target='_blank')= challenge.name
+
               if (algorithms.length > 0)
                   .col-sm-12
                       table.table.table-striped
@@ -125,22 +121,12 @@ block content
                                   th.col-xs-5 Algorithms
                                   th.col-xs-2.hidden-xs Completed
                                   th.col-xs-2.hidden-xs Last Updated
-                                  th.col-xs-2.hidden-xs Solution
                           for challenge in algorithms
                               tr
                                   td.col-xs-5.hidden-xs= challenge.name
                                   td.col-xs-2.hidden-xs= challenge.completedDate ? challenge.completedDate : 'Not Available'
                                   td.col-xs-2.hidden-xs= challenge.lastUpdated ? challenge.lastUpdated : ''
-                                  td.col-xs-2.hidden-xs
-                                    if (challenge.solution)
-                                        a(href='/challenges/#{challenge.block}/#{challenge.dashedName}?solution=#{encodeURIComponent(encodeFcc(challenge.solution))}', target='_blank') View solution
-                                    else
-                                        a(href='/challenges/#{challenge.block}/#{challenge.dashedName}') View this challenge
-                                  td.col-xs-12.visible-xs
-                                    if (challenge.solution)
-                                        a(href='/challenges/#{challenge.block}/#{challenge.dashedName}?solution=#{encodeURIComponent(encodeFcc(challenge.solution))}', target='_blank')= challenge.name
-                                    else
-                                        a(href='/challenges/#{challenge.block}/#{challenge.dashedName}')= challenge.name
+                
               if (challenges.length > 0)
                   .col-sm-12
                       table.table.table-striped
@@ -149,23 +135,9 @@ block content
                                   th.col-xs-5 Challenges
                                   th.col-xs-2.hidden-xs Completed
                                   th.col-xs-2.hidden-xs Last Updated
-                                  th.col-xs-2.hidden-xs Solution
                           for challenge in challenges
                               tr
                                   td.col-xs-5.hidden-xs= challenge.name
                                   td.col-xs-2.hidden-xs= challenge.completedDate ? challenge.completedDate : 'Not Available'
                                   td.col-xs-2.hidden-xs= challenge.lastUpdated ? challenge.lastUpdated : ''
-                                  td.col-xs-2.hidden-xs
-                                    if (challenge.solution && challenge.name)
-                                      a(href='/challenges/#{challenge.block}/#{challenge.dashedName}?solution=#{encodeURIComponent(encodeFcc(challenge.solution))}', target='_blank') View solution
-                                    else if (challenge.name)
-                                        a(href='/challenges/#{challenge.block}/#{challenge.dashedName}') View this challenge
-                                    else
-                                        span N/A
-                                  td.col-xs-12.visible-xs
-                                    if (challenge.solution && challenge.name)
-                                        a(href='/challenges/#{challenge.block}/#{challenge.dashedName}?solution=#{encodeURIComponent(encodeFcc(challenge.solution))}', target='_blank')= challenge.name
-                                    else if (challenge.name)
-                                        a(href='/challenges/#{challenge.block}/#{challenge.dashedName}')= challenge.name
-                                    else
-                                        span N/A
+           

@@ -178,5 +178,8 @@
     "webpack-stream": "^3.1.0",
     "yargs": "^7.0.1"
   },
-  "snyk": true
+  "snyk": true,
+  "engines": {
+    "node": "6.10.0"
+  }
 }
