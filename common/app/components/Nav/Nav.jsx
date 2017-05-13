@@ -170,15 +170,11 @@ export default class FCCNav extends React.Component {
         <Navbar.Header>
           <Navbar.Toggle children={ toggleButtonChild } />
           <NavbarBrand>
-            <a
+          <a class="navbar_link"
               href='/challenges/current-challenge'
               onClick={ this.handleLogoClick }
               >
-              <img
-                alt='learn to code javascript at freeCodeCamp logo'
-                className='img-responsive nav-logo'
-                src={ fCClogo }
-              />
+             <h2>codeCampChallenges</h2>
             </a>
           </NavbarBrand>
         </Navbar.Header>

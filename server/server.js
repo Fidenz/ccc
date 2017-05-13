@@ -3,6 +3,10 @@ var pmx = require('pmx');
 
 pmx.init();
 
+//var wwwhisper = require('connect-wwwhisper');
+//app.use(wwwhisper());
+//app.use(wwwhisper(false));
+
 var _ = require('lodash'),
     Rx = require('rx'),
     loopback = require('loopback'),
