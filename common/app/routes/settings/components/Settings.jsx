@@ -157,22 +157,6 @@ export class Settings extends React.Component {
         </Row>
         <h1 className='text-center'>Settings for your Account</h1>
         <div className='spacer' />
-        <h2 className='text-center'>Privacy Settings</h2>
-        <Row>
-          <Col
-            md={ 6 }
-            mdOffset={ 3 }
-            sm={ 8 }
-            smOffset={ 2 }
-            xs={ 12 }
-            >
-            <LockedSettings
-              isLocked={ isLocked }
-              toggle={ toggleIsLocked }
-            />
-          </Col>
-        </Row>
-        <div className='spacer' />
         <Row>
           <Col
             md={ 6 }
