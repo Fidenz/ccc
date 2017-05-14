@@ -3,7 +3,7 @@
   "base": "User",
   "strict": true,
   "idInjection": true,
-  "emailVerificationRequired": false,
+  "emailVerificationRequired": true,
   "trackChanges": false,
   "properties": {
     "email": {

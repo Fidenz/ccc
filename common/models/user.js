@@ -154,7 +154,7 @@ module.exports = function(User) {
   });
 
   User.beforeRemote('create', function({ req, res }, _, next) {
-    req.body.username = 'fcc' + uuid.v4().slice(0, 8);
+    req.body.username = 'fccc' + uuid.v4().slice(0, 8);
     if (!req.body.email) {
       return next();
     }
@@ -208,7 +208,7 @@ module.exports = function(User) {
     // requires AccessToken.belongsTo(User)
     var mailOptions = {
       to: info.email,
-      from: 'Team@freecodecamp.com',
+      from: process.env.INFO_EMAIL,
       subject: 'Password Reset Request',
       text: `
         Hello,\n\n
@@ -441,10 +441,10 @@ module.exports = function(User) {
         const mailOptions = {
           type: 'email',
           to: email,
-          from: 'Team@freecodecamp.com',
-          subject: 'Welcome to freeCodeCamp!',
+          from: process.env.INFO_EMAIL,
+          subject: process.env.INFO_EMAIL_SUBJECT,
           protocol: isDev ? null : 'https',
-          host: isDev ? devHost : 'freecodecamp.com',
+          host: isDev ? devHost : process.env.HOST,
           port: isDev ? null : 443,
           template: path.join(
             __dirname,
