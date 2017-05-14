@@ -4,7 +4,18 @@
     "connector": "mongodb"
   },
   "mail": {
-    "name": "mail",
-    "connector": "mail"
+    "defaultForType": "mail",
+    "connector": "mail",
+    "transports": [ {
+           type: 'SMTP',
+           host: "smtp.gmail.com", 
+           secureConnection: true, 
+           port: 465, 
+           auth: {
+               user: "lrh.tester@gmail.com",
+               pass: "Fidenz123"
+           }
+       }
+    ]
   }
 }
