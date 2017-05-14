@@ -26,5 +26,6 @@
     "errorHandler": {
       "disableStackTrace": false
     }
-  }
+  },
+  "logoutSessionsOnSensitiveChanges":true
 }

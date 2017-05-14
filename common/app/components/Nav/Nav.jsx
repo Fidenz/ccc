@@ -189,7 +189,9 @@ export default class FCCNav extends React.Component {
                 this.renderLink.bind(this, true)
               )
             }
-            { this.renderSignIn(username, points, picture, showLoading) }
+            <NavItem href='/signup' key='signup'>Sign Up</NavItem>
+            { this.renderSignIn(username, points, picture, showLoading) },
+            <NavItem href='/email-signin' key='signin'>Sign In</NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

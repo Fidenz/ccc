@@ -80,7 +80,6 @@ export class Header extends PureComponent {
     return (
       <div>
         <div className='text-center'>
-          <p>Challenges required for certifications are marked with a *</p>
           <Row className='map-buttons'>
             <Button
               block={ true }
