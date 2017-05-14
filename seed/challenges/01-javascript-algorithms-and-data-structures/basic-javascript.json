@@ -4399,6 +4399,235 @@
       "challengeType": 5,
       "translations": {
       }
+    },
+	{
+    "id": "a202eed8fc186c8434cb6ch1",
+    "title": "Challenge - 82",
+    "description": [
+      "Return the number of words in this sentence which has number of characters between param 2(min) and 3(max).",
+      "Length could include both min & max"
+    ],
+    "challengeSeed": [
+      "function findWordsWithLengthRange(str, min, max) {",
+      "  return 0;",
+      "}",
+      "",
+      "findWordsWithLengthRange(\"The quick brown fox jumped over the lazy dog\", 2,4);"
+    ],
+    "tests": [
+      "assert( typeof findWordsWithLengthRange(\"The quick brown fox jumped over the lazy dog\", 2,4) ==  \"number\", 'message: Return type should be a number.');",
+      "assert(findWordsWithLengthRange(\"The quick brown fox jumped over the lazy dog\", 2,4) == 6, 'message: Should equal to 6');",
+      "assert(findWordsWithLengthRange(\"American election is over\", 1,1) == 4, 'message: Should equal to 4');",
+      "assert(findWordsWithLengthRange(\"Life is about making an impact, not making an income\", 6,8) == 4, 'message: Should equal to 4');",
+      "assert(findWordsWithLengthRange(\" We become what we think about\", 8,10) == 0, 'message: Should equal to 0');",
+      "assert(findWordsWithLengthRange(\" I am not a product of my circumstances. I am a product of my decisions\", 15,17) == 0, 'message: Should equal to 0');"
+    ],
+    "type": "algorithms",
+    "isRequired": true,
+    "solutions": [
+    ],
+    "MDNlinks": [
+    ],
+    "challengeType": 5,
+    "translations": {
+    }
+  },
+  {
+    "id": "a202eed8fc186c8434cb6ch2",
+    "title": "Challenge - 83",
+    "description": [
+      "Encrypt all characters of the first parameter by shifting each character by second parameter",
+      "Input string will always be in uppercase. No need to shift any non alpha characters."
+    ],
+    "challengeSeed": [
+      "function encrypt(str, index) {",
+      "  var encryptedstr = ''",
+      "  return encryptedstr;",
+      "}",
+      "",
+      "encrypt('ABC', 4);"
+    ],
+    "tests": [
+      "assert( typeof encrypt('ABC', 4) ==  \"string\", 'message: Return type should be a string.');",
+      "assert(encrypt('ABC', 4)  == \"EFG\", 'message: Should equal to “EFG” ');",
+      "assert(encrypt('AB C', 2) == \"CD E\", 'message: Should equal to “CD E”');",
+      "assert(encrypt('ABC DEF', 2) == \"CDE FGH\", 'message: Should equal to “CDE FGH”');",
+      "assert(encrypt('CODE CAMP CHALLENGE', 15) == \"MYNO MKWZ MRKVVOXQO\", 'message: Should equal to “MYNO MKWZ MRKVVOXQO”');",
+      "assert(encrypt('TEST THIS STRING', 15) == \"ITHI IWXH HIGXCV\", 'message: Should equal to “ITHI IWXH HIGXCV”');"
+    ],
+    "type": "algorithms",
+    "isRequired": true,
+    "solutions": [
+    ],
+    "MDNlinks": [
+    ],
+    "challengeType": 5,
+    "translations": {
+    }
+  },
+  {
+    "id": "a202eed8fc186c8434cb6ch3",
+    "title": "Challenge - 84",
+    "description": [
+      "Write a function to identify objects in first array, which matches all name/value pairs in second array."
+    ],
+    "challengeSeed": [
+      "function findMatches(str, min, max) {",
+      "  return [];",
+      "}",
+      "",
+      "findMatches([{\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"4\", \"P\" = \"5\"}, {\"X\" = \"2\", \"Y\" = \"2\",\"Z\" = \"4\", \"P\" = \"5\"}, {\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"9\", \"P\" = \"6\"}], {\"X\"=\"1\", \"Y\"=\"2\"});"
+    ],
+    "tests": ["assert(typeof findMatches([{\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"4\", \"P\" = \"5\"},{\"X\" = \"2\", \"Y\" = \"2\",\"Z\" = \"4\", \"P\" = \"5\"},{\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"9\", \"P\" = \"6\"}],{\"X\"=\"1\", \"Y\"=\"2\"}) ==  \"object\", 'message: Return type should be a number.');",
+      "assert(findMatches([{\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"4\", \"P\" = \"5\"},{\"X\" = \"2\", \"Y\" = \"2\",\"Z\" = \"4\", \"P\" = \"5\"},{\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"9\", \"P\" = \"6\"}],{\"X\"=\"1\", \"Y\"=\"2\"}) == [{\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"4\", \"P\" = \"5\"}, {\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"9\", \"P\" = \"6\"}], 'message: Should equal to [{\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"4\", \"P\" = \"5\"}, {\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"9\", \"P\" = \"6\"}]');",
+      "assert(findMatches([{\"leg\" = \"12\", \"hand\" = \"9\",\"neck\" = \"8\", \"chest\" = \"32\"}, {\"leg\" = \"12\", \"hand\" = \"12\",\"neck\" = \"8\", \"chest\" = \"40\"},{\"leg\" = \"10\", \"hand\" = \"8\",\"neck\" = \"8\", \"chest\" = \"32\"}], {\"neck\" = \"8\", \"chest\" = \"32\"}) == [{\"leg\" = \"10\", \"hand\" = \"8\",\"neck\" = \"8\", \"chest\" = \"32\"}, {\"leg\" = \"12\", \"hand\" = \"9\",\"neck\" = \"8\", \"chest\" = \"32\"}], 'message: Should equal to [{\"leg\" = \"10\", \"hand\" = \"8\",\"neck\" = \"8\", \"chest\" = \"32\"}, {\"leg\" = \"12\", \"hand\" = \"9\",\"neck\" = \"8\", \"chest\" = \"32\"}]');",
+      "assert(findMatches([{\"yom\" = \"2010\", \"capacity\" = \"2000\",\"weight\" = \"1000\", \"make\" = \"toyota\"}, {\"yom\" = \"2012\", \"capacity\" = \"1500\",\"weight\" = \"1000\", \"make\" = \"nissan\"}, {\"yom\" = \"2013\", \"capacity\" = \"2000\",\"weight\" = \"1000\", \"make\" = \"mazda\"}], {\"yom\" = \"2013\"}) == [{\"yom\" = \"2013\", \"capacity\" = \"2000\",\"weight\" = \"1000\", \"make\" = \"mazda\"}], 'message: Should equal to [{\"yom\" = \"2013\", \"capacity\" = \"2000\",\"weight\" = \"1000\", \"make\" = \"mazda\"}]');"
+      ],
+    "type": "algorithms",
+    "isRequired": true,
+    "solutions": [
+    ],
+    "MDNlinks": [
+    ],
+    "challengeType": 5,
+    "translations": {
+    }
+  },
+  {
+      "id": "a202eed8fc186c8434cb6la2",
+      "title": "Challenge - 85",
+      "description": [
+        "Write a function to return the index of n'th largest number in a given array with positive integers.",
+        "<code>'n'</code> is an integer, <code> 0 < n <= arr.length </code>",
+        "Example :",
+        "Inputs <code>arr = [1,4,3,6,5]</code> <code>n = 3</code>",
+        "Output = 1"
+      ],
+      "challengeSeed": [
+        "function findNthLargest(arr,n) {",
+        "}",
+        "",
+        "findNthLargest([1,2,3,5,7,4,9,6], 1);"
+      ],
+      "tests": [
+        "assert( typeof findNthLargest([1,2,3,5,7,4,9,6], 1) ==  \"number\", 'message: Return type should be a number.');",
+        "assert(findNthLargest([1,2,3,5,7,4,9,6], 1) == 6, 'message: Should equal to 6');",
+        "assert(findNthLargest([1,2,3,5,7,4,9,6], 2) == 4, 'message: Should equal to 4');",
+        "assert(findNthLargest([1,2,3,5,7,4,9,6], 3) == 7, 'message: Should equal to 7');",
+        "assert(findNthLargest([1,2,3,5,7,4,9,6], 8) == 0, 'message: Should equal to 0');"
+      ],
+      "type": "algorithms",
+      "isRequired": true,
+      "solutions": [
+      ],
+      "MDNlinks": [
+      ],
+      "challengeType": 5,
+      "translations": {
+      }
+    },
+    {
+      "id": "a202eed8fc186c8434cb6la1",
+      "title": "Challenge - 86",
+      "description": [
+        "Find the number of adjacent element trios with given sum",
+        "Example :",
+        "Inputs <code>arr = [1,2,3,12,1,4,9,6]</code> <code>sum = 6</code>",
+        "Output = 2",
+        "<code>([<u>1,2,3</u>,12,<u>1,4,1</u>,6])</code>"
+      ],
+      "challengeSeed": [
+        "function getCount(arr, sum) {",
+        "  return 0;",
+        "}",
+        "",
+        "getCount([1,2,3,12,3,4,9,6],19);"
+      ],
+      "tests": [
+        "assert( typeof getCount([1,2,3,12,3,4,9,6],19) ==  \"number\", 'message: Return type should be a number.');",
+        "assert(getCount([1,2,3,12,3,4,9,6],19) == 2, 'message: Should equal to 2');",
+        "assert(getCount([3,6,3,3,8], 9) == 0, 'message: Should equal to 0');",
+        "assert(getCount([0,4,2,7,4,1,6], 6) == 1, 'message: Should equal to 1');",
+        "assert(getCount([0,4,2,7,0,0,6], 6) == 2, 'message: Should equal to 2');",
+        "assert(getCount([0,4,8,0,6,0,6,6], 12) == 4, 'message: Should equal to 4');"
+      ],
+      "type": "algorithms",
+      "isRequired": true,
+      "solutions": [
+      ],
+      "MDNlinks": [
+      ],
+      "challengeType": 5,
+      "translations": {
+      }
+    },
+    {
+      "id": "a202eed8fc186c8434cb6la3",
+      "title": "Challenge - 87",
+      "description": [
+        "Write an algorithm to find the length of the longest substring that exists without duplicating characters, starting from the first letter.",
+        "Example :",
+        "Inputs <code>str = “abcdalkjhgfd”</code>",
+        "Output = 4 (abcd)"
+      ],
+      "challengeSeed": [
+        "function longestUniqueString(str) {",
+        "  return 0;",
+        "}",
+        "",
+        "longestUniqueString(\"asdgplmnbvgc\");"
+      ],
+      "tests": [
+        "assert( typeof longestUniqueString(\"asdgplmnbvgc\") ==  \"number\", 'message: Return type should be a number.');",
+        "assert(longestUniqueString(\"asdgplmnbvgc\") == 10, 'message: Should equal to 10.');",
+        "assert(longestUniqueString(\"tyht\") == 3, 'message: Should equal to 3.');",
+        "assert(longestUniqueString(\"plkgsjj\") == 6, 'message: Should equal to 6.');",
+        "assert(longestUniqueString(\"qqplsdcgvd\") == 1, 'message: Should equal to 1.');"
+      ],
+      "type": "algorithms",
+      "isRequired": true,
+      "solutions": [
+      ],
+      "MDNlinks": [
+      ],
+      "challengeType": 5,
+      "translations": {
+      }
+    },
+    {
+      "id": "a202eed8fc186c8434cb6la4",
+      "title": "Challenge - 88",
+      "description": [
+        "Rearrange the given array in a manner that every element is either larger or smaller than it's right and left elements(see the condition 'i' below). Consider the array do not contain duplicating elements. Output array should prove the following conditions.",
+        "If output array is <code>‘arrO’</code>",
+        "i. <code>arrO[n-1] < arrO[n] > arrO[n+1]  or  arrO[n-1] > arrO[n] < arrO[n+1]</code>",
+        "ii. <code>arrO[0] > arrO[1]</code>",
+        "Example :",
+        "Inputs <code>arr = [1,2,3,4,5,6]</code>",
+        "Output = [2,1,4,3,6,5]"
+      ],
+      "challengeSeed": [
+        "function rearrange(arr) {",
+        "  return [];",
+        "}",
+        "",
+        "rearrange([1,2,3,4,5,6]);"
+      ],
+      "tests": [
+        "assert( typeof rearrange([1,2,3,4,5,6]) == \"object\", 'message: Return type should be a number.');",
+        "assert(rearrange([6,5,4,3,2,1]) == [2,1,4,3,6,5], 'message:');",
+        "assert(rearrange([5,6,4,2,3,8,7]) == [3,2,5,4,7,6,8], 'message: ');",
+        "assert(rearrange([5,6,4,2,3,8,7,1]) == [2,1,4,3,6,5,8,7], 'message: ');"
+      ],
+      "type": "algorithms",
+      "isRequired": true,
+      "solutions": [
+      ],
+      "MDNlinks": [
+      ],
+      "challengeType": 5,
+      "translations": {
+      }
     }
   ]
 }
