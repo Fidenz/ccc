@@ -134,7 +134,7 @@
         "<blockquote>myVar = 5;<br>myNum = myVar;</blockquote>",
         "This assigns <code>5</code> to <code>myVar</code> and then resolves <code>myVar</code> to <code>5</code>  again and assigns it to <code>myNum</code>.",
         "<hr>",
-        "Assign the value <code>7</code> to variable <code>a</code>.",
+        "Assign the value <code>5</code> to variable <code>a</code>.",
         "Assign the contents of <code>a</code> to variable <code>b</code>."
       ],
       "releasedOn": "January 1, 2016",
@@ -193,7 +193,7 @@
         "<code>var myVar = 0;</code>",
         "Creates a new variable called <code>myVar</code> and assigns it an initial value of <code>0</code>.",
         "<hr>",
-        "Define a variable <code>a</code> with <code>var</code> and initialize it to a value of <code>9</code>."
+        "Define a variable <code>a</code> with <code>var</code> and initialize it to a value of <code>6</code>."
       ],
       "releasedOn": "January 1, 2016",
       "challengeSeed": [
@@ -492,7 +492,7 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244ac",
-      "title": "Challenge - 21",
+      "title": "Challenge - 11",
       "description": [
         "You can easily <dfn>increment</dfn> or add one to a variable with the <code>++</code> operator.",
         "<code>i++;</code>",
@@ -972,7 +972,7 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244b7",
-      "title": "Challenge - 11",
+      "title": "Challenge - 21",
       "description": [
         "In JavaScript, when the <code>+</code> operator is used with a <code>String</code> value, it is called the <dfn>concatenation</dfn> operator. You can build a new string out of other strings by <dfn>concatenating</dfn> them together.",
         "<strong>Example</strong>",
