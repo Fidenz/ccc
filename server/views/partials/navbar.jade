@@ -1,25 +1,27 @@
 nav.navbar.navbar-default.navbar-static-top.nav-height
-    .navbar-header
-        button.hamburger.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-            .col-xs-12
-                span.hamburger-text Menu
-        a.navbar-brand(href='/challenges/current-challenge')
-            h2 codeCampChallenges
-    .collapse.navbar-collapse
-        ul.nav.navbar-nav.navbar-right.hamburger-dropdown
-            li
-                a(href='/map') Challenges
-            if !user
+    .nav-header-items
+        .navbar-header
+            button.hamburger.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                .col-xs-12
+                    span.hamburger-text Menu
+            a.navbar-brand(href='/')
+                //h2 CodeCampChallenges
+                .home-top-logo
+        .collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right.hamburger-dropdown
                 li
-                    a(href='/signup') Sign Up
-                li
-                    a(href='/email-signin') Sign In 
-                    
-            else
-                li.avatar-points
-                  a(href='/settings')
-                    span.brownie-points-nav
-                      span.hidden-md.hidden-lg #{user.username} 
-                      span.brownie-points [&thinsp;#{user.points}&thinsp;]
-                    span.hidden-xs.hidden-sm.avatar
-                      img.profile-picture.float-right(src='#{user.picture}')
+                    a.top-nav-text(href='/map') Map
+                if !user
+                    //li
+                        //a.top-nav-text(href='/signup') Sign Up
+                    li
+                        a.top-nav-text(href='/signin') Sign In
+
+                else
+                    li.avatar-points
+                      a(href='/settings')
+                        span.brownie-points-nav
+                          span.hidden-md.hidden-lg #{user.username}
+                          span.brownie-points [&thinsp;#{user.points}&thinsp;]
+                        span.hidden-xs.hidden-sm.avatar
+                          img.profile-picture.float-right(src='#{user.picture}')

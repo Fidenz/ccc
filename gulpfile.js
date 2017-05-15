@@ -169,7 +169,7 @@ const errorNotifier = notify.onError({
   message: '<%= error %>'
 });
 
-function errorHandler(...args) {
+function errorHandler(args) {
   // Send error to notification center with gulp-notify
   errorNotifier.apply(this, args);
   // Keep gulp from hanging on this task

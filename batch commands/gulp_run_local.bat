@@ -1,2 +1,2 @@
 cmd /c  cd ..
-cmd /c gulp --production
+cmd /c gulp serve --production

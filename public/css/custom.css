@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600');
+
+.nav-header-items {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-top-logo {
+  width: 400px;
+  height: 35px;
+  background: url('../images/home-top-logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.top-nav-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px !important;
+  font-weight: 100;
+}
+
+
+.banner-img {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 50px;
+  left: 0;
+  z-index: -1;
+  background: url('../images/home-banner.png');
+  background-repeat: no-repeat;
+  background-size: 130% auto;
+  background-position: center 50px;
+  background-attachment: fixed;
+}
+
+
+.middle-item-list {
+  display: flex;
+  justify-content: center;
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .middle-item {
+    margin-top: 10%;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  .middle-item {
+    margin-top: 20%;
+  }
+}
+
+.middle-item img {
+    width: 125px;
+    height: auto;
+}
+
+.middle-item p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 25px;
+  margin-top: 10px;
+  color: #265ea3;
+}
+
+
+
+.register-btn a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  background-color: #265ea3;
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px 30px;
+  margin-top: 30px;
+}
+
+
+
+.bottom-banner-img {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: url('../images/home-bottom.png');
+  background-repeat: no-repeat;
+  background-size: 130% auto;
+  background-position: center bottom;
+  background-attachment: fixed;
+}

@@ -166,15 +166,19 @@ module.exports = function(User) {
         if (!exists) {
           return next();
         }
-
-        req.flash('error', {
+        else
+        {
+             req.flash('error', {
           msg: dedent`
       The ${req.body.email} email address is already associated with an account.
       Try signing in with it here instead.
           `
         });
+          
+        }
+       
 
-        return res.redirect('/email-signin');
+      
       })
       .catch(err => {
         console.error(err);
