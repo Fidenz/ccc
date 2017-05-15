@@ -130,6 +130,22 @@ export default class FCCNav extends React.Component {
     );
   }
 
+  renderSignUp(username, points, picture, showLoading) {
+    if (showLoading) {
+      return null;
+    }
+    if (!username) {
+      return (
+        <NavItem
+          href='/email-signin'
+          key='signin'
+          >
+          Sign In
+        </NavItem>
+      
+      );
+    } 
+  }
   renderSignIn(username, points, picture, showLoading) {
     if (showLoading) {
       return null;
@@ -189,9 +205,8 @@ export default class FCCNav extends React.Component {
                 this.renderLink.bind(this, true)
               )
             }
-            <NavItem href='/signup' key='signup'>Sign Up</NavItem>
             { this.renderSignIn(username, points, picture, showLoading) },
-            <NavItem href='/email-signin' key='signin'>Sign In</NavItem>
+                       { this.renderSignUp(username, points, picture, showLoading) }
           </Nav>
         </Navbar.Collapse>
       </Navbar>
