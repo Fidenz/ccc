@@ -65,6 +65,7 @@ module.exports = function(User) {
   });
 
   User.observe('before save', function({ instance: user }, next) {
+      debug(user);
     if (user) {
       if (user.email && !isEmail(user.email)) {
         return next(new Error('Email format is not valid'));
@@ -166,6 +167,7 @@ module.exports = function(User) {
         if (!exists) {
           //return next();
         }
+        
         else
         {
              req.flash('error', {
