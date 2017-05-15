@@ -155,18 +155,6 @@ export class Settings extends React.Component {
 
           </Col>
         </Row>
-        <h1 className='text-center'>Settings for your Account</h1>
-        <div className='spacer' />
-        <Row>
-          <Col
-            md={ 6 }
-            mdOffset={ 3 }
-            sm={ 8 }
-            smOffset={ 2 }
-            xs={ 12 }
-            >
-          </Col>
-        </Row>
         <div className='spacer' />
       </div>
     );
