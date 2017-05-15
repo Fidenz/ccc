@@ -174,7 +174,7 @@ export default class FCCNav extends React.Component {
               href='/challenges/current-challenge'
               onClick={ this.handleLogoClick }
               >
-             <h2>codeCampChallenges</h2>
+             <div className='home-top-logo-map'></div>
             </a>
           </NavbarBrand>
         </Navbar.Header>

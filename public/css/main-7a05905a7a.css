@@ -1,4 +1,12 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+.home-top-logo-map {
+  width: 400px;
+  height: 35px;
+  background: url('../images/home-top-logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

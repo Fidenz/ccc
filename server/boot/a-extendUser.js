@@ -90,6 +90,7 @@ module.exports = function(app) {
       redirect: '/email-signin'
     };
 
+
     debug('sending welcome email');
     return user.verify(mailOptions, function(err) {
       if (err) { return next(err); }
@@ -99,7 +100,7 @@ module.exports = function(app) {
                'click to verify your email address and then login.'
              ].join('')
       });
-      return res.redirect(redirect);
+      return res.redirect('/email-signin');
     });
   });
 };

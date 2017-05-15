@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600');
 
 .nav-header-items {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -23,15 +23,15 @@
 .banner-img {
   position: absolute;
   width: 100%;
-  height: 30%;
+  height: 30vh;
   top: 50px;
   left: 0;
   z-index: -1;
   background: url('../images/home-banner.png');
   background-repeat: no-repeat;
-  background-size: 130% auto;
-  background-position: center 50px;
-  background-attachment: fixed;
+  /*background-size: 130vw auto;*/
+  background-size: cover;
+  background-position: center;
 }
 
 
@@ -41,12 +41,22 @@
 }
 
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-height: 600px) {
   .middle-item {
     margin-top: 10%;
   }
 }
-@media only screen and (min-width: 1900px) {
+@media only screen and (min-height: 700px) {
+  .middle-item {
+    margin-top: 10%;
+  }
+}
+@media only screen and (min-height: 800px) {
+  .middle-item {
+    margin-top: 15%;
+  }
+}
+@media only screen and (min-height: 900px) {
   .middle-item {
     margin-top: 20%;
   }
@@ -55,6 +65,30 @@
 .middle-item img {
     width: 125px;
     height: auto;
+}
+@media only screen and (min-height: 600px) {
+  .middle-item img {
+    width: 90px;
+    height: auto;
+  }
+}
+@media only screen and (min-height: 700px) {
+  .middle-item img {
+    width: 110px;
+    height: auto;
+  }
+}
+@media only screen and (min-height: 720px) {
+  .middle-item img {
+    width: 120px;
+    height: auto;
+  }
+}
+@media only screen and (min-height: 800px) {
+  .middle-item img {
+    width: 140px;
+    height: auto;
+  }
 }
 
 .middle-item p {
@@ -76,21 +110,30 @@
   color: #fff;
   border-radius: 20px;
   padding: 5px 30px;
-  margin-top: 30px;
+  margin-top: 5%;
 }
-
+@media only screen and (min-height: 600px) {
+  .register-btn a {
+    margin-top: 2%;
+  }
+}
+@media only screen and (min-height: 740px) {
+  .register-btn a {
+    margin-top: 5%;
+  }
+}
 
 
 .bottom-banner-img {
   position: absolute;
   width: 100%;
-  height: 30%;
+  height: 30vh;
   bottom: 0;
   left: 0;
   z-index: -1;
   background: url('../images/home-bottom.png');
   background-repeat: no-repeat;
-  background-size: 130% auto;
+  /*background-size: 130vw auto;*/
+  background-size: cover;
   background-position: center bottom;
-  background-attachment: fixed;
 }

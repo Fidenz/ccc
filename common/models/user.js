@@ -164,7 +164,7 @@ module.exports = function(User) {
     return User.doesExist(null, req.body.email)
       .then(exists => {
         if (!exists) {
-          return next();
+          //return next();
         }
         else
         {
@@ -174,11 +174,9 @@ module.exports = function(User) {
       Try signing in with it here instead.
           `
         });
+          return res.redirect('/email-signin');
           
         }
-       
-
-      
       })
       .catch(err => {
         console.error(err);
