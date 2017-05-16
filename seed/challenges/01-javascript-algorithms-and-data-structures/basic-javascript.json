@@ -1,6 +1,6 @@
 {
-  "name": "Challenges",
-  "time": "4 hours",
+  "name": "Basic JavaScript",
+  "time": "10 hours",
   "order": 1,
   "helpRoom": "HelpJavaScript",
   "challenges": [
@@ -70,17 +70,17 @@
         "<code>Variables</code> are similar to the x and y variables you use in mathematics, which means they're a simple name to represent the data we want to refer to. Computer <code>variables</code> differ from mathematical variables in that they can store different values at different times.",
         "We tell JavaScript to create or <dfn>declare</dfn> a variable by putting the keyword <code>var</code> in front of it, like so:",
         "<blockquote>var ourName;</blockquote>",
-        "creates a <code>variable</code> called <code>ourName</code>. In JavaScript we end statements with semicolons.",
+        "creates a <code>variable</code> called <code>firstName</code>. In JavaScript we end statements with semicolons.",
         "<code>Variable</code> names can be made up of numbers, letters, and <code>$</code> or <code>_</code>, but may not contain spaces or start with a number.",
         "<hr>",
-        "Use the <code>var</code> keyword to create a variable called <code>myName</code>.",
+        "Use the <code>var</code> keyword to create a variable called <code>firstName</code>.",
         "<strong>Hint</strong><br>Look at the <code>ourName</code> example if you get stuck."
       ],
       "challengeSeed": [
         "// Example",
         "var ourName;",
         "",
-        "// Declare myName below this line",
+        "// Declare below this line",
         ""
       ],
       "tail": [
@@ -134,7 +134,7 @@
         "<blockquote>myVar = 5;<br>myNum = myVar;</blockquote>",
         "This assigns <code>5</code> to <code>myVar</code> and then resolves <code>myVar</code> to <code>5</code>  again and assigns it to <code>myNum</code>.",
         "<hr>",
-        "Assign the value <code>5</code> to variable <code>a</code>.",
+        "Assign the value <code>7</code> to variable <code>a</code>.",
         "Assign the contents of <code>a</code> to variable <code>b</code>."
       ],
       "releasedOn": "January 1, 2016",
@@ -193,7 +193,7 @@
         "<code>var myVar = 0;</code>",
         "Creates a new variable called <code>myVar</code> and assigns it an initial value of <code>0</code>.",
         "<hr>",
-        "Define a variable <code>a</code> with <code>var</code> and initialize it to a value of <code>6</code>."
+        "Define a variable <code>a</code> with <code>var</code> and initialize it to a value of <code>9</code>."
       ],
       "releasedOn": "January 1, 2016",
       "challengeSeed": [
@@ -492,7 +492,7 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244ac",
-      "title": "Challenge - 11",
+      "title": "Challenge - 21",
       "description": [
         "You can easily <dfn>increment</dfn> or add one to a variable with the <code>++</code> operator.",
         "<code>i++;</code>",
@@ -567,7 +567,7 @@
         "var myVar = 21;\nmyVar--;"
       ],
       "tests": [
-        "assert(myVar === 20, 'message: <code>myVar</code> should equal <code>10</code>');",
+        "assert(myVar == 20, 'message: <code>myVar</code> should equal <code>20</code>');",
         "assert(/[-]{2}\\s*myVar|myVar\\s*[-]{2}/.test(code), 'message: Use the <code>--</code> operator on <code>myVar</code>');",
         "assert(/var myVar = 21;/.test(code), 'message: Do not change code above the line');"
       ],
@@ -744,7 +744,7 @@
         "(function(a,b,c){ return \"a = \" + a + \", b = \" + b + \", c = \" + c; })(a,b,c);"
       ],
       "solutions": [
-        "var a = 3;\nvar b = 17;\nvar c = 12;\n\na += 10;\nb += 9;\nc += 8;"
+        "var a = 5;\nvar b = 17;\nvar c = 12;\n\na += 10;\nb += 9;\nc += 8;"
       ],
       "tests": [
         "assert(a === 15, 'message: <code>a</code> should equal <code>15</code>');",
@@ -950,7 +950,7 @@
       "solutions": [],
       "tests": [
         "assert(code.match(/\\\\\"/g).length === 6 && code.match(/[^\\\\]\"/g).length === 10, 'message: You should use two double quotes (<code>&quot;</code>) and four escaped double quotes (<code>&#92;&quot;</code>).');",
-        "assert(myStr === \"I am a \\\"double quoted\\\" string inside \\\"double quotes\\\".\", 'message: Variable myStr should contain the string: <code>I am a \"double quoted\" string inside \"double quotes\".</code>');"
+        "assert(myStr == \"I am a \\\"double quoted\\\" string inside \\\"double quotes\\\".\", 'message: Variable myStr should contain the string: <code>I am a \"double quoted\" string inside \"double quotes\".</code>');"
       ],
       "type": "waypoint",
       "challengeType": 1,
@@ -1622,7 +1622,7 @@
         "<blockquote>var ourArray = [50,40,30];<br>ourArray[0] = 15; // equals [15,40,30]</blockquote>",
         "<strong>Note</strong><br>There shouldn't be any spaces between the array name and the square brackets, like <code>array [0]</code>. Although JavaScript is able to process this correctly, this may confuse other programmers reading your code.",
         "<hr>",
-        "Modify the data stored at index <code>0</code> of <code>myArray</code> to a value of <code>45</code>."
+        "Modify the data stored at index <code>2</code> of <code>myArray</code> to a value of <code>45</code>."
       ],
       "challengeSeed": [
         "// Example",
@@ -1644,7 +1644,7 @@
       ],
       "tests": [
         "assert((function(){if(typeof myArray != 'undefined' && myArray[0] == 18 && myArray[1] == 64 && myArray[2] == 45){return true;}else{return false;}})(), 'message: <code>myArray</code> should now be [18,64,45].');",
-        "assert((function(){if(code.match(/myArray\\[0\\]\\s*=\\s*/g)){return true;}else{return false;}})(), 'message: You should be using correct index to modify the value in <code>myArray</code>.');"
+        "assert((function(){if(code.match(/myArray\\[2\\]\\s*=\\s*/g)){return true;}else{return false;}})(), 'message: You should be using correct index to modify the value in <code>myArray</code>.');"
       ],
       "type": "waypoint",
       "challengeType": 1,
@@ -1690,7 +1690,7 @@
       ],
       "tests": [
         "assert(myData === 12, 'message: <code>myData</code> should be equal to <code>12</code>.');",
-        "assert(/myArray\\[2\\]\\[1\\]/g.test(code) && !/myData\\s*=\\s*(?:.*[-+*/%]|\\d)/g.test(code), 'message: You should be using bracket notation to read the correct value from <code>myArray</code>.');"
+        "assert(/myArray\\[3\\]\\[0\\]\\[2\\]/g.test(code) && !/myData\\s*=\\s*(?:.*[-+*/%]|\\d)/g.test(code), 'message: You should be using bracket notation to read the correct value from <code>myArray</code>.');"
       ],
       "type": "waypoint",
       "challengeType": 1,
@@ -2108,7 +2108,7 @@
         "<blockquote>function myTest() {<br>  var loc = \"foo\";<br>  console.log(loc);<br>}<br>myTest(); // logs \"foo\"<br>console.log(loc); // loc is not defined</blockquote>",
         "<code>loc</code> is not defined outside of the function.",
         "<hr>",
-        "Declare a local variable <code>myVar</code> inside <code>myLocalScope</code>. Run the tests and then follow the instructions commented out in the editor.",
+        "Declare a local variable <code>newVar</code> inside <code>myLocalScope</code>. Run the tests and then follow the instructions commented out in the editor.",
         "<strong>Hint</strong><br>Refreshing the page may help if you get stuck."
       ],
       "releasedOn": "January 1, 2016",
@@ -3543,7 +3543,7 @@
         "<code>ourDog[\"name\"] = \"Happy Camper\";</code>",
         "Now when we evaluate <code>ourDog.name</code>, instead of getting \"Camper\", we'll get his new name, \"Happy Camper\".",
         "<hr>",
-        "Update the <code>myDog</code> object's name property. Let's change her name from \"Coder\" to \"Happy Coder\". You can use either dot or bracket notation."
+        "Update the <code>myDog</code> object's name property. Let's change her name from \"Coder\" to \"Happy Coder\" and legs from 4 to 2. You can use either dot or bracket notation."
       ],
       "challengeSeed": [
         "// Example",
@@ -3576,7 +3576,7 @@
       ],
       "tests": [
         "assert(/happy coder/gi.test(myDog.name), 'message: Update <code>myDog</code>&apos;s <code>\"name\"</code> property to equal \"Happy Coder\".');",
-        "assert(/happy coder/gi.test(myDog.legs), 'message: Update <code>myDog</code>&apos;s <code>\"legs\"</code> property to equal \"2\".');",
+        "assert( myDog.legs == 2, 'message: Update <code>myDog</code>&apos;s <code>\"legs\"</code> property to equal \"2\".');",
         "assert(/\"name\": \"Coder\"/.test(code), 'message: Do not edit the <code>myDog</code> definition');"
       ],
       "type": "waypoint",
@@ -4368,41 +4368,9 @@
         }
       }
     },
-    {
-      "id": "a202eed8fc186c8434cb6d61",
-      "title": "Challenge - 81",
-      "description": [
-        "Find the number of adjacent element trios with given sum",
-        "Example :",
-        "Inputs <code>arr = [1,2,3,12,1,4,9,6]</code> <code>sum = 6</code>",
-        "Output = 2",
-        "<code>([<u>1,2,3</u>,12,<u>1,4,1</u>,6])</code>"
-      ],
-      "challengeSeed": [
-        "function getCount(arr, sum) {",
-        "  var count = 0;",
-        "  return count;",
-        "}",
-        "",
-        "getCount([1,2,3,12,3,4,9,6],19);"
-      ],
-      "tests": [
-        "assert(getCount([1,2,3,12,3,4,9,6],19) == 2, 'message: <code>getCount([1,2,3,12,3,4,9,6],19)</code> should return count 2.');",
-        "assert(getCount([3,6,3,3,8], 9) == 0, 'message: <code>getCount([3,6,3,3,8], 9)</code> should return count 0.');",
-        "assert(getCount([0,4,2,7,4,1,6], 6) == 1, 'message: <code>getCount([3,6,3,3,8], 9)</code> should return count 1.');"
-      ],
-      "type": "bonfire",
-      "isRequired": true,
-      "solutions": [  ],
-      "MDNlinks": [
-      ],
-      "challengeType": 5,
-      "translations": {
-      }
-    },
-	{
+  {
     "id": "a202eed8fc186c8434cb6ch1",
-    "title": "Challenge - 82",
+    "title": "Challenge - 81",
     "description": [
       "Return the number of words in this sentence which has number of characters between param 2(min) and 3(max).",
       "Length could include both min & max"
@@ -4422,7 +4390,7 @@
       "assert(findWordsWithLengthRange(\" We become what we think about\", 8,10) == 0, 'message: Should equal to 0');",
       "assert(findWordsWithLengthRange(\" I am not a product of my circumstances. I am a product of my decisions\", 15,17) == 0, 'message: Should equal to 0');"
     ],
-    "type": "algorithms",
+    "type": "waypoint",
     "isRequired": true,
     "solutions": [
     ],
@@ -4434,7 +4402,7 @@
   },
   {
     "id": "a202eed8fc186c8434cb6ch2",
-    "title": "Challenge - 83",
+    "title": "Challenge - 82",
     "description": [
       "Encrypt all characters of the first parameter by shifting each character by second parameter",
       "Input string will always be in uppercase. No need to shift any non alpha characters."
@@ -4455,7 +4423,42 @@
       "assert(encrypt('CODE CAMP CHALLENGE', 15) == \"MYNO MKWZ MRKVVOXQO\", 'message: Should equal to “MYNO MKWZ MRKVVOXQO”');",
       "assert(encrypt('TEST THIS STRING', 15) == \"ITHI IWXH HIGXCV\", 'message: Should equal to “ITHI IWXH HIGXCV”');"
     ],
-    "type": "algorithms",
+    "type": "waypoint",
+    "isRequired": true,
+    "solutions": [
+    ],
+    "MDNlinks": [
+    ],
+    "challengeType": 5,
+    "translations": {
+    }
+  },
+  {
+    "id": "a202eed8fc186c8434cb6ch4",
+    "title": "Challenge - 83",
+    "description": [
+      "Write an algorithm to identify what notes you need.",
+      "Notes/Coins available <code>5000,1000,500,100,50,20,10,5,2,1</code>",
+      "Example :",
+      "Inputs <code>salary = 2316</code>",
+      "Output = [0,2,0,3,0,0,1,1,0,1]"
+    ],
+    "challengeSeed": [
+      "function findNoteAndCoins(salary) {",
+      "  return [];",
+      "}",
+      "",
+      "findWordsWithLengthRange(\"The quick brown fox jumped over the lazy dog\", 2,4);"
+    ],
+    "tests": [
+      "assert( typeof findNoteAndCoins(2316) ==  \"object\", 'message: Return type should be a array.');",
+      "assert(findNoteAndCoins(2316) == [0,2,0,3,0,0,1,1,0,1], 'message:');",
+      "assert(findNoteAndCoins(2100) == [0,2,0,1,0,0,0,0,0,0], 'message:');",
+      "assert(findNoteAndCoins(3200) == [0,3,0,2,0,0,0,0,0,0], 'message:');",
+      "assert(findNoteAndCoins(5366) == [1,0,0,3,1,0,1,1,0,1], 'message:');",
+      "assert(findNoteAndCoins(7202) == [1,2,0,2,0,0,0,0,2,0], 'message:');"
+    ],
+    "type": "waypoint",
     "isRequired": true,
     "solutions": [
     ],
@@ -4469,21 +4472,22 @@
     "id": "a202eed8fc186c8434cb6ch3",
     "title": "Challenge - 84",
     "description": [
-      "Write a function to identify objects in first array, which matches all name/value pairs in second array."
+      "Write a function to identify objects in first array, which matches all key/value pairs in second object."
     ],
     "challengeSeed": [
       "function findMatches(str, min, max) {",
       "  return [];",
       "}",
       "",
-      "findMatches([{\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"4\", \"P\" = \"5\"}, {\"X\" = \"2\", \"Y\" = \"2\",\"Z\" = \"4\", \"P\" = \"5\"}, {\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"9\", \"P\" = \"6\"}], {\"X\"=\"1\", \"Y\"=\"2\"});"
+      "findMatches([{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"}, {\"X\" : \"2\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"}, {\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}], {\"X\":\"1\", \"Y\":\"2\"});"
     ],
-    "tests": ["assert(typeof findMatches([{\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"4\", \"P\" = \"5\"},{\"X\" = \"2\", \"Y\" = \"2\",\"Z\" = \"4\", \"P\" = \"5\"},{\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"9\", \"P\" = \"6\"}],{\"X\"=\"1\", \"Y\"=\"2\"}) ==  \"object\", 'message: Return type should be a number.');",
-      "assert(findMatches([{\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"4\", \"P\" = \"5\"},{\"X\" = \"2\", \"Y\" = \"2\",\"Z\" = \"4\", \"P\" = \"5\"},{\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"9\", \"P\" = \"6\"}],{\"X\"=\"1\", \"Y\"=\"2\"}) == [{\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"4\", \"P\" = \"5\"}, {\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"9\", \"P\" = \"6\"}], 'message: Should equal to [{\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"4\", \"P\" = \"5\"}, {\"X\" = \"1\", \"Y\" = \"2\",\"Z\" = \"9\", \"P\" = \"6\"}]');",
-      "assert(findMatches([{\"leg\" = \"12\", \"hand\" = \"9\",\"neck\" = \"8\", \"chest\" = \"32\"}, {\"leg\" = \"12\", \"hand\" = \"12\",\"neck\" = \"8\", \"chest\" = \"40\"},{\"leg\" = \"10\", \"hand\" = \"8\",\"neck\" = \"8\", \"chest\" = \"32\"}], {\"neck\" = \"8\", \"chest\" = \"32\"}) == [{\"leg\" = \"10\", \"hand\" = \"8\",\"neck\" = \"8\", \"chest\" = \"32\"}, {\"leg\" = \"12\", \"hand\" = \"9\",\"neck\" = \"8\", \"chest\" = \"32\"}], 'message: Should equal to [{\"leg\" = \"10\", \"hand\" = \"8\",\"neck\" = \"8\", \"chest\" = \"32\"}, {\"leg\" = \"12\", \"hand\" = \"9\",\"neck\" = \"8\", \"chest\" = \"32\"}]');",
-      "assert(findMatches([{\"yom\" = \"2010\", \"capacity\" = \"2000\",\"weight\" = \"1000\", \"make\" = \"toyota\"}, {\"yom\" = \"2012\", \"capacity\" = \"1500\",\"weight\" = \"1000\", \"make\" = \"nissan\"}, {\"yom\" = \"2013\", \"capacity\" = \"2000\",\"weight\" = \"1000\", \"make\" = \"mazda\"}], {\"yom\" = \"2013\"}) == [{\"yom\" = \"2013\", \"capacity\" = \"2000\",\"weight\" = \"1000\", \"make\" = \"mazda\"}], 'message: Should equal to [{\"yom\" = \"2013\", \"capacity\" = \"2000\",\"weight\" = \"1000\", \"make\" = \"mazda\"}]');"
+    "tests": [
+      "assert(typeof findMatches([{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"2\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}],{\"X\":\"1\", \"Y\":\"2\"}) ==  \"object\", 'message: Return type should be a array.');",
+      "assert(findMatches([{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"2\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}],{\"X\":\"1\", \"Y\":\"2\"}) == [{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"}, {\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}], 'message: Should equal to [{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"}, {\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}]');",
+      "assert(findMatches([{\"leg\" : \"12\", \"hand\" : \"9\",\"neck\" : \"8\", \"chest\" : \"32\"}, {\"leg\" : \"12\", \"hand\" : \"12\",\"neck\" : \"8\", \"chest\" : \"40\"},{\"leg\" : \"10\", \"hand\" : \"8\",\"neck\" : \"8\", \"chest\" : \"32\"}], {\"neck\" : \"8\", \"chest\" : \"32\"}) == [{\"leg\" : \"10\", \"hand\" : \"8\",\"neck\" : \"8\", \"chest\" : \"32\"}, {\"leg\" : \"12\", \"hand\" : \"9\",\"neck\" : \"8\", \"chest\" : \"32\"}], 'message: Should equal to [{\"leg\" : \"10\", \"hand\" : \"8\",\"neck\" : \"8\", \"chest\" : \"32\"}, {\"leg\" : \"12\", \"hand\" : \"9\",\"neck\" : \"8\", \"chest\" : \"32\"}]');",
+      "assert(findMatches([{\"yom\" : \"2010\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"toyota\"}, {\"yom\" : \"2012\", \"capacity\" : \"1500\",\"weight\" : \"1000\", \"make\" : \"nissan\"}, {\"yom\" : \"2013\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"mazda\"}], {\"yom\" : \"2013\"}) == [{\"yom\" : \"2013\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"mazda\"}], 'message: Should equal to [{\"yom\" : \"2013\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"mazda\"}]');"
       ],
-    "type": "algorithms",
+    "type": "waypoint",
     "isRequired": true,
     "solutions": [
     ],
@@ -4493,9 +4497,102 @@
     "translations": {
     }
   },
-  {
-      "id": "a202eed8fc186c8434cb6la2",
+    {
+      "id": "a202eed8fc186c8434cb6sr1",
       "title": "Challenge - 85",
+      "description": [
+        "Write a function which take a sentence as an input and output a sorted sentence output should give a sentence with the words sorted according to the count of their letters and each letter in each word should then again sorted in alphabetical order.",
+        "Note :- Word only can have lowercase letters",
+        "Example :",
+        "Inputs <code>str = \"she lives with him in a small apartment\"</code>",
+        "Output = \"a in ehs him hitw eilsv allms aaemnprtt\""
+      ],
+      "challengeSeed": [
+        "function makeAlphabetSentenceSort(str) {",
+        "  return \"\";",
+        "}",
+        "",
+        "makeAlphabetSentenceSort(\"she lives with him in a small apartment\");"
+      ],
+      "tests": [
+        "assert( typeof makeAlphabetSentenceSort(\"she lives with him in a small apartment\") ==  \"string\", 'message: Return type should be a string.');",
+        "assert(makeAlphabetSentenceSort(\"she lives with him in a small apartment\") == \"a in ehs him hitw eilsv allms aaemnprtt\", 'message: ');",
+        "assert(makeAlphabetSentenceSort(\"he was curious about how it would taste, so he took a small bite.\") == \"a eh it os eh how asw koot .beit allms dlouw abotu ,aestt ciorsuu\", 'message: ');"
+      ],
+      "type": "waypoint",
+      "isRequired": true,
+      "solutions": [],
+      "MDNlinks": [],
+      "challengeType": 5,
+      "translations": {}
+    },
+    {
+      "id": "a202eed8fc186c8434cb6sr2",
+      "title": "Challenge - 86",
+      "description": [
+        "For any two strings of digits, A and B, we define F<sub>A,B</sub> to be the sequence (A,B,AB,BAB,ABBAB,...) in which each term is the concatenation of the previous two.",
+        "Further, we define D<sub>A,B</sub>(n) to be the nth digit in the first term of FA,B that contains at least n digits.",
+        "Example :",
+        "Let A=\"1415\", B=\"8979\". n = 10 We wish to find D<sub>A,B</sub>(n), say.",
+        "The first few terms of FA,B are:",
+        "\"1415\"",
+        "\"8979\"",
+        "\"14158979\"",
+        "\"897914158<code>9<code>78\"",
+        "\"<code>9<code>\" is the ancer",
+        "Write a algorithm to find the n<sup>th</sup> digit of D<sub>A,B</sub>(n) "
+      ],
+      "challengeSeed": [
+        "function fibonacci(a,b,n) {",
+        "  return \"\";",
+        "}",
+        "",
+        "fibonacci(\"1415\",\"8979\",10);"
+      ],
+      "tests": [
+        "assert( typeof ffibonacci(\"1415\",\"8979\",10) ==  \"string\", 'message: Return type should be a string.');",
+        "assert(fibonacci(\"1415\",\"8979\",10); == \"9\", 'message: Should equal to 9');",
+        "assert(fibonacci(\"abc\",\"435d\",100) == \"b\", 'message: Should equal to b');"
+      ],
+      "type": "waypoint",
+      "isRequired": true,
+      "solutions": [],
+      "MDNlinks": [],
+      "challengeType": 5,
+      "translations": {}
+    },
+    {
+      "id": "a202eed8fc186c8434cb6ch1",
+      "title": "Challenge - 87",
+      "description": [
+        "For a given sentence, find occurrences of given character set. Pick filtered words and generate permutations. (SENTENCE AND CHARACTER SET ONLY CAN HAVE UPPERCASE LETTERS)",
+        "Show selected words & permutations",
+        "Example :",
+        "Inputs <code>sentence = \"THIS IS AN ISSUE FROM GIHAN\"</code> <code>word = \"IS\"</code>",
+        "Output <code>{ words : [\"THIS\", \"IS\", \"ISSUE\"], permutations : [[\"THIS\",\"IS\",\"ISSUE\"], [\"IS\",\"THIS\",\"ISSUE\"], [\"ISSUE\",\"THIS\",\"IS\"], [\"THIS\",\"ISSUE\",\"IS\"], [\"IS\",\"ISSUE\",\"THIS\"], [\"ISSUE\",\"IS\",\"THIS\"]] }</code> "
+      ],
+      "challengeSeed": [
+        "function getPermutations(sentence, word) {",
+        "  return { words: [], permutations : []};",
+        "}",
+        "",
+        "getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\");"
+      ],
+      "tests": [
+        "assert( typeof getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\") ==  \"object\", 'message: Return type should be a object.');",
+        "assert((function(){ var ancermatch = true; var data = [\"THIS IS ISSUE\", \"IS THIS ISSUE\", \"ISSUE THIS IS\", \"THIS ISSUE IS\", \"IS ISSUE THIS\", \"ISSUE IS THIS\"]; var ancers  = getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\"); for(i = 0 ; i< ancer.permutations.lenght; i++){ vat tmp = ancer.permutations[i].join(\" \"); if( !ancers.include(tmp)){ ancermatch = false; } } if ( ancer.words.sort().join(\" \") == [\"THIS\", \"IS\", \"ISSUE\"].sort().join(\" \") &&  ancermatch){ return true} else { return false}) == true, 'message: ');",
+        "assert((function(){ var ancermatch = true; var data = [\"BETTY BOTTER BUTTER\",\"BOTTER BETTY BUTTER\",\"BUTTER BETTY BOTTER\",\"BETTY BUTTER BOTTER\",\"BOTTER BUTTER BETTY\",\"BUTTER BOTTER BETTY\"]; var ancers  = getPermutations(\"BETTY BOTTER BOUGHT SOME BUTTER\", \"TT\"); for(i = 0 ; i< ancer.permutations.lenght; i++){ vat tmp = ancer.permutations[i].join(\" \"); if( !ancers.include(tmp)){ ancermatch = false; } } if ( ancer.words.sort().join(\" \") == [\"BETTY\", \"BOTTER\", \"BUTTER\"].sort().join(\" \") &&  ancermatch){ return true} else { return false}) == true, 'message: ');"
+      ],
+      "type": "waypoint",
+      "isRequired": true,
+      "solutions": [],
+      "MDNlinks": [],
+      "challengeType": 5,
+      "translations": {}
+    },
+    {
+      "id": "a202eed8fc186c8434cb6la2",
+      "title": "Challenge - 88",
       "description": [
         "Write a function to return the index of n'th largest number in a given array with positive integers.",
         "<code>'n'</code> is an integer, <code> 0 < n <= arr.length </code>",
@@ -4516,7 +4613,7 @@
         "assert(findNthLargest([1,2,3,5,7,4,9,6], 3) == 7, 'message: Should equal to 7');",
         "assert(findNthLargest([1,2,3,5,7,4,9,6], 8) == 0, 'message: Should equal to 0');"
       ],
-      "type": "algorithms",
+      "type": "waypoint",
       "isRequired": true,
       "solutions": [
       ],
@@ -4528,7 +4625,7 @@
     },
     {
       "id": "a202eed8fc186c8434cb6la1",
-      "title": "Challenge - 86",
+      "title": "Challenge - 89",
       "description": [
         "Find the number of adjacent element trios with given sum",
         "Example :",
@@ -4551,7 +4648,7 @@
         "assert(getCount([0,4,2,7,0,0,6], 6) == 2, 'message: Should equal to 2');",
         "assert(getCount([0,4,8,0,6,0,6,6], 12) == 4, 'message: Should equal to 4');"
       ],
-      "type": "algorithms",
+      "type": "waypoint",
       "isRequired": true,
       "solutions": [
       ],
@@ -4563,7 +4660,7 @@
     },
     {
       "id": "a202eed8fc186c8434cb6la3",
-      "title": "Challenge - 87",
+      "title": "Challenge - 90",
       "description": [
         "Write an algorithm to find the length of the longest substring that exists without duplicating characters, starting from the first letter.",
         "Example :",
@@ -4584,7 +4681,7 @@
         "assert(longestUniqueString(\"plkgsjj\") == 6, 'message: Should equal to 6.');",
         "assert(longestUniqueString(\"qqplsdcgvd\") == 1, 'message: Should equal to 1.');"
       ],
-      "type": "algorithms",
+      "type": "waypoint",
       "isRequired": true,
       "solutions": [
       ],
@@ -4596,7 +4693,7 @@
     },
     {
       "id": "a202eed8fc186c8434cb6la4",
-      "title": "Challenge - 88",
+      "title": "Challenge - 91",
       "description": [
         "Rearrange the given array in a manner that every element is either larger or smaller than it's right and left elements(see the condition 'i' below). Consider the array do not contain duplicating elements. Output array should prove the following conditions.",
         "If output array is <code>‘arrO’</code>",
@@ -4619,7 +4716,7 @@
         "assert(rearrange([5,6,4,2,3,8,7]) == [3,2,5,4,7,6,8], 'message: ');",
         "assert(rearrange([5,6,4,2,3,8,7,1]) == [2,1,4,3,6,5,8,7], 'message: ');"
       ],
-      "type": "algorithms",
+      "type": "waypoint",
       "isRequired": true,
       "solutions": [
       ],
@@ -4628,6 +4725,146 @@
       "challengeType": 5,
       "translations": {
       }
+    },
+  {
+    "id": "a202eed8fc186c8434cb6lk1",
+    "title": "Challenge - 92",
+    "description": [
+      "<b>News Spread</b>",
+      "There is a small town with <code>50,000</code> people living in it. A person came to the town at <code>0800</code> with a news. Within <code>15</code> minutes, he managed to tell that news to <code>3</code> people. Assuming that each person will tell that news to another <code>3</code> personals and it take <code>15</code> minutes to tell the news, calculate;",
+      "<ol><li>Number of people know the new at 0915.</li><li>At what time will the whole town know of this news?</li></ol>"
+    ],
+    "challengeSeed": [
+      "function NewSpread(speed,population) {",
+      "  var _start_time = 08.00;",
+      "  this.run = function () {",
+      "    var result = [];",
+      "    return result;",
+      "  }",
+      "}",
+      "",
+      "NewSpread();"
+    ],
+    "tests": [
+      "assert( typeof NewSpread(15,50000) ==  \"object\", 'message: Return type should be a array.');",
+      "assert(NewSpread(15,50000) == [364, \"10:30\"], 'message:');"
+    ],
+    "type": "waypoint",
+    "isRequired": true,
+    "solutions": [
+    ],
+    "MDNlinks": [
+    ],
+    "challengeType": 5,
+    "translations": {
     }
+  },
+  {
+    "id": "a202eed8fc186c8434cb6lk2",
+    "title": "Challenge - 93",
+    "description": [
+      "<b>The Virus</b>",
+      "There is an isolated sector in a disk of size <code>1</code> mb where a virus has corrupted all the data. An antivirus program starts to run on this sector which rectify the corrupted data at a rate of 5 kbits in <code>2^-7</code> seconds. The behavior of the virus is to replicate its current corrupted bits by <code>2.5</code> times per second; Find",
+      "<ol><li>Will antivirus program be able to beat the virus?</li><li>If so, how long will it take the antivirus to clean the sector?</li></ol>"
+    ],
+    "challengeSeed": [
+      "function VirusGuard(sectorzies,cleanrate,replicationrate) {",
+      "  var result = [];",
+      "  return result;",
+      "}",
+      "",
+      "VirusGuard(8*1024*1024,5.12*1024*1000,2.5);"
+    ],
+    "tests": [
+      "assert( typeof VirusGuard() ==  \"object\", 'message: Return type should be a array.');",
+      "assert(VirusGuard() == [true, 3.625], 'message:');"
+    ],
+    "type": "waypoint",
+    "isRequired": true,
+    "solutions": [
+    ],
+    "MDNlinks": [
+    ],
+    "challengeType": 5,
+    "translations": {
+    }
+  },
+  {
+    "id": "a202eed8fc186c8434cb6lk3",
+    "title": "Challenge - 94",
+    "description": [
+      "<b>Show me the way</b>",
+      "Peter bought a new car from the dealership. And it came equipped with a GPS system. So when Peter want's to go from point A to point B, all he has to do was key in the destination and it will automatically calculate the best route for him (\"technology\" ha). But before he has to do a one time setup on the device. That is enter his car economy and cost per liter of gas. For his can it will be; ",
+      "<ul><li>if driving less than 60 KmpH, car will go 20 Km per Liter.</li><li>if driving at 60 KmpH, car will go 28 Km per Liter.</li><li>if driving more than 60 KmpH, car will go 25 Km per Liter.</li></ul>",
+      "And cost for 1 Liter of gas is 150/-",
+      "Considering the below route plan, write an algorithm to find the best route from point X to point Y for Peter.",
+      "<img  src=\"http://mauction.fidenz.info/assets/img/Path.jpg\">",
+      "Red lines are unidirectional routes, so you can't go back. Blue lines are bidirectional routes (a.k.k shortcuts), which allow Peter to go in any direction.",
+      "<ol><li>Assuming Peter is in a hurry, find the fastest possible route for him.</li><li>Assuming Peter is in no rush and want to save some money, calculate the most cost effective route.</li>"
+    ],
+    "challengeSeed": [
+      "function BestRoute() {",
+      "  var _cost_per_leter = 150;",
+      "  var _routes = [",
+      "   [\"A\", \"H\", \"N\"],",
+      "   [\"A\", \"H\", \"O\", \"P\"],",
+      "   [\"A\", \"E\", \"J\", \"O\", \"N\"],",
+      "   [\"A\", \"E\", \"J\", \"P\"],",
+      "   [\"B\", \"I\", \"J\", \"P\"],",
+      "   [\"B\", \"I\", \"J\", \"O\", \"N\"],",
+      "   [\"B\", \"I\", \"E\", \"H\", \"N\"],",
+      "   [\"B\", \"I\", \"E\", \"H\", \"O\", \"P\"],",
+      "   [\"B\", \"F\", \"L\"],",
+      "   [\"C\", \"K\", \"L\"],",
+      "   [\"C\", \"K\", \"F\", \"I\", \"J\", \"P\"],",
+      "   [\"C\", \"K\", \"F\", \"I\", \"E\", \"H\", \"N\"],",
+      "   [\"C\", \"K\", \"F\", \"I\", \"E\", \"H\", \"O\", \"P\"],",
+      "   [\"C\", \"K\", \"F\", \"I\", \"J\", \"O\", \"N\"],",
+      "   [\"D\", \"M\"],",
+      "   [\"D\", \"G\", \"K\", \"L\"],",
+      "   [\"D\", \"G\", \"K\", \"F\", \"I\", \"J\", \"P\"],",
+      "   [\"D\", \"G\", \"K\", \"F\", \"I\", \"J\", \"O\", \"N\"],",
+      "   [\"D\", \"G\", \"K\", \"F\", \"I\", \"E\", \"H\", \"N\"],",
+      "   [\"D\", \"G\", \"K\", \"F\", \"I\", \"E\", \"H\", \"O\", \"P\"],",
+      " ];",
+      "",
+      " var _route_attributes = {",
+      "   \"A\": {\"distance\": 95, \"speed\": 120, \"toll\": 800, \"delay\": 0},",
+      "   \"B\": {\"distance\": 45, \"speed\": 60, \"toll\": 590, \"delay\": 0},",
+      "   \"C\": {\"distance\": 80, \"speed\": 55, \"toll\": 500, \"delay\": 0},",
+      "   \"D\": {\"distance\": 100, \"speed\": 100, \"toll\": 1000, \"delay\": 0},",
+      "   \"E\": {\"distance\": 25, \"speed\": 100, \"toll\": 0, \"delay\": 0},",
+      "   \"F\": {\"distance\": 45, \"speed\": 80, \"toll\": 860, \"delay\": 0},",
+      "   \"G\": {\"distance\": 15, \"speed\": 55, \"toll\": 0, \"delay\": 5},",
+      "   \"H\": {\"distance\": 90, \"speed\": 120, \"toll\": 800, \"delay\": 0},",
+      "   \"I\": {\"distance\": 15, \"speed\": 40, \"toll\": 0, \"delay\": 5},",
+      "   \"J\": {\"distance\": 30, \"speed\": 60, \"toll\": 0, \"delay\": 5},",
+      "   \"K\": {\"distance\": 30, \"speed\": 55, \"toll\": 0, \"delay\": 0},",
+      "   \"L\": {\"distance\": 80, \"speed\": 55, \"toll\": 550, \"delay\": 5},",
+      "   \"M\": {\"distance\": 150, \"speed\": 120, \"toll\": 1500, \"delay\": 10},",
+      "   \"N\": {\"distance\": 35, \"speed\": 65, \"toll\": 0, \"delay\": 10},",
+      "   \"O\": {\"distance\": 15, \"speed\": 55, \"toll\": 0, \"delay\": 20},",
+      "  \"P\": {\"distance\": 35, \"speed\": 40, \"toll\": 0, \"delay\": 30}",
+      " };",
+      "  var result = [];",
+      "  return result;",
+      "}",
+      "",
+      "BestRoute();"
+    ],
+    "tests": [
+      "assert( typeof BestRoute() ==  \"object\", 'message: Return type should be a array.');",
+      "assert(BestRoute() == [[\"A\",\"H\",\"N\"], [\"B\", \"I\", \"J\", \"P\"]], 'message:');"
+    ],
+    "type": "waypoint",
+    "isRequired": true,
+    "solutions": [
+    ],
+    "MDNlinks": [
+    ],
+    "challengeType": 5,
+    "translations": {
+    }
+  }
   ]
 }

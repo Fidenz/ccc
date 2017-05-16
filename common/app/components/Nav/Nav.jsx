@@ -170,9 +170,7 @@ export default class FCCNav extends React.Component {
         <Navbar.Header>
           <Navbar.Toggle children={ toggleButtonChild } />
           <NavbarBrand>
-          <a class="navbar_link"
-              href='/challenges/current-challenge'
-              onClick={ this.handleLogoClick }
+          <a class="navbar_link" href='/map'
               >
              <div className='home-top-logo-map'></div>
             </a>

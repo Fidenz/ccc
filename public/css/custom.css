@@ -1,8 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600');
 
+@media (min-width: 0px) and (max-width: 780px) {
+  .small-screen-msg {
+    position: absolute;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: url('http://www.rspb.org.uk/community/resized-image.ashx/__size/550x0/__key/telligent-evolution-components-attachments/13-12261-00-00-00-77-29-48/500x500.gif');
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: center;
+    background-color: white;
+    z-index: 99999;
+  }
 
-.nav-header-items {
-  margin: 0 auto;
+  .small-screen-img-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    line-height: 100vh;
+  }
 }
+/*@media only screen and (min-width: 801px) {
+  .small-screen-msg {
+    display: none;
+  }
+}*/
+
+
+/*.nav-header-items {
+  max-width: 1000px;
+  margin: 0 auto;
+}*/
 
 .home-top-logo {
   width: 400px;
@@ -12,9 +41,11 @@
   background-position: center;
 }
 
-.top-nav-text {
+/*.top-nav-text {
   font-family: 'Open Sans', sans-serif;
-}
+  font-size: 14px !important;
+  font-weight: 100;
+}*/
 
 
 .banner-img {
@@ -55,7 +86,7 @@
 }
 @media only screen and (min-height: 900px) {
   .middle-item {
-    margin-top: 20%;
+    margin-top: 17.5%;
   }
 }
 
@@ -98,7 +129,6 @@
 }
 
 
-
 .register-btn a {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
@@ -119,6 +149,11 @@
     margin-top: 5%;
   }
 }
+@media only screen and (min-height: 900px) {
+  .register-btn a {
+    margin-top: 10%;
+  }
+}
 
 
 .bottom-banner-img {
@@ -136,3 +171,12 @@
 }
 
 
+.form-horizontal .form-group
+{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width:100%;
+}
+.form-horizontal .input-group-addon{
+    padding:0;
+}

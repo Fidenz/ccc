@@ -156,20 +156,23 @@ module.exports = function(User) {
 
   User.beforeRemote('create', function({ req, res }, _, next) {
     req.body.username = 'fccc' + uuid.v4().slice(0, 8);
+    req.body.userexists=false;
     if (!req.body.email) {
       return next();
     }
     if (!isEmail(req.body.email)) {
       return next(new Error('Email format is not valid'));
     }
+    
     return User.doesExist(null, req.body.email)
       .then(exists => {
-        if (!exists) {
+        if (!exists) { 
           //return next();
         }
         
         else
         {
+             req.body.userexists=true;
              req.flash('error', {
           msg: dedent`
       The ${req.body.email} email address is already associated with an account.
