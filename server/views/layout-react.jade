@@ -6,6 +6,20 @@ html(lang='en')
     else
       title codeCampChallenges
     include partials/react-stylesheets
+    script.
+      window.webpackManifest = !{JSON.stringify(chunkManifest || {})};
+      (function setTheme() {
+        let fccTheme;
+        try {
+          fccTheme = JSON.parse(localStorage.getItem('fcc-theme'));
+          if (fccTheme && fccTheme === 'night') {
+            document.body.classList.add('night');
+          }
+        }
+        catch(e) {
+          fccTheme = null;
+        }
+      })();
   body
     #fcc!= markup
     script!= state
