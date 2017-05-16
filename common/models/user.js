@@ -466,8 +466,7 @@ module.exports = function(User) {
         return this.verify(mailOptions);
       })
       .map(() => dedent`
-        Please check your email.
-        We sent you a link that you can click to verify your email address.
+        You can login here.
       `);
   };
 

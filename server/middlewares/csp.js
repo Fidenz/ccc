@@ -19,17 +19,20 @@ export default function csp() {
       defaultSrc: trusted.concat([
         'https://*.cloudflare.com',
         '*.cloudflare.com',
-        'https://*.optimizely.com'
+        'https://*.optimizely.com',
+        '*.livechatinc.com'
       ]),
       connectSrc: trusted.concat([
         'https://glitch.com',
         'https://*.glitch.com',
         'https://*.glitch.me',
-        'https://*.cloudflare.com'
+        'https://*.cloudflare.com',
+        '*.livechatinc.com'
       ]),
       scriptSrc: [
         "'unsafe-eval'",
         "'unsafe-inline'",
+        '*.cdn.livechatinc.com',
         '*.google-analytics.com',
         '*.gstatic.com',
         'https://*.cloudflare.com',
@@ -43,7 +46,8 @@ export default function csp() {
         'https://*.twimg.com',
         '*.youtube.com',
         '*.ytimg.com',
-        'https://*.optimizely.com'
+        'https://*.optimizely.com',
+        '*.livechatinc.com'
       ].concat(trusted),
       styleSrc: [
         "'unsafe-inline'",
@@ -53,7 +57,8 @@ export default function csp() {
         'https://*.bootstrapcdn.com',
         '*.cloudflare.com',
         'https://*.cloudflare.com',
-        'https://*.optimizely.com'
+        'https://*.optimizely.com',
+        '*.livechatinc.com'
       ].concat(trusted),
       fontSrc: [
         '*.cloudflare.com',
@@ -62,7 +67,8 @@ export default function csp() {
         '*.googleapis.com',
         '*.gstatic.com',
         'https://*.bootstrapcdn.com',
-        'https://*.optimizely.com'
+        'https://*.optimizely.com',
+        '*.livechatinc.com'
       ].concat(trusted),
       imgSrc: [
         // allow all input since we have user submitted images for
@@ -82,7 +88,8 @@ export default function csp() {
         '*.twitter.com',
         '*.ghbtns.com',
         '*.freecatphotoapp.com',
-        'freecodecamp.github.io'
+        'freecodecamp.github.io',
+        '*.livechatinc.com'
       ].concat(trusted)
     },
     // set to true if you only want to report errors
