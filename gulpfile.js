@@ -135,7 +135,9 @@ const paths = {
   js: [
     'client/main.js',
     'client/frame-runner.js',
-    'client/plugin.js'
+    'client/plugin.js',
+    'client/jquery.js',
+    'client/jquery.validate.js',
   ],
 
   less: './client/less/main.less',

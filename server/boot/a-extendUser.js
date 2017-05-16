@@ -51,24 +51,12 @@ module.exports = function(app) {
 
   // set email varified false on user email signup
   // should not be set with oauth signin methods
-  User.beforeRemote('create', function(ctx, user, next) {
-    var body = ctx.req.body;
-    if (body) {
-      // this is workaround for preventing a server crash
-      // refer strongloop/loopback/#1364
-      if (body.password === '') {
-        body.password = null;
-      }
-      body.emailVerified = false;
-    }
-    next();
-  });
+
 
   // send welcome email to new camper
   User.afterRemote('create', function({ req, res }, user, next) {
-      debug('asasasasas');
       debug(req.body);
-      //if(req.body.userexists)
+      if(!req.body.userexists)
       {
            debug('user created, sending email');
             if (!user.email || !isEmail(user.email)) { return next(); }
@@ -93,14 +81,11 @@ module.exports = function(app) {
               redirect: '/email-signin'
             };
 
-
             debug('sending welcome email');
             return user.verify(mailOptions, function(err) {
               if (err) { return next(err); }
               req.flash('success', {
-                msg: [ 'Congratulations ! We\'ve created your account. ',
-                       'Please check your email. We sent you a link that you can ',
-                       'click to verify your email address and then login.'
+                msg: [ 'Congratulations ! We\'ve created your account. '
                      ].join('')
               });
               return res.redirect('/email-signin');

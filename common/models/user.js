@@ -156,7 +156,7 @@ module.exports = function(User) {
 
   User.beforeRemote('create', function({ req, res }, _, next) {
     req.body.username = 'fccc' + uuid.v4().slice(0, 8);
-    req.body.userexists=false;
+    req.body.userexists=true;
     if (!req.body.email) {
       return next();
     }
@@ -168,11 +168,11 @@ module.exports = function(User) {
       .then(exists => {
         if (!exists) { 
           //return next();
+            req.body.userexists=false;
         }
         
         else
         {
-             req.body.userexists=true;
              req.flash('error', {
           msg: dedent`
       The ${req.body.email} email address is already associated with an account.
@@ -205,7 +205,7 @@ module.exports = function(User) {
       url = `http://${host}:${port}/reset-password?access_token=${token}`;
     } else {
       url =
-        `http://${host}/reset-password?access_token=${token}`;
+        `${process.env.INFO_EMAIL_HOST}/reset-password?access_token=${token}`;
     }
 
     // the email of the requested user
