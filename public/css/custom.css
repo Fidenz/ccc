@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600');
+
 
 .nav-header-items {
   margin: 0 auto;
@@ -14,8 +14,6 @@
 
 .top-nav-text {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px !important;
-  font-weight: 100;
 }
 
 
@@ -136,3 +134,5 @@
   background-size: cover;
   background-position: center bottom;
 }
+
+

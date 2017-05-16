@@ -11,7 +11,6 @@ import {
 import { render } from 'redux-epic';
 import { createHistory } from 'history';
 import useLangRoutes from './utils/use-lang-routes';
-import sendPageAnalytics from './utils/send-page-analytics';
 import flashToToast from './utils/flash-to-toast';
 
 import createApp from '../common/app';
@@ -46,7 +45,7 @@ window.__fcc__ = {};
 const serviceOptions = { xhrPath: '/services', context: { _csrf: csrfToken } };
 
 const history = useLangRoutes(createHistory, primaryLang)();
-sendPageAnalytics(history, window.ga);
+
 
 const devTools = window.devToolsExtension ? window.devToolsExtension() : f => f;
 const adjustUrlOnReplay = !!window.devToolsExtension;

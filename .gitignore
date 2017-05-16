@@ -17,3 +17,4 @@ results
 tmp
 .ds_store
 .vscode
+node_modules

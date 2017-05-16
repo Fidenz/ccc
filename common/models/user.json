@@ -22,6 +22,15 @@
     "password": {
       "type": "string"
     },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+     "mobileno": {
+      "type": "number"
+    },
     "progressTimestamps": {
       "type": "array",
       "default": []

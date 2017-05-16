@@ -2,30 +2,35 @@ extends ../layout
 block content
     script.
       var challengeName = 'Email Signup'
-    h2.text-center Sign up with an email address here:
+    h2.text-center Sign up here:
     form.form-horizontal(method='POST', action='/api/users', name="signupForm")
         .row
-            .col-sm-6.col-sm-offset-3
-              input(type='hidden', name='_csrf', value=_csrf)
-              .form-group
-                  input.input-lg.form-control(type='email', name='email', id='email', placeholder='email', autofocus, required, autocomplete="off")
-               .form-group
-                  input.input-lg.form-control(type='text', name='eventusercode', id='eventusercode', placeholder='google io code', required, pattern=".{8,50}", title="Please enter valid google io code")
-              .form-group
-                  input.input-lg.form-control(type='text', name='confirmeventusercode', id='confirmeventusercode', placeholder='confirm google io code', required, pattern=".{8,50}", title="Please enter valid google io code")         
-              .form-group
-                  input.input-lg.form-control(type='password', name='password', id='password', placeholder='password', required, pattern=".{8,50}", title="Must be at least 8 characters and no longer than 50 characters.")
-               .form-group
-                  input.input-lg.form-control(type='password', name='confirmpassword', id='confirmpassword', placeholder='confirm password', required, pattern=".{8,50}", title="Must be at least 8 characters and no longer than 50 characters.")           
-               .form-group
-                  button.btn.btn-lg.btn-primary.btn-block(type='submit')
-                    span.ion-person-add
-                    | Signup
+           .col-sm-6.col-sm-offset-3
+            .form-group
+              input#email.input-lg.form-control(type='email', name='email', placeholder='Email', autofocus='', required='', autocomplete='off')
+            .input-group.form-group
+              span.input-group-addon 20174195925 - 
+              input#eventusercode.input-lg.form-control(type='text', name='eventusercode', placeholder='Google I/O Order reference. e.g 3027315', required='', pattern='[0-9]{8}', title='Please enter a valid google io registration code.')
+            .input-group.form-group
+              .input-group.form-group
+              span.input-group-addon 20174195925 - 
+              input#confirmeventusercode.input-lg.form-control(type='text', name='confirmeventusercode', placeholder='confirm google io code', required='', pattern='[0-9]{8}', title='Please enter a valid google io registration code.')
+            .form-group
+              input#firstname.input-lg.form-control(type='text', name='firstname', placeholder='Enter your first name. e.g. Donald', required='', pattern='.{4,15}', title='First name should have at least 3 characters.')
+            .form-group
+              input#firstname.input-lg.form-control(type='text', name='lastname', placeholder='Enter your last name. e.g. Trump', required='', pattern='.{4,15}', title='Last name should have at least 3 characters.')           
+            .form-group
+              input#phoneno.input-lg.form-control(type='text', name='phoneno', placeholder='Enter your mobile number. e.g. 0712123456', required='', pattern='[0-9]{10}', title='Phone number should consists of 10 digits.')
+            .form-group
+              input#password.input-lg.form-control(type='password', name='password', placeholder='password', required='', pattern='.{8,50}', title='Must be at least 8 characters and no longer than 50 characters.')
+            .form-group
+              input#confirmpassword.input-lg.form-control(type='password', name='confirmpassword', placeholder='confirm password', required='', pattern='.{8,50}', title='Must be at least 8 characters and no longer than 50 characters.')
+            .form-group
+              button.btn.btn-lg.btn-primary.btn-block(type='submit')
+                span.ion-person-add
+                | Signup
+                
             .row
            .col-sm-6.col-sm-offset-3
                p.text-center
                    a(href="/email-signin") Click here if you already have an account and want to sign in.
-<div class="input-group">
-  <span class="input-group-addon" id="basic-addon1">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-</div>
