@@ -29,6 +29,7 @@ MongoClient.connect(secrets.db, function(err, database) {
     if (!results.completedChallenges) {
       // dud
     } else {
+        debug(results);
       var dataOut = [];
       results.completedChallenges.forEach(function(challenge) {
         dataOut.push({
