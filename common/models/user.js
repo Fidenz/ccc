@@ -205,7 +205,7 @@ module.exports = function(User) {
       url = `http://${host}:${port}/reset-password?access_token=${token}`;
     } else {
       url =
-        `http://freecodecamp.com/reset-password?access_token=${token}`;
+        `http://${host}/reset-password?access_token=${token}`;
     }
 
     // the email of the requested user
@@ -218,14 +218,12 @@ module.exports = function(User) {
       from: process.env.INFO_EMAIL,
       subject: 'Password Reset Request',
       text: `
-        Hello,\n\n
-        This email is confirming that you requested to
-        reset your password for your freeCodeCamp account.
-        This is your email: ${ info.email }.
-        Go to ${ url } to reset your password.
+        Hi!,\n
+        This email is confirming that you requested to reset your password for your codeCampChallenge account.
+        Go to below url to reset your password.
+        ${ url }
         \n
         Happy Coding!
-        \n
       `
     };
 

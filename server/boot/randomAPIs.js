@@ -46,7 +46,7 @@ module.exports = function(app) {
   app.use('/:lang', router);
 
   function chat(req, res) {
-    res.redirect('https://gitter.im/FreeCodeCamp/FreeCodeCamp');
+   // res.redirect('https://gitter.im/FreeCodeCamp/FreeCodeCamp');
   }
 
   function terms(req, res) {
