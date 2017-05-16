@@ -4454,11 +4454,11 @@
     ],
     "tests": [
       "assert( typeof findNoteAndCoins(2316) ==  \"object\", 'message: Return type should be a array.');",
-      "assert((function(){ var ancer = findNoteAndCoins(2316); if(ancer.join('') == [0,2,0,3,0,0,1,1,0,1].join('')) { return true} else {return false} } ) == true, 'message: findNoteAndCoins(2316) should return [0,2,0,3,0,0,1,1,0,1] ');",
-      "assert((function(){ var ancer = findNoteAndCoins(2100); if(ancer.join('') == [0,2,0,1,0,0,0,0,0,0].join('')) { return true} else {return false} } ) == true, 'message: findNoteAndCoins(2100) should return [0,2,0,1,0,0,0,0,0,0]');",
-      "assert((function(){ var ancer = findNoteAndCoins(3200); if(ancer.join('') == [0,3,0,2,0,0,0,0,0,0].join('')) { return true} else {return false} } ) == true, 'message: findNoteAndCoins(3200) should return [0,3,0,2,0,0,0,0,0,0]');",
-      "assert((function(){ var ancer = findNoteAndCoins(5366); if(ancer.join('') == [1,0,0,3,1,0,1,1,0,1].join('')) { return true} else {return false} } ) == true, 'message: findNoteAndCoins(5366) should return [1,0,0,3,1,0,1,1,0,1]');",
-      "assert((function(){ var ancer = findNoteAndCoins(7202); if(ancer.join('') == [1,2,0,2,0,0,0,0,2,0].join('')) { return true} else {return false} } ) == true, 'message: findNoteAndCoins(7202) should return [1,2,0,2,0,0,0,0,2,0]');"
+      "assert((function(){ var ancer = findNoteAndCoins(2316); if(ancer.join('') == [0,2,0,3,0,0,1,1,0,1].join('')) { return true} else {return false} } )(), 'message: findNoteAndCoins(2316) should return [0,2,0,3,0,0,1,1,0,1] ');",
+      "assert((function(){ var ancer = findNoteAndCoins(2100); if(ancer.join('') == [0,2,0,1,0,0,0,0,0,0].join('')) { return true} else {return false} } )(), 'message: findNoteAndCoins(2100) should return [0,2,0,1,0,0,0,0,0,0]');",
+      "assert((function(){ var ancer = findNoteAndCoins(3200); if(ancer.join('') == [0,3,0,2,0,0,0,0,0,0].join('')) { return true} else {return false} } )(), 'message: findNoteAndCoins(3200) should return [0,3,0,2,0,0,0,0,0,0]');",
+      "assert((function(){ var ancer = findNoteAndCoins(5366); if(ancer.join('') == [1,0,0,3,1,0,1,1,0,1].join('')) { return true} else {return false} } )(), 'message: findNoteAndCoins(5366) should return [1,0,0,3,1,0,1,1,0,1]');",
+      "assert((function(){ var ancer = findNoteAndCoins(7202); if(ancer.join('') == [1,2,0,2,0,0,0,0,1,0].join('')) { return true} else {return false} } )(), 'message: findNoteAndCoins(7202) should return [1,2,0,2,0,0,0,0,2,0]');"
     ],
     "type": "waypoint",
     "isRequired": true,
@@ -4485,9 +4485,9 @@
     ],
     "tests": [
       "assert(typeof findMatches([{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"2\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}],{\"X\":\"1\", \"Y\":\"2\"}) ==  \"object\", 'message: Return type should be a array.');",
-      "assert( (function(){ var tmp = [{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"}, {\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}]; var ancer = findMatches([{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"2\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}],{\"X\":\"1\", \"Y\":\"2\"}); var flag = false; for (var i = 0; i < ancer.lenght; i++ ){  flag = false; for(var c =0; c < tmp.lenght; c++){ if(JSON.stringify(tmp[c]) === JSON.stringify(ancer[i])){ flag = true; } } } return flag;}) == true, 'message: Should equal to [{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"}, {\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}]');",
-      "assert((function(){ var tmp = [{\"leg\" : \"10\", \"hand\" : \"8\",\"neck\" : \"8\", \"chest\" : \"32\"}, {\"leg\" : \"12\", \"hand\" : \"9\",\"neck\" : \"8\", \"chest\" : \"32\"}]; var ancer = findMatches([{\"leg\" : \"12\", \"hand\" : \"9\",\"neck\" : \"8\", \"chest\" : \"32\"}, {\"leg\" : \"12\", \"hand\" : \"12\",\"neck\" : \"8\", \"chest\" : \"40\"},{\"leg\" : \"10\", \"hand\" : \"8\",\"neck\" : \"8\", \"chest\" : \"32\"}], {\"neck\" : \"8\", \"chest\" : \"32\"}); var flag = false; for (var i = 0; i < ancer.lenght; i++ ){  flag = false; for(var c =0; c < tmp.lenght; c++){ if(JSON.stringify(tmp[c]) === JSON.stringify(ancer[i])){ flag = true; } } } return flag;}) == true, 'message: Should equal to [{\"leg\" : \"10\", \"hand\" : \"8\",\"neck\" : \"8\", \"chest\" : \"32\"}, {\"leg\" : \"12\", \"hand\" : \"9\",\"neck\" : \"8\", \"chest\" : \"32\"}]');",
-      "assert( (function(){ var tmp = [{\"yom\" : \"2013\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"mazda\"}]; var ancer = findMatches([{\"yom\" : \"2010\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"toyota\"}, {\"yom\" : \"2012\", \"capacity\" : \"1500\",\"weight\" : \"1000\", \"make\" : \"nissan\"}, {\"yom\" : \"2013\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"mazda\"}], {\"yom\" : \"2013\"}); var flag = false; for (var i = 0; i < ancer.lenght; i++ ){  flag = false; for(var c =0; c < tmp.lenght; c++){ if(JSON.stringify(tmp[c]) === JSON.stringify(ancer[i])){ flag = true; } } } return flag;}) == true, 'message: Should equal to [{\"yom\" : \"2013\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"mazda\"}]');"
+      "assert( (function(){ var tmp = [{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"}, {\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}]; var ancer = findMatches([{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"2\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}],{\"X\":\"1\", \"Y\":\"2\"}); var flag = false; for (var i = 0; i < ancer.lenght; i++ ){  flag = false; for(var c =0; c < tmp.lenght; c++){ if(JSON.stringify(tmp[c]) === JSON.stringify(ancer[i])){ flag = true; } } } return flag;})(), 'message: Should equal to [{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"}, {\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}]');",
+      "assert((function(){ var tmp = [{\"leg\" : \"10\", \"hand\" : \"8\",\"neck\" : \"8\", \"chest\" : \"32\"}, {\"leg\" : \"12\", \"hand\" : \"9\",\"neck\" : \"8\", \"chest\" : \"32\"}]; var ancer = findMatches([{\"leg\" : \"12\", \"hand\" : \"9\",\"neck\" : \"8\", \"chest\" : \"32\"}, {\"leg\" : \"12\", \"hand\" : \"12\",\"neck\" : \"8\", \"chest\" : \"40\"},{\"leg\" : \"10\", \"hand\" : \"8\",\"neck\" : \"8\", \"chest\" : \"32\"}], {\"neck\" : \"8\", \"chest\" : \"32\"}); var flag = false; for (var i = 0; i < ancer.lenght; i++ ){  flag = false; for(var c =0; c < tmp.lenght; c++){ if(JSON.stringify(tmp[c]) === JSON.stringify(ancer[i])){ flag = true; } } } return flag;})(), 'message: Should equal to [{\"leg\" : \"10\", \"hand\" : \"8\",\"neck\" : \"8\", \"chest\" : \"32\"}, {\"leg\" : \"12\", \"hand\" : \"9\",\"neck\" : \"8\", \"chest\" : \"32\"}]');",
+      "assert( (function(){ var tmp = [{\"yom\" : \"2013\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"mazda\"}]; var ancer = findMatches([{\"yom\" : \"2010\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"toyota\"}, {\"yom\" : \"2012\", \"capacity\" : \"1500\",\"weight\" : \"1000\", \"make\" : \"nissan\"}, {\"yom\" : \"2013\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"mazda\"}], {\"yom\" : \"2013\"}); var flag = false; for (var i = 0; i < ancer.lenght; i++ ){  flag = false; for(var c =0; c < tmp.lenght; c++){ if(JSON.stringify(tmp[c]) === JSON.stringify(ancer[i])){ flag = true; } } } return flag;})(), 'message: Should equal to [{\"yom\" : \"2013\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"mazda\"}]');"
       ],
     "type": "waypoint",
     "isRequired": true,
@@ -4609,8 +4609,8 @@
       ],
       "tests": [
         "assert( typeof getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\") ==  \"object\", 'message: Return type should be a object.');",
-        "assert((function(){ var ancermatch = true; var data = [\"THIS IS ISSUE\", \"IS THIS ISSUE\", \"ISSUE THIS IS\", \"THIS ISSUE IS\", \"IS ISSUE THIS\", \"ISSUE IS THIS\"]; var ancers  = getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\"); for(i = 0 ; i< ancer.permutations.lenght; i++){ vat tmp = ancer.permutations[i].join(\" \"); if( !ancers.include(tmp)){ ancermatch = false; } } if ( ancer.words.sort().join(\" \") == [\"THIS\", \"IS\", \"ISSUE\"].sort().join(\" \") &&  ancermatch){ return true} else { return false}) == true, 'message: ');",
-        "assert((function(){ var ancermatch = true; var data = [\"BETTY BOTTER BUTTER\",\"BOTTER BETTY BUTTER\",\"BUTTER BETTY BOTTER\",\"BETTY BUTTER BOTTER\",\"BOTTER BUTTER BETTY\",\"BUTTER BOTTER BETTY\"]; var ancers  = getPermutations(\"BETTY BOTTER BOUGHT SOME BUTTER\", \"TT\"); for(i = 0 ; i< ancer.permutations.lenght; i++){ vat tmp = ancer.permutations[i].join(\" \"); if( !ancers.include(tmp)){ ancermatch = false; } } if ( ancer.words.sort().join(\" \") == [\"BETTY\", \"BOTTER\", \"BUTTER\"].sort().join(\" \") &&  ancermatch){ return true} else { return false}) == true, 'message: ');"
+        "assert((function(){ var ancermatch = true; var data = [\"THIS IS ISSUE\", \"IS THIS ISSUE\", \"ISSUE THIS IS\", \"THIS ISSUE IS\", \"IS ISSUE THIS\", \"ISSUE IS THIS\"]; var ancers  = getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\"); for(i = 0 ; i< ancer.permutations.lenght; i++){ vat tmp = ancer.permutations[i].join(\" \"); if( !ancers.include(tmp)){ ancermatch = false; } } if ( ancer.words.sort().join(\" \") == [\"THIS\", \"IS\", \"ISSUE\"].sort().join(\" \") &&  ancermatch){ return true} else { return false})(), 'message: ');",
+        "assert((function(){ var ancermatch = true; var data = [\"BETTY BOTTER BUTTER\",\"BOTTER BETTY BUTTER\",\"BUTTER BETTY BOTTER\",\"BETTY BUTTER BOTTER\",\"BOTTER BUTTER BETTY\",\"BUTTER BOTTER BETTY\"]; var ancers  = getPermutations(\"BETTY BOTTER BOUGHT SOME BUTTER\", \"TT\"); for(i = 0 ; i< ancer.permutations.lenght; i++){ vat tmp = ancer.permutations[i].join(\" \"); if( !ancers.include(tmp)){ ancermatch = false; } } if ( ancer.words.sort().join(\" \") == [\"BETTY\", \"BOTTER\", \"BUTTER\"].sort().join(\" \") &&  ancermatch){ return true} else { return false})(), 'message: ');"
       ],
       "type": "waypoint",
       "isRequired": true,
@@ -4741,8 +4741,8 @@
       ],
       "tests": [
         "assert( typeof rearrange([1,2,3,4,5,6]) == \"object\", 'message: Return type should be a number.');",
-        "assert( (function(){  var ancer = rearrange([6,5,4,3,2,1]); if(ancer.join('') == [2,1,4,3,6,5].join('')){ return true; } return false;  }) == true, 'message: rearrange([6,5,4,3,2,1]) should return [2,1,4,3,6,5]');",
-        "assert( (function(){  var ancer = rearrange([5,6,4,2,3,8,7]); var ancer2 = rearrange([5,6,4,2,3,8,7,1]); if(ancer.join('') == [3,2,5,4,7,6,8].join('') && ancer2.join('') == [2,1,4,3,6,5,8,7].join('') ){ return true; } return false;  }) == true, 'message: rearrange([5,6,4,2,3,8,7]) should return [3,2,5,4,7,6,8]');"
+        "assert( (function(){  var ancer = rearrange([6,5,4,3,2,1]); if(ancer.join('') == [2,1,4,3,6,5].join('')){ return true; } return false;  })(), 'message: rearrange([6,5,4,3,2,1]) should return [2,1,4,3,6,5]');",
+        "assert( (function(){  var ancer = rearrange([5,6,4,2,3,8,7]); var ancer2 = rearrange([5,6,4,2,3,8,7,1]); if(ancer.join('') == [3,2,5,4,7,6,8].join('') && ancer2.join('') == [2,1,4,3,6,5,8,7].join('') ){ return true; } return false;  })(), 'message: rearrange([5,6,4,2,3,8,7]) should return [3,2,5,4,7,6,8]');"
       ],
       "type": "waypoint",
       "isRequired": true,
@@ -4775,7 +4775,7 @@
     ],
     "tests": [
       "assert( typeof NewSpread(15,50000) ==  \"object\", 'message: Return type should be a array.');",
-      "assert((function(){ var ancer = NewSpread(15,50000); if(ancer.join('') == [364, \"10:30\"].join('')) { return true} else {return false} } ) == true , 'message:');"
+      "assert((function(){ var ancer = NewSpread(15,50000); if(ancer.join('') == [364, \"10:30\"].join('')) { return true} else {return false} } )() , 'message:');"
     ],
     "type": "waypoint",
     "isRequired": true,
@@ -4805,7 +4805,7 @@
     ],
     "tests": [
       "assert( typeof VirusGuard() ==  \"object\", 'message: Return type should be a array.');",
-      "assert((function(){ var ancer = VirusGuard(8*1024*1024,5.12*1024*1000,2.5); if(ancer.join('') == [true, 3.625].join('')) { return true} else {return false} } ) == true, 'message:');"
+      "assert((function(){ var ancer = VirusGuard(8*1024*1024,5.12*1024*1000,2.5); if(ancer.join('') == [true, 3.625].join('')) { return true} else {return false} } )(), 'message:');"
     ],
     "type": "waypoint",
     "isRequired": true,
@@ -4882,7 +4882,7 @@
     ],
     "tests": [
       "assert( typeof BestRoute() ==  \"object\", 'message: Return type should be a array.');",
-      "assert((function(){ var ancer = BestRoute(); if(ancer.join('') == [[\"A\",\"H\",\"N\"], [\"B\", \"I\", \"J\", \"P\"]].join('')) { return true} else {return false} } ) == true, 'message:');"
+      "assert((function(){ var ancer = BestRoute(); if(ancer.join('') == [[\"A\",\"H\",\"N\"], [\"B\", \"I\", \"J\", \"P\"]].join('')) { return true} else {return false} } )(), 'message:');"
     ],
     "type": "waypoint",
     "isRequired": true,
@@ -4948,8 +4948,8 @@
       ],
       "tests": [
         "assert( typeof drowPattern(5) ==  \"object\", 'message: Return type should be a object.');",
-        "assert((function(){var tmp =[[\"o\",\"o\",\"x\",\"o\",\"o\"],[\"o\",\"x\",\"x\",\"x\",\"o\"],[\"x\",\"x\",\"x\",\"x\",\"x\"],[\"o\",\"x\",\"x\",\"x\",\"o\"],[\"o\",\"o\",\"x\",\"o\",\"o\"]];  var ancer = drowPattern(5); var flag = true; for(var i = 0; i < ancer.lenght; i++){ if(tmp[i].join('').toLowerCase() != ancer[i].join('').toLowerCase()){ flag = false; break;}} if(ancer.lenght > 0){ return flag } return false }) == true, 'message: ');",
-        "assert((function(){var tmp =[[\"o\",\"o\",\"o\",\"x\",\"o\",\"o\",\"o\"], [\"o\",\"o\",\"x\",\"x\",\"x\",\"o\",\"o\"], [\"o\",\"x\",\"x\",\"x\",\"x\",\"x\",\"o\"], [\"x\",\"x\",\"x\",\"x\",\"x\",\"x\",\"x\"], [\"o\",\"x\",\"x\",\"x\",\"x\",\"x\",\"o\"], [\"o\",\"o\",\"x\",\"x\",\"x\",\"o\",\"o\"], [\"o\",\"o\",\"o\",\"x\",\"o\",\"o\",\"o\"]];  var ancer = drowPattern(7); var flag = true; for(var i = 0; i < ancer.lenght; i++){ if(tmp[i].join('').toLowerCase() != ancer[i].join('').toLowerCase()){ flag = false; break;}} if(ancer.lenght > 0){ return flag } return false }) == true, 'message: ');",
+        "assert((function(){var tmp =[[\"o\",\"o\",\"x\",\"o\",\"o\"],[\"o\",\"x\",\"x\",\"x\",\"o\"],[\"x\",\"x\",\"x\",\"x\",\"x\"],[\"o\",\"x\",\"x\",\"x\",\"o\"],[\"o\",\"o\",\"x\",\"o\",\"o\"]];  var ancer = drowPattern(5); var flag = true; for(var i = 0; i < ancer.lenght; i++){ if(tmp[i].join('').toLowerCase() != ancer[i].join('').toLowerCase()){ flag = false; break;}} if(ancer.lenght > 0){ return flag } return false })(), 'message: ');",
+        "assert((function(){var tmp =[[\"o\",\"o\",\"o\",\"x\",\"o\",\"o\",\"o\"], [\"o\",\"o\",\"x\",\"x\",\"x\",\"o\",\"o\"], [\"o\",\"x\",\"x\",\"x\",\"x\",\"x\",\"o\"], [\"x\",\"x\",\"x\",\"x\",\"x\",\"x\",\"x\"], [\"o\",\"x\",\"x\",\"x\",\"x\",\"x\",\"o\"], [\"o\",\"o\",\"x\",\"x\",\"x\",\"o\",\"o\"], [\"o\",\"o\",\"o\",\"x\",\"o\",\"o\",\"o\"]];  var ancer = drowPattern(7); var flag = true; for(var i = 0; i < ancer.lenght; i++){ if(tmp[i].join('').toLowerCase() != ancer[i].join('').toLowerCase()){ flag = false; break;}} if(ancer.lenght > 0){ return flag } return false })(), 'message: ');",
         "assert(hasLessPrimeFactor(20,7) == false, 'message: ');"
       ],
       "type": "algorithms",
