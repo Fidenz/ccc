@@ -1,6 +1,6 @@
 {
   "name": "Basic JavaScript",
-  "time": "10 hours",
+  "time": "5 hours",
   "order": 1,
   "helpRoom": "HelpJavaScript",
   "challenges": [
@@ -26,7 +26,7 @@
       ],
       "tests": [
         "assert(code.match(/(\\/\\/)...../g), 'message: Create a <code>//</code> style comment that contains at least five letters.');",
-        "assert(code.match(/(\\/\\*)([^\\*\\/]{5,})(?=\\*\\/)/gm), 'message: Create a <code>/* */</code> style comment that contains at least five letters.');"
+        "assert(code.match(/(\\/\\*)([^\\*\\/]{20,})(?=\\*\\/)/gm), 'message: Create a <code>/* */</code> style comment that contains at least towenty letters.');"
       ],
       "type": "waypoint",
       "challengeType": 1,
@@ -492,7 +492,7 @@
     },
     {
       "id": "56533eb9ac21ba0edf2244ac",
-      "title": "Challenge - 21",
+      "title": "Challenge - 11",
       "description": [
         "You can easily <dfn>increment</dfn> or add one to a variable with the <code>++</code> operator.",
         "<code>i++;</code>",
@@ -4530,8 +4530,8 @@
       "id": "a202eed8fc186c8434cb6sr2",
       "title": "Challenge - 86",
       "description": [
-        "For any two strings of digits, A and B, we define F<sub>A,B</sub> to be the sequence (A,B,AB,BAB,ABBAB,...) in which each term is the concatenation of the previous two.",
-        "Further, we define D<sub>A,B</sub>(n) to be the nth digit in the first term of FA,B that contains at least n digits.",
+        "For any two string variables, A and B, we define F<sub>A,B</sub> to be the sequence (A,B,AB,BAB,ABBAB,...) in which each term is the concatenation of the previous two.",
+        "Further, we define D<sub>A,B</sub>(n) to be the n<sup>th</sup> digit in the first term of FA,B that contains at least n digits.",
         "Example :",
         "Let A=\"1415\", B=\"8979\". n = 10 We wish to find D<sub>A,B</sub>(n), say.",
         "The first few terms of FA,B are:",
@@ -4562,7 +4562,7 @@
       "translations": {}
     },
     {
-      "id": "a202eed8fc186c8434cb6ch1",
+      "id": "a202eed8fc186c8434cb6vb1",
       "title": "Challenge - 87",
       "description": [
         "For a given sentence, find occurrences of given character set. Pick filtered words and generate permutations. (SENTENCE AND CHARACTER SET ONLY CAN HAVE UPPERCASE LETTERS)",
