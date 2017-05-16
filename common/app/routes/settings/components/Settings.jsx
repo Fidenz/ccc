@@ -141,7 +141,7 @@ export class Settings extends React.Component {
               href={ `/${username}` }
               >
               <FA name='user' />
-              Show me my public profile
+              Show me my profile
             </Button>
             <Button
               block={ true }
@@ -150,7 +150,7 @@ export class Settings extends React.Component {
               className='btn-link-social'
               href={ '/signout' }
               >
-              Sign me out of freeCodeCamp
+              Sign me out
             </Button>
 
           </Col>
