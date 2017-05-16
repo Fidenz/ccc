@@ -246,7 +246,7 @@ module.exports = function(app) {
       return res.redirect('/');
     }
     return res.render('account/signin', {
-      title: 'Sign in to freeCodeCamp'
+      title: 'Sign in to codeCampChallenge'
     });
   }
 
@@ -261,7 +261,7 @@ module.exports = function(app) {
       return res.redirect('/');
     }
     return res.render('account/deprecated-signin', {
-      title: 'Sign in to freeCodeCamp using a Deprecated Login'
+      title: 'Sign in to codeCampChallenge using a Deprecated Login'
     });
   }
 
@@ -279,7 +279,7 @@ module.exports = function(app) {
       return res.redirect('/');
     }
     return res.render('account/email-signin', {
-      title: 'Sign in to freeCodeCamp using your Email Address'
+      title: 'Sign in to codeCampChallenge using your Email Address'
     });
   }
 
@@ -288,7 +288,7 @@ module.exports = function(app) {
       return res.redirect('/');
     }
     return res.render('account/email-signup', {
-      title: 'Sign up for freeCodeCamp using your Email Address'
+      title: 'Sign up for codeCampChallenge using your Email Address'
     });
   }
 
@@ -421,7 +421,7 @@ module.exports = function(app) {
             msg: dedent`
               Upon review, this account has been flagged for academic
               dishonesty. If you’re the owner of this account contact
-              team@freecodecamp.com for details.
+              team@codeCampChallenge.com for details.
             `
           });
         }
@@ -522,7 +522,7 @@ module.exports = function(app) {
               certViews[certType],
               {
                 username: user.username,
-                date: moment(new Date(completedDate)).format('MMMM D, YYYY'),
+                date: moment(new Date(completedDate)).format('MMMM D, YYYY hh:mm:ss'),
                 name: user.name
               }
             );
@@ -668,9 +668,9 @@ module.exports = function(app) {
 
     return Email.send$({
       type: 'email',
-      to: 'Team@FreeCodeCamp.com',
+      to: 'Team@codeCampChallenge.com',
       cc: user.email,
-      from: 'Team@FreeCodeCamp.com',
+      from: 'Team@codeCampChallenge.com',
       subject: 'Abuse Report : Reporting ' + username + '\'s profile.',
       text: dedent(`
         Hello Team,\n

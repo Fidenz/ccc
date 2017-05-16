@@ -2,7 +2,7 @@ import { handleActions } from 'redux-actions';
 import types from './types';
 
 const initialState = {
-  title: 'Learn To Code | freeCodeCamp',
+  title: 'Learn To Code | codeCampChallenge',
   isSignInAttempted: false,
   user: '',
   lang: '',
@@ -14,7 +14,7 @@ export default handleActions(
   {
     [types.updateTitle]: (state, { payload = 'Learn To Code' }) => ({
       ...state,
-      title: payload + ' | freeCodeCamp'
+      title: payload + ' | codeCampChallenge'
     }),
 
     [types.updateThisUser]: (state, { payload: user }) => ({
