@@ -6,20 +6,16 @@ html(lang='en')
     else
       title freeCodeCamp
     include partials/react-stylesheets
+
     script.
-      window.webpackManifest = !{JSON.stringify(chunkManifest || {})};
-      (function setTheme() {
-        let fccTheme;
-        try {
-          fccTheme = JSON.parse(localStorage.getItem('fcc-theme'));
-          if (fccTheme && fccTheme === 'night') {
-            document.body.classList.add('night');
-          }
-        }
-        catch(e) {
-          fccTheme = null;
-        }
+      window.__lc = window.__lc || {};
+      window.__lc.license = 8822131;
+      (function() {
+        var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+        lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
       })();
+
   body
     #fcc!= markup
     script!= state
