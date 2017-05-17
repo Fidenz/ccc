@@ -26,7 +26,7 @@
       ],
       "tests": [
         "assert(code.match(/(\\/\\/)...../g), 'message: Create a <code>//</code> style comment that contains at least five letters.');",
-        "assert(code.match(/(\\/\\*)([^\\*\\/]{20,})(?=\\*\\/)/gm), 'message: Create a <code>/* */</code> style comment that contains at least towenty letters.');"
+        "assert(code.match(/(\\/\\*)([^\\*\\/]{20,})(?=\\*\\/)/gm), 'message: Create a <code>/* */</code> style comment that contains at least twenty letters.');"
       ],
       "type": "waypoint",
       "challengeType": 1,
