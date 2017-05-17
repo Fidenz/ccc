@@ -4597,8 +4597,8 @@
 			],
 			"tests": [
 				"assert( typeof getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\") ==  \"object\", 'message: Return type should be a object.');",
-				"assert( (function(){ var ancermatch = true; var data = [\"THIS IS ISSUE\", \"IS THIS ISSUE\", \"ISSUE THIS IS\", \"THIS ISSUE IS\", \"IS ISSUE THIS\", \"ISSUE IS THIS\"]; var ancers  = getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\"); for(var i =0 ; i< ancers.permutations.length; i++){ var tmp = ancers.permutations[i].join(\" \"); if( !data.includes(tmp)){ ancermatch = false; } } if ( ancers.words.sort().join(\" \") == [\"THIS\", \"IS\", \"ISSUE\"].sort().join(\" \") &&  ancermatch){ return true} else { return false} })(), 'message: getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\") Should return  { \"word\" : [\"THIS\",\"IS\",\"ISSUE\"], \"permutations\" : [[\"THIS\",\"IS\",\"ISSUE\"], [\"IS\",\"THIS\",\"ISSUE\"], [\"ISSUE\", \"THIS\", \"IS\"], [\"THIS\", \"ISSUE\", \"IS\"], [\"IS\", \"ISSUE\", \"THIS\"], [\"ISSUE\",\"IS\",\"THIS\"]]}');",
-				"assert( (function(){ var ancermatch = true; var data = [\"THIS IS ISSUE\", \"IS THIS ISSUE\", \"ISSUE THIS IS\", \"THIS ISSUE IS\", \"IS ISSUE THIS\", \"ISSUE IS THIS\"]; var ancers  = getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\"); for(var i =0 ; i< ancers.permutations.length; i++){ var tmp = ancers.permutations[i].join(\" \"); if( !data.includes(tmp)){ ancermatch = false; } } if ( ancers.words.sort().join(\" \") == [\"THIS\", \"IS\", \"ISSUE\"].sort().join(\" \") &&  ancermatch){ return true} else { return false} })() && (function(){ var ancermatch = true; var data = [\"BETTY BOTTER BUTTER\",\"BOTTER BETTY BUTTER\",\"BUTTER BETTY BOTTER\",\"BETTY BUTTER BOTTER\",\"BOTTER BUTTER BETTY\",\"BUTTER BOTTER BETTY\"]; var ancers  = getPermutations(\"BETTY BOTTER BOUGHT SOME BUTTER\", \"TT\"); for(var i =0 ; i< ancers.permutations.length; i++){ var tmp = ancers.permutations[i].join(\" \"); if( !data.includes(tmp)){ ancermatch = false; } } if ( ancers.words.sort().join(\" \") == [\"BETTY\", \"BOTTER\", \"BUTTER\"].sort().join(\" \") &&  ancermatch){ return true} else { return false} })(), 'message: Answer should be valid for any given input.');"
+				"assert( (function(){ var ancermatch = true; var data = [\"THIS IS ISSUE\", \"IS THIS ISSUE\", \"ISSUE THIS IS\", \"THIS ISSUE IS\", \"IS ISSUE THIS\", \"ISSUE IS THIS\"]; var ancers  = getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\"); for( var i = 0 ; i< ancers.permutations.length; i++){ var tmp = ancers.permutations[i].join(\" \"); if( !data.includes(tmp)){ ancermatch = false; } } if ( ancers.words.sort().join(\" \") == [\"THIS\", \"IS\", \"ISSUE\"].sort().join(\" \") &&  ancermatch){ return true} else { return false} })(), 'message: getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\") Should return  { \"word\" : [\"THIS\",\"IS\",\"ISSUE\"], \"permutations\" : [[\"THIS\",\"IS\",\"ISSUE\"], [\"IS\",\"THIS\",\"ISSUE\"], [\"ISSUE\", \"THIS\", \"IS\"], [\"THIS\", \"ISSUE\", \"IS\"], [\"IS\", \"ISSUE\", \"THIS\"], [\"ISSUE\",\"IS\",\"THIS\"]]}');",
+				"assert( (function(){ var ancermatch = true; var data = [\"THIS IS ISSUE\", \"IS THIS ISSUE\", \"ISSUE THIS IS\", \"THIS ISSUE IS\", \"IS ISSUE THIS\", \"ISSUE IS THIS\"]; var ancers  = getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\"); for( var i = 0 ; i< ancers.permutations.length; i++){ var tmp = ancers.permutations[i].join(\" \"); if( !data.includes(tmp)){ ancermatch = false; } } if ( ancers.words.sort().join(\" \") == [\"THIS\", \"IS\", \"ISSUE\"].sort().join(\" \") &&  ancermatch){ return true} else { return false} })() && (function(){ var ancermatch = true; var data = [\"BETTY BOTTER BUTTER\",\"BOTTER BETTY BUTTER\",\"BUTTER BETTY BOTTER\",\"BETTY BUTTER BOTTER\",\"BOTTER BUTTER BETTY\",\"BUTTER BOTTER BETTY\"]; var ancers  = getPermutations(\"BETTY BOTTER BOUGHT SOME BUTTER\", \"TT\"); for(i = 0 ; i< ancers.permutations.length; i++){ var tmp = ancers.permutations[i].join(\" \"); if( !data.includes(tmp)){ ancermatch = false; } } if ( ancers.words.sort().join(\" \") == [\"BETTY\", \"BOTTER\", \"BUTTER\"].sort().join(\" \") &&  ancermatch){ return true} else { return false} })(), 'message: Answer should be valid for any given input.');"
 			],
 			"type": "waypoint",
 			"isRequired": false,
@@ -4608,8 +4608,163 @@
 			"translations": {}
 		},
 		{
-			"id": "ac6993d51946422351508a41",
+			"id": "587d7b8d367417b2b2512b5a",
 			"title": "Challenge - 89",
+			"description": [
+				"Find the number of subarrays in an array, which has the given sum.",
+				"Example :",
+				"Inputs <code>arr = [1,2,3,2,1,8,-3]</code>",
+				"Output = 3"
+			],
+			"challengeSeed": [
+				"function getSubArrayCount(arr, sum) {",
+				"  return 0;",
+				"}",
+				"",
+				"getSubArrayCount([1,2,3,2,1,8,-3],5);"
+			],
+			"tests": [
+				"assert( typeof getSubArrayCount([1,2,3,2,1,8,-3],5) ==  \"number\", 'message: Return type should be a number.');",
+				"assert(getSubArrayCount([1,2,3,2,1,8,-3],5) == 3, 'message: getSubArrayCount([1,2,3,2,1,8,-3],5) should equal to 3.');",
+				"assert(getSubArrayCount([1,2,3,4],10) == 1, 'message: getSubArrayCount([1,2,3,4],10) should equal to 1.');",
+				"assert(getSubArrayCount([1,2,3,5,4,1,3,2,3,1,1,4,0,1],5) == 8 && getSubArrayCount([1,2,3,4],10) == 1, 'message: Answer should be valid for any given input.');"
+			],
+			"type": "waypoint",
+			"isRequired": false,
+			"solutions": [],
+			"MDNlinks": [],
+			"challengeType": 1,
+			"translations": {}
+		},
+    {
+      "id": "aa2e6f85cab2ab736c9a9b24",
+      "title": "Challenge - 90",
+      "description": [
+        "Design a cash register drawer function <code>checkCashRegister()</code> that accepts purchase price as the first argument (<code>price</code>), payment as the second argument (<code>cash</code>), and cash-in-drawer (<code>cid</code>) as the third argument.",
+        "<code>cid</code> is a 2D array listing available currency.",
+        "Return the string <code>\"Insufficient Funds\"</code> if cash-in-drawer is less than the change due or if you cannot return the exact change. Return the string <code>\"Closed\"</code> if cash-in-drawer is equal to the change due.",
+        "Otherwise, return change in coin and bills, sorted in highest to lowest order.",
+        "Remember to use <a href='http://forum.freeCodeCamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.",
+        "<table class='table table-striped'><tr><th>Currency Unit</th><th>Amount</th></tr><tr><td>Penny</td><td>$0.01 (PENNY)</td></tr><tr><td>Nickel</td><td>$0.05 (NICKEL)</td></tr><tr><td>Dime</td><td>$0.1 (DIME)</td></tr><tr><td>Quarter</td><td>$0.25 (QUARTER)</td></tr><tr><td>Dollar</td><td>$1 (DOLLAR)</td></tr><tr><td>Five Dollars</td><td>$5 (FIVE)</td></tr><tr><td>Ten Dollars</td><td>$10 (TEN)</td></tr><tr><td>Twenty Dollars</td><td>$20 (TWENTY)</td></tr><tr><td>One-hundred Dollars</td><td>$100 (ONE HUNDRED)</td></tr></table>"
+      ],
+      "challengeSeed": [
+        "function checkCashRegister(price, cash, cid) {",
+        "  var change;",
+        "  // Here is your change, ma'am.",
+        "  return change;",
+        "}",
+        "",
+        "// Example cash-in-drawer array:",
+        "// [[\"PENNY\", 1.01],",
+        "// [\"NICKEL\", 2.05],",
+        "// [\"DIME\", 3.1],",
+        "// [\"QUARTER\", 4.25],",
+        "// [\"ONE\", 90],",
+        "// [\"FIVE\", 55],",
+        "// [\"TEN\", 20],",
+        "// [\"TWENTY\", 60],",
+        "// [\"ONE HUNDRED\", 100]]",
+        "",
+        "checkCashRegister(19.5, 20, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.1], [\"QUARTER\", 4.25], [\"ONE\", 90], [\"FIVE\", 55], [\"TEN\", 20], [\"TWENTY\", 60], [\"ONE HUNDRED\", 100]]);"
+      ],
+      "solutions": [
+        "var denom = [\n\t{ name: 'ONE HUNDRED', val: 100},\n\t{ name: 'TWENTY', val: 20},\n\t{ name: 'TEN', val: 10},\n\t{ name: 'FIVE', val: 5},\n\t{ name: 'ONE', val: 1},\n\t{ name: 'QUARTER', val: 0.25},\n\t{ name: 'DIME', val: 0.1},\n\t{ name: 'NICKEL', val: 0.05},\n\t{ name: 'PENNY', val: 0.01}\n];\n\nfunction checkCashRegister(price, cash, cid) {\n    var change = cash - price;\n    var register = cid.reduce(function(acc, curr) {\n        acc.total += curr[1];\n        acc[curr[0]] = curr[1];\n        return acc;\n    }, {total: 0});\n    if(register.total === change) {\n        return 'Closed';\n    }\n    if(register.total < change) {\n        return 'Insufficient Funds';\n    }\n    var change_arr = denom.reduce(function(acc, curr) {\n        var value = 0;\n        while(register[curr.name] > 0 && change >= curr.val) {\n           change -= curr.val;\n           register[curr.name] -= curr.val;\n           value += curr.val;\n           change = Math.round(change * 100) / 100;\n        }\n        if(value > 0) {\n            acc.push([ curr.name, value ]);\n        }\n        return acc;\n    }, []);\n  if(change_arr.length < 1 || change > 0) {\n    return \"Insufficient Funds\";\n  }\n  return change_arr;\n}"
+      ],
+      "tests": [
+        "assert.isArray(checkCashRegister(19.5, 20, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.1], [\"QUARTER\", 4.25], [\"ONE\", 90], [\"FIVE\", 55], [\"TEN\", 20], [\"TWENTY\", 60], [\"ONE HUNDRED\", 100]]), 'message: <code>checkCashRegister(19.5, 20, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.1], [\"QUARTER\", 4.25], [\"ONE\", 90], [\"FIVE\", 55], [\"TEN\", 20], [\"TWENTY\", 60], [\"ONE HUNDRED\", 100]])</code> should return an array.');",
+        "assert.isString(checkCashRegister(19.5, 20, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]]), 'message: <code>checkCashRegister(19.5, 20, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]])</code> should return a string.');",
+        "assert.isString(checkCashRegister(19.5, 20, [[\"PENNY\", 0.5], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]]), 'message: <code>checkCashRegister(19.5, 20, [[\"PENNY\", 0.5], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]])</code> should return a string.');",
+        "assert.deepEqual(checkCashRegister(19.5, 20, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.1], [\"QUARTER\", 4.25], [\"ONE\", 90], [\"FIVE\", 55], [\"TEN\", 20], [\"TWENTY\", 60], [\"ONE HUNDRED\", 100]]), [[\"QUARTER\", 0.5]], 'message: <code>checkCashRegister(19.5, 20, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.1], [\"QUARTER\", 4.25], [\"ONE\", 90], [\"FIVE\", 55], [\"TEN\", 20], [\"TWENTY\", 60], [\"ONE HUNDRED\", 100]])</code> should return <code>[[\"QUARTER\", 0.5]]</code>.');",
+        "assert.deepEqual(checkCashRegister(3.26, 100, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.1], [\"QUARTER\", 4.25], [\"ONE\", 90], [\"FIVE\", 55], [\"TEN\", 20], [\"TWENTY\", 60], [\"ONE HUNDRED\", 100]]), [[\"TWENTY\", 60], [\"TEN\", 20], [\"FIVE\", 15], [\"ONE\", 1], [\"QUARTER\", 0.5], [\"DIME\", 0.2], [\"PENNY\", 0.04]], 'message: <code>checkCashRegister(3.26, 100, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.1], [\"QUARTER\", 4.25], [\"ONE\", 90], [\"FIVE\", 55], [\"TEN\", 20], [\"TWENTY\", 60], [\"ONE HUNDRED\", 100]])</code> should return <code>[[\"TWENTY\", 60], [\"TEN\", 20], [\"FIVE\", 15], [\"ONE\", 1], [\"QUARTER\", 0.5], [\"DIME\", 0.2], [\"PENNY\", 0.04]]</code>.');",
+        "assert.deepEqual(checkCashRegister(19.5, 20, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]]), \"Insufficient Funds\", 'message: <code>checkCashRegister(19.5, 20, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]])</code> should return \"Insufficient Funds\".');",
+        "assert.deepEqual(checkCashRegister(19.5, 20, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 1], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]]), \"Insufficient Funds\", 'message: <code>checkCashRegister(19.5, 20, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 1], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]])</code> should return \"Insufficient Funds\".');",
+        "assert.deepEqual(checkCashRegister(19.5, 20, [[\"PENNY\", 0.5], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]]), \"Closed\", 'message: <code>checkCashRegister(19.5, 20, [[\"PENNY\", 0.5], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]])</code> should return \"Closed\".');"
+      ],
+      "type": "bonfire",
+      "MDNlinks": [
+        "Global Object",
+        "Floating Point Guide"
+      ],
+      "challengeType": 5,
+      "translations": {}
+    },
+    {
+      "id": "a3f503de51cfab748ff001aa",
+      "title": "Challenge - 91",
+      "description": [
+        "Given an array <code>arr</code>, find element pairs whose sum equal the second argument <code>arg</code> and return the sum of their indices.",
+        "You may use multiple pairs that have the same numeric elements but different indices. Each pair should use the lowest possible available indices. Once an element has been used it cannot be reused to pair with another element.",
+        "For example <code>pairwise([7, 9, 11, 13, 15], 20)</code> returns <code>6</code>. The pairs that sum to 20 are <code>[7, 13]</code> and <code>[9, 11]</code>. We can then write out the array with their indices and values.",
+        "<table class=\"table\"><tr><th><strong>Index</strong></th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td>Value</td><td>7</td><td>9</td><td>11</td><td>13</td><td>15</td></tr></table>",
+        "Below we'll take their corresponding indices and add them.",
+        "7 + 13 = 20 &#8594; Indices 0 + 3 = 3<br>9 + 11 = 20 &#8594; Indices 1 + 2 = 3<br>3 + 3 = 6 &#8594 Return <code>6</code>",
+        "Remember to use <a href='http://forum.freeCodeCamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code."
+      ],
+      "challengeSeed": [
+        "function pairwise(arr, arg) {",
+        "  return arg;",
+        "}",
+        "",
+        "pairwise([1,4,2,3,0,5], 7);"
+      ],
+      "solutions": [
+        "function pairwise(arr, arg) {\n  var sum = 0;\n  arr.forEach(function(e, i, a) {\n    if (e != null) {      \n      var diff = arg-e;\n      a[i] = null;\n      var dix = a.indexOf(diff);\n      if (dix !== -1) {\n        sum += dix;\n        sum += i;\n        a[dix] = null;\n      }  \n    }\n  });\n  return sum;\n}\n\npairwise([1,4,2,3,0,5], 7);\n"
+      ],
+      "tests": [
+        "assert.deepEqual(pairwise([1, 4, 2, 3, 0, 5], 7), 11, 'message: <code>pairwise([1, 4, 2, 3, 0, 5], 7)</code> should return 11.');",
+        "assert.deepEqual(pairwise([1, 3, 2, 4], 4), 1, 'message: <code>pairwise([1, 3, 2, 4], 4)</code> should return 1.');",
+        "assert.deepEqual(pairwise([1, 1, 1], 2), 1, 'message: <code>pairwise([1, 1, 1], 2)</code> should return 1.');",
+        "assert.deepEqual(pairwise([0, 0, 0, 0, 1, 1], 1), 10, 'message: <code>pairwise([0, 0, 0, 0, 1, 1], 1)</code> should return 10.');",
+        "assert.deepEqual(pairwise([], 100), 0, 'message: <code>pairwise([], 100)</code> should return 0.');"
+      ],
+      "type": "bonfire",
+      "MDNlinks": [
+        "Array.prototype.reduce()"
+      ],
+      "challengeType": 5,
+      "translations": {}
+    },
+    {
+      "id": "a7bf700cd123b9a54eef01d5",
+      "title": "Challenge - 92",
+      "description": [
+        "Return the number of total permutations of the provided string that don't have repeated consecutive letters. Assume that all characters in the provided string are each unique.",
+        "For example, <code>aab</code> should return 2 because it has 6 total permutations (<code>aab</code>, <code>aab</code>, <code>aba</code>, <code>aba</code>, <code>baa</code>, <code>baa</code>), but only 2 of them (<code>aba</code> and <code>aba</code>) don't have the same letter (in this case <code>a</code>) repeating.",
+        "Remember to use <a href='http://forum.freeCodeCamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code."
+      ],
+      "challengeSeed": [
+        "function permAlone(str) {",
+        "  return str;",
+        "}",
+        "",
+        "permAlone('aab');"
+      ],
+      "solutions": [
+        "function permAlone(str) {\n  return permutor(str).filter(function(perm) {\n    return !perm.match(/(.)\\1/g);\n  }).length;\n}\n\nfunction permutor(str) {\n  // http://staff.roguecc.edu/JMiller/JavaScript/permute.html\n  //permArr: Global array which holds the list of permutations\n  //usedChars: Global utility array which holds a list of \"currently-in-use\" characters\n  var permArr = [], usedChars = [];\n  function permute(input) {\n    //convert input into a char array (one element for each character)\n    var i, ch, chars = input.split(\"\");\n    for (i = 0; i < chars.length; i++) {\n      //get and remove character at index \"i\" from char array\n      ch = chars.splice(i, 1);\n      //add removed character to the end of used characters\n      usedChars.push(ch);\n      //when there are no more characters left in char array to add, add used chars to list of permutations\n      if (chars.length === 0) permArr[permArr.length] = usedChars.join(\"\");\n      //send characters (minus the removed one from above) from char array to be permuted\n      permute(chars.join(\"\"));\n      //add removed character back into char array in original position\n      chars.splice(i, 0, ch);\n      //remove the last character used off the end of used characters array\n      usedChars.pop();\n    }\n  }\n  permute(str);\n  return permArr;\n}\n\npermAlone('aab');\n"
+      ],
+      "tests": [
+        "assert.isNumber(permAlone('aab'), 'message: <code>permAlone(\"aab\")</code> should return a number.');",
+        "assert.strictEqual(permAlone('aab'), 2, 'message: <code>permAlone(\"aab\")</code> should return 2.');",
+        "assert.strictEqual(permAlone('aaa'), 0, 'message: <code>permAlone(\"aaa\")</code> should return 0.');",
+        "assert.strictEqual(permAlone('aabb'), 8, 'message: <code>permAlone(\"aabb\")</code> should return 8.');",
+        "assert.strictEqual(permAlone('abcdefa'), 3600, 'message: <code>permAlone(\"abcdefa\")</code> should return 3600.');",
+        "assert.strictEqual(permAlone('abfdefa'), 2640, 'message: <code>permAlone(\"abfdefa\")</code> should return 2640.');",
+        "assert.strictEqual(permAlone('zzzzzzzz'), 0, 'message: <code>permAlone(\"zzzzzzzz\")</code> should return 0.');",
+        "assert.strictEqual(permAlone('a'), 1, 'message: <code>permAlone(\"a\")</code> should return 1.');",
+        "assert.strictEqual(permAlone('aaab'), 0, 'message: <code>permAlone(\"aaab\")</code> should return 0.');",
+        "assert.strictEqual(permAlone('aaabb'), 12, 'message: <code>permAlone(\"aaabb\")</code> should return 12.');"
+      ],
+      "type": "bonfire",
+      "MDNlinks": [
+        "Permutations",
+        "RegExp"
+      ],
+      "challengeType": 5,
+      "translations": {}
+    },
+		{
+			"id": "ac6993d51946422351508a41",
+			"title": "Challenge - 93",
 			"description": [
 				"Write a function to return the index of n'th largest number in a given array with positive integers.",
 				"<code>'n'</code> is an integer, <code> 0 < n <= arr.length </code>",
@@ -4638,7 +4793,7 @@
 		},
 		{
 			"id": "a6e40f1041b06c996f7b2406",
-			"title": "Challenge - 90",
+			"title": "Challenge - 94",
 			"description": [
 				"Find the number of adjacent element trios with given sum",
 				"Example :",
@@ -4669,7 +4824,7 @@
 		},
 		{
 			"id": "a77dbc43c33f39daa4429b4f",
-			"title": "Challenge - 91",
+			"title": "Challenge - 95",
 			"description": [
 				"Write an algorithm to find the length of the longest substring that exists without duplicating characters, starting from the first letter.",
 				"Example :",
@@ -4698,7 +4853,7 @@
 		},
 		{
 			"id": "ab6137d4e35944e21037b769",
-			"title": "Challenge - 92",
+			"title": "Challenge - 96",
 			"description": [
 				"Rearrange the given array in a manner that every element is either larger or smaller than it's right and left elements(see the condition 'i' below). Consider the array do not contain duplicating elements. Output array should prove the following conditions.",
 				"If output array is <code>‘arrO’</code>",
@@ -4729,7 +4884,7 @@
 		},
 		{
 			"id": "579e2a2c335b9d72dd32e05c",
-			"title": "Challenge - 93",
+			"title": "Challenge - 97",
 			"description": [
 				"<b>News Spread</b>",
 				"There is a small town with <code>50,000</code> people living in it. A person came to the town at <code>0800</code> with a news. Within <code>15</code> minutes, he managed to tell that news to <code>3</code> people. Assuming that each person will tell that news to another <code>3</code> personals and it take <code>15</code> minutes to tell the news, calculate;",
@@ -4750,7 +4905,7 @@
 				"assert( typeof NewSpread(15,50000) ==  \"object\", 'message: Return type should be a array.');",
 				"assert( NewSpread(15,50000).join('') == [364, \"10:30\"].join('') , 'message: NewSpread(15,50000) should return [364, \"10:30\"]');",
 				"assert( NewSpread(25,55000).join('') == [40, \"12:10.000000000000018\"].join('') , 'message: NewSpread(15,50000) should return [364, \"10:30\"]');",
-				"assert( NewSpread(25,55000).join('') == [40, \"12:10.000000000000018\"].join('') && NewSpread(36,40000) == [13, \"14:0\"].join('') , 'message: Answer should be valid for any given input.');"
+				"assert( NewSpread(25,55000).join('') == [40, \"12:10.000000000000018\"].join('') && NewSpread(36,40000).join('') == [13, \"14:0\"].join('') , 'message: Answer should be valid for any given input.');"
 			],
 			"type": "waypoint",
 			"isRequired": false,
@@ -4761,7 +4916,7 @@
 		},
 		{
 			"id": "adf08ec01beb4f99fc7a68f2",
-			"title": "Challenge - 94",
+			"title": "Challenge - 98",
 			"description": [
 				"<b>The Virus</b>",
 				"There is an isolated sector of 1MB which has been infected by a virus. An antivirus program can clean the data of that sector at a rate of 5 kbits in 2^-7 seconds. The behaviour of the virus is to replicate itself by 2.5 times per second. (i.e infection of 1KB in a sector will become 2.5KB in 2.5 seconds)",
@@ -4776,7 +4931,7 @@
 				"VirusGuard(8*1024*1024,5.12*1024*1000,2.5);"
 			],
 			"tests": [
-				"assert( typeof VirusGuard() ==  \"object\", 'message: Return type should be a array.');",
+				"assert( typeof VirusGuard() ==  \"number\", 'message: Return type should be a number.');",
 				"assert( VirusGuard(8*1024*1024,5.12*1024*1000,2.5) == 3.625 , 'message: VirusGuard(8*1024*1024,5.12*1024*1000,2.5) should equal to 3.625');",
 				"assert( VirusGuard(8*1024*1024,5.12*1024*1000,2.5) == 3.625 , 'message: VirusGuard(8*1024*1024,5.12*1024*1000,2.5) should equal to 3.625');"
 			],
@@ -4789,7 +4944,7 @@
 		},
 		{
 			"id": "af2170cad53daa0770fabdea",
-			"title": "Challenge - 95",
+			"title": "Challenge - 99",
 			"description": [
 				"Write a function to take a positive integer and a prime number as a input and return true if the prime factors of the given positive integer are less than the given prime number",
 				"Example :",
@@ -4817,7 +4972,7 @@
 		},
 		{
 			"id": "a9bd25c716030ec90084d8a1",
-			"title": "Challenge - 96",
+			"title": "Challenge - 100",
 			"description": [
 				"Construct the following pattern in a X by X grid(Multidimensional array)",
 				"X should be an odd number",
@@ -4847,35 +5002,6 @@
 				"assert((function(){var tmp =[[\"o\",\"o\",\"o\",\"x\",\"o\",\"o\",\"o\"], [\"o\",\"o\",\"x\",\"x\",\"x\",\"o\",\"o\"], [\"o\",\"x\",\"x\",\"x\",\"x\",\"x\",\"o\"], [\"x\",\"x\",\"x\",\"x\",\"x\",\"x\",\"x\"], [\"o\",\"x\",\"x\",\"x\",\"x\",\"x\",\"o\"], [\"o\",\"o\",\"x\",\"x\",\"x\",\"o\",\"o\"], [\"o\",\"o\",\"o\",\"x\",\"o\",\"o\",\"o\"]];  var ancer = drowPattern(7); var flag = true; for(var i = 0; i < ancer.length; i++){ if(tmp[i].join('').toLowerCase() != ancer[i].join('').toLowerCase()){ flag = false; break;}} if(ancer.length > 0){ return flag } return false })(), 'message: Answer should be valid for any given input.');"
 			],
 			"type": "algorithms",
-			"isRequired": false,
-			"solutions": [],
-			"MDNlinks": [],
-			"challengeType": 1,
-			"translations": {}
-		},
-		{
-			"id": "587d7b8d367417b2b2512b5a",
-			"title": "Challenge - 97",
-			"description": [
-				"Find the number of subarrays in an array, which has the given sum.",
-				"Example :",
-				"Inputs <code>arr = [1,2,3,2,1,8,-3]</code>",
-				"Output = 3"
-			],
-			"challengeSeed": [
-				"function getSubArrayCount(arr, sum) {",
-				"  return 0;",
-				"}",
-				"",
-				"getSubArrayCount([1,2,3,2,1,8,-3],5);"
-			],
-			"tests": [
-				"assert( typeof getSubArrayCount([1,2,3,2,1,8,-3],5) ==  \"number\", 'message: Return type should be a number.');",
-				"assert(getSubArrayCount([1,2,3,2,1,8,-3],5) == 3, 'message: getSubArrayCount([1,2,3,2,1,8,-3],5) should equal to 3.');",
-				"assert(getSubArrayCount([1,2,3,4],10) == 1, 'message: getSubArrayCount([1,2,3,4],10) should equal to 1.');",
-				"assert(getSubArrayCount([1,2,3,5,4,1,3,2,3,1,1,4,0,1],5) == 8 && getSubArrayCount([1,2,3,4],10) == 1, 'message: Answer should be valid for any given input.');"
-			],
-			"type": "waypoint",
 			"isRequired": false,
 			"solutions": [],
 			"MDNlinks": [],
