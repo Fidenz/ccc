@@ -110,7 +110,15 @@ export default class ToolPanel extends PureComponent {
           )
         }
         <div className='button-spacer' />
-        <ButtonGroup
+		      <Button
+        block={ true }
+        bsStyle='primary'
+        className='btn-big'
+        onClick={ this.makeReset }
+        >
+        Reset
+      </Button>
+	  {/*   <ButtonGroup
           className='input-group'
           justified={ true }
           >
@@ -139,7 +147,7 @@ export default class ToolPanel extends PureComponent {
             >
             Bug
           </Button>
-        </ButtonGroup>
+	  </ButtonGroup>*/}
         <div className='button-spacer' />
       </div>
     );

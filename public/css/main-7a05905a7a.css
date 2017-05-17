@@ -14225,3 +14225,9 @@ a
 {
       font-family: 'Open Sans', sans-serif !important;
 }
+
+
+.navbar-nav > li > a {
+    font-size: 15px !important;
+    font-weight: normal !important;
+}

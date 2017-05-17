@@ -47,7 +47,7 @@ const certText = {
   [certTypes.fullStack]: 'Full Stack Certified'
 };
 
-const dateFormat = 'MMM DD, YYYY';
+const dateFormat = 'MMM DD, YYYY hh:mm:ss';
 
 function replaceScriptTags(value) {
   return value

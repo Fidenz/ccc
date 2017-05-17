@@ -9,8 +9,6 @@ nav.navbar.navbar-default.navbar-static-top.nav-height
                 .home-top-logo
         .collapse.navbar-collapse
             ul.nav.navbar-nav.navbar-right.hamburger-dropdown
-                li
-                    a.top-nav-text(href='/map') Challenges
                 if !user
                     li
                         a.top-nav-text(href='/signup') Sign Up
@@ -19,9 +17,9 @@ nav.navbar.navbar-default.navbar-static-top.nav-height
 
                 else
                     li.avatar-points
-                      a(href='/settings')
                         span.brownie-points-nav
                           span.hidden-md.hidden-lg #{user.username}
                           span.brownie-points [&thinsp;#{user.points}&thinsp;]
                         span.hidden-xs.hidden-sm.avatar
                           img.profile-picture.float-right(src='#{user.picture}')
+                          
