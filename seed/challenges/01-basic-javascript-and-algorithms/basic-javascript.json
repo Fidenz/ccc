@@ -4449,7 +4449,7 @@
 				"assert((function(){ var ancer = findNoteAndCoins(2316); if(ancer.join('') == [0,2,0,3,0,0,1,1,0,1].join('')) { return true} else {return false} } )(), 'message: findNoteAndCoins(2316) should return [0,2,0,3,0,0,1,1,0,1] ');",
 				"assert((function(){ var ancer = findNoteAndCoins(2100); if(ancer.join('') == [0,2,0,1,0,0,0,0,0,0].join('')) { return true} else {return false} } )(), 'message: findNoteAndCoins(2100) should return [0,2,0,1,0,0,0,0,0,0]');",
 				"assert((function(){ var ancer = findNoteAndCoins(3200); if(ancer.join('') == [0,3,0,2,0,0,0,0,0,0].join('')) { return true} else {return false} } )(), 'message: findNoteAndCoins(3200) should return [0,3,0,2,0,0,0,0,0,0]');",
-				"assert((function(){ var ancer = findNoteAndCoins(5366); var ancer2 = findNoteAndCoins(7202); if(ancer.join('') == [1,0,0,3,1,0,1,1,0,1].join('') && ancer2 == [1,2,0,2,0,0,0,0,2,0].join('') ) { return true} else {return false} } )(), 'message: Answer should be valid for any given input.');"
+				"assert((function(){ var ancer = findNoteAndCoins(5366); if(ancer.join('') == [1,0,0,3,1,0,1,1,0,1].join('')) { return true} else {return false} } )() && (function(){ var ancer = findNoteAndCoins(7202); if(ancer.join('') == [1,2,0,2,0,0,0,0,1,0].join('')) { return true} else {return false} } )(), 'message: Answer should be valid for any given input.');"
 			],
 			"type": "waypoint",
 			"isRequired": false,
@@ -4502,7 +4502,7 @@
 				"assert( typeof isPrimeFactorLargerThanFive(10) ==  \"boolean\", 'message: Return type should be a boolean.');",
 				"assert(isPrimeFactorLargerThanFive(10) == true, 'message: isPrimeFactorLargerThanFive(10) Should return true');",
 				"assert(isPrimeFactorLargerThanFive(13) == false, 'message: isPrimeFactorLargerThanFive(13) should return false');",
-				"assert(isPrimeFactorLargerThanFive(5) == true && sPrimeFactorLargerThanFive(7) == false, 'message: Answer should be valid for any given input.');"
+				"assert(isPrimeFactorLargerThanFive(5) == true && isPrimeFactorLargerThanFive(7) == false, 'message: Answer should be valid for any given input.');"
 			],
 			"type": "algorithms",
 			"isRequired": false,
@@ -4597,8 +4597,8 @@
 			],
 			"tests": [
 				"assert( typeof getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\") ==  \"object\", 'message: Return type should be a object.');",
-				"assert((function(){ var ancermatch = true; var data = [\"THIS IS ISSUE\", \"IS THIS ISSUE\", \"ISSUE THIS IS\", \"THIS ISSUE IS\", \"IS ISSUE THIS\", \"ISSUE IS THIS\"]; var ancers  = getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\"); for(i = 0 ; i< ancer.permutations.length; i++){ vat tmp = ancer.permutations[i].join(\" \"); if( !ancers.include(tmp)){ ancermatch = false; } } if ( ancer.words.sort().join(\" \") == [\"THIS\", \"IS\", \"ISSUE\"].sort().join(\" \") &&  ancermatch){ return true} else { return false})(), 'message: getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\") Should return  { \"word\" : [\"THIS\",\"IS\",\"ISSUE\"], \"permutations\" : [[\"THIS\",\"IS\",\"ISSUE\"], [\"IS\",\"THIS\",\"ISSUE\"], [\"ISSUE\", \"THIS\", \"IS\"], [\"THIS\", \"ISSUE\", \"IS\"], [\"IS\", \"ISSUE\", \"THIS\"], [\"ISSUE\",\"IS\",\"THIS\"]]}');",
-				"assert((function(){ var ancermatch = true; var data = [\"BETTY BOTTER BUTTER\",\"BOTTER BETTY BUTTER\",\"BUTTER BETTY BOTTER\",\"BETTY BUTTER BOTTER\",\"BOTTER BUTTER BETTY\",\"BUTTER BOTTER BETTY\"]; var ancers  = getPermutations(\"BETTY BOTTER BOUGHT SOME BUTTER\", \"TT\"); for(i = 0 ; i< ancer.permutations.length; i++){ vat tmp = ancer.permutations[i].join(\" \"); if( !ancers.include(tmp)){ ancermatch = false; } } if ( ancer.words.sort().join(\" \") == [\"BETTY\", \"BOTTER\", \"BUTTER\"].sort().join(\" \") &&  ancermatch){ return true} else { return false})() && (function(){ var ancermatch = true; var data = [\"THIS IS ISSUE\", \"IS THIS ISSUE\", \"ISSUE THIS IS\", \"THIS ISSUE IS\", \"IS ISSUE THIS\", \"ISSUE IS THIS\"]; var ancers  = getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\"); for(i = 0 ; i< ancer.permutations.length; i++){ vat tmp = ancer.permutations[i].join(\" \"); if( !ancers.include(tmp)){ ancermatch = false; } } if ( ancer.words.sort().join(\" \") == [\"THIS\", \"IS\", \"ISSUE\"].sort().join(\" \") &&  ancermatch){ return true} else { return false})(), 'message: Answer should be valid for any given input.');"
+				"assert( (function(){ var ancermatch = true; var data = [\"THIS IS ISSUE\", \"IS THIS ISSUE\", \"ISSUE THIS IS\", \"THIS ISSUE IS\", \"IS ISSUE THIS\", \"ISSUE IS THIS\"]; var ancers  = getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\"); for(i = 0 ; i< ancers.permutations.length; i++){ var tmp = ancers.permutations[i].join(\" \"); if( !data.includes(tmp)){ ancermatch = false; } } if ( ancers.words.sort().join(\" \") == [\"THIS\", \"IS\", \"ISSUE\"].sort().join(\" \") &&  ancermatch){ return true} else { return false} })(), 'message: getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\") Should return  { \"word\" : [\"THIS\",\"IS\",\"ISSUE\"], \"permutations\" : [[\"THIS\",\"IS\",\"ISSUE\"], [\"IS\",\"THIS\",\"ISSUE\"], [\"ISSUE\", \"THIS\", \"IS\"], [\"THIS\", \"ISSUE\", \"IS\"], [\"IS\", \"ISSUE\", \"THIS\"], [\"ISSUE\",\"IS\",\"THIS\"]]}');",
+				"assert( (function(){ var ancermatch = true; var data = [\"THIS IS ISSUE\", \"IS THIS ISSUE\", \"ISSUE THIS IS\", \"THIS ISSUE IS\", \"IS ISSUE THIS\", \"ISSUE IS THIS\"]; var ancers  = getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\"); for(i = 0 ; i< ancers.permutations.length; i++){ var tmp = ancers.permutations[i].join(\" \"); if( !data.includes(tmp)){ ancermatch = false; } } if ( ancers.words.sort().join(\" \") == [\"THIS\", \"IS\", \"ISSUE\"].sort().join(\" \") &&  ancermatch){ return true} else { return false} })() && (function(){ var ancermatch = true; var data = [\"BETTY BOTTER BUTTER\",\"BOTTER BETTY BUTTER\",\"BUTTER BETTY BOTTER\",\"BETTY BUTTER BOTTER\",\"BOTTER BUTTER BETTY\",\"BUTTER BOTTER BETTY\"]; var ancers  = getPermutations(\"BETTY BOTTER BOUGHT SOME BUTTER\", \"TT\"); for(i = 0 ; i< ancers.permutations.length; i++){ var tmp = ancers.permutations[i].join(\" \"); if( !data.includes(tmp)){ ancermatch = false; } } if ( ancers.words.sort().join(\" \") == [\"BETTY\", \"BOTTER\", \"BUTTER\"].sort().join(\" \") &&  ancermatch){ return true} else { return false} })(), 'message: Answer should be valid for any given input.');"
 			],
 			"type": "waypoint",
 			"isRequired": false,
@@ -4744,13 +4744,13 @@
 				"  }",
 				"}",
 				"",
-				"NewSpread();"
+				"NewSpread(15, 50000);"
 			],
 			"tests": [
 				"assert( typeof NewSpread(15,50000) ==  \"object\", 'message: Return type should be a array.');",
-				"assert( NewSpread(15,50000) == [364, \"10:30\"].join('') , 'message: NewSpread(15,50000) should return [364, \"10:30\"]');",
-				"assert( NewSpread(25,55000) == [40, \"12:10.000000000000018\"].join('') , 'message: NewSpread(15,50000) should return [364, \"10:30\"]');",
-				"assert( NewSpread(25,55000) == [40, \"12:10.000000000000018\"].join('') && NewSpread(36,40000) == [13, \"14:0\"].join('') , 'message: Answer should be valid for any given input.');"
+				"assert( NewSpread(15,50000).join('') == [364, \"10:30\"].join('') , 'message: NewSpread(15,50000) should return [364, \"10:30\"]');",
+				"assert( NewSpread(25,55000).join('') == [40, \"12:10.000000000000018\"].join('') , 'message: NewSpread(15,50000) should return [364, \"10:30\"]');",
+				"assert( NewSpread(25,55000).join('') == [40, \"12:10.000000000000018\"].join('') && NewSpread(36,40000) == [13, \"14:0\"].join('') , 'message: Answer should be valid for any given input.');"
 			],
 			"type": "waypoint",
 			"isRequired": false,
@@ -4764,7 +4764,7 @@
 			"title": "Challenge - 94",
 			"description": [
 				"<b>The Virus</b>",
-				"There is an isolated sector in a disk of size <code>1</code> mb where a virus has corrupted all the data. An antivirus program starts to run on this sector which rectify the corrupted data at a rate of 5 kbits in <code>2^-7</code> seconds. The behavior of the virus is to replicate its current corrupted bits by <code>2.5</code> times per second; Find",
+				"There is an isolated sector of 1MB which has been infected by a virus. An antivirus program can clean the data of that sector at a rate of 5 kbits in 2^-7 seconds. The behaviour of the virus is to replicate itself by 2.5 times per second. (i.e infection of 1KB in a sector will become 2.5KB in 2.5 seconds)",
 				"<ol><li>How long will it take the antivirus to clean the sector?</li></ol>"
 			],
 			"challengeSeed": [
@@ -4844,10 +4844,38 @@
 			"tests": [
 				"assert( typeof drowPattern(5) ==  \"object\", 'message: Return type should be a object.');",
 				"assert((function(){var tmp =[[\"o\",\"o\",\"x\",\"o\",\"o\"],[\"o\",\"x\",\"x\",\"x\",\"o\"],[\"x\",\"x\",\"x\",\"x\",\"x\"],[\"o\",\"x\",\"x\",\"x\",\"o\"],[\"o\",\"o\",\"x\",\"o\",\"o\"]];  var ancer = drowPattern(5); var flag = true; for(var i = 0; i < ancer.length; i++){ if(tmp[i].join('').toLowerCase() != ancer[i].join('').toLowerCase()){ flag = false; break;}} if(ancer.length > 0){ return flag } return false })(), 'message: drowPattern(5) should return [[\"o\",\"o\",\"x\",\"o\",\"o\"],[\"o\",\"x\",\"x\",\"x\",\"o\"],[\"x\",\"x\",\"x\",\"x\",\"x\"],[\"o\",\"x\",\"x\",\"x\",\"o\"],[\"o\",\"o\",\"x\",\"o\",\"o\"]]');",
-				"assert((function(){var tmp =[[\"o\",\"o\",\"o\",\"x\",\"o\",\"o\",\"o\"], [\"o\",\"o\",\"x\",\"x\",\"x\",\"o\",\"o\"], [\"o\",\"x\",\"x\",\"x\",\"x\",\"x\",\"o\"], [\"x\",\"x\",\"x\",\"x\",\"x\",\"x\",\"x\"], [\"o\",\"x\",\"x\",\"x\",\"x\",\"x\",\"o\"], [\"o\",\"o\",\"x\",\"x\",\"x\",\"o\",\"o\"], [\"o\",\"o\",\"o\",\"x\",\"o\",\"o\",\"o\"]];  var ancer = drowPattern(7); var flag = true; for(var i = 0; i < ancer.length; i++){ if(tmp[i].join('').toLowerCase() != ancer[i].join('').toLowerCase()){ flag = false; break;}} if(ancer.length > 0){ return flag } return false })(), 'message: Answer should be valid for any given input.');",
-				"assert(hasLessPrimeFactor(20,7) == false, 'message: ');"
+				"assert((function(){var tmp =[[\"o\",\"o\",\"o\",\"x\",\"o\",\"o\",\"o\"], [\"o\",\"o\",\"x\",\"x\",\"x\",\"o\",\"o\"], [\"o\",\"x\",\"x\",\"x\",\"x\",\"x\",\"o\"], [\"x\",\"x\",\"x\",\"x\",\"x\",\"x\",\"x\"], [\"o\",\"x\",\"x\",\"x\",\"x\",\"x\",\"o\"], [\"o\",\"o\",\"x\",\"x\",\"x\",\"o\",\"o\"], [\"o\",\"o\",\"o\",\"x\",\"o\",\"o\",\"o\"]];  var ancer = drowPattern(7); var flag = true; for(var i = 0; i < ancer.length; i++){ if(tmp[i].join('').toLowerCase() != ancer[i].join('').toLowerCase()){ flag = false; break;}} if(ancer.length > 0){ return flag } return false })(), 'message: Answer should be valid for any given input.');"
 			],
 			"type": "algorithms",
+			"isRequired": false,
+			"solutions": [],
+			"MDNlinks": [],
+			"challengeType": 1,
+			"translations": {}
+		},
+		{
+			"id": "a77dbc43c33f39daa4429b4f",
+			"title": "Challenge - 97",
+			"description": [
+				"Find the number of subarrays in an array, which has the given sum.",
+				"Example :",
+				"Inputs <code>arr = [1,2,3,2,1,8,-3]</code>",
+				"Output = 3"
+			],
+			"challengeSeed": [
+				"function getSubArrayCount(arr, sum) {",
+				"  return 0;",
+				"}",
+				"",
+				"getSubArrayCount([1,2,3,2,1,8,-3],5);"
+			],
+			"tests": [
+				"assert( typeof getSubArrayCount([1,2,3,2,1,8,-3],5) ==  \"number\", 'message: Return type should be a number.');",
+				"assert(getSubArrayCount([1,2,3,2,1,8,-3],5) == 3, 'message: getSubArrayCount([1,2,3,2,1,8,-3],5) should equal to 3.');",
+				"assert(getSubArrayCount([1,2,3,4],10) == 1, 'message: getSubArrayCount([1,2,3,4],10) should equal to 1.');",
+				"assert(getSubArrayCount([1,2,3,5,4,1,3,2,3,1,1,4,0,1],5) == 8 && getSubArrayCount([1,2,3,4],10) == 1, 'message: Answer should be valid for any given input.');"
+			],
+			"type": "waypoint",
 			"isRequired": false,
 			"solutions": [],
 			"MDNlinks": [],
