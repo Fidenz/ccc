@@ -41,7 +41,7 @@ export class ShowMap extends PureComponent {
 
   renderSuperBlocks(superBlocks) {
     if (!Array.isArray(superBlocks) || !superBlocks.length) {
-      return <div>No Super Blocks</div>;
+      return <div>No challenges found</div>;
     }
     return superBlocks.map(dashedName => (
       <SuperBlock

@@ -58,7 +58,7 @@ export class SuperBlock extends PureComponent {
 
   renderBlocks(blocks) {
     if (!Array.isArray(blocks) || !blocks.length) {
-      return <div>No Blocks Found</div>;
+      return <div>No Challenges Found</div>;
     }
     return blocks.map(dashedName => (
       <Block

@@ -4391,7 +4391,7 @@
       "assert(findWordsWithLengthRange(\" I am not a product of my circumstances. I am a product of my decisions\", 15,17) == 0, 'message: Should equal to 0');"
     ],
     "type": "waypoint",
-    "isRequired": true,
+    "isRequired": false,
     "solutions": [
     ],
     "MDNlinks": [
@@ -4426,7 +4426,7 @@
       "assert(encrypt('TEST THIS STRING', 15) == \"ITHI IWXH HIGXCV\", 'message: encrypt('TEST THIS STRING', 15) Should equal to “ITHI IWXH HIGXCV”');"
     ],
     "type": "waypoint",
-    "isRequired": true,
+    "isRequired": false,
     "solutions": [
     ],
     "MDNlinks": [
@@ -4461,7 +4461,7 @@
       "assert((function(){ var ancer = findNoteAndCoins(7202); if(ancer.join('') == [1,2,0,2,0,0,0,0,1,0].join('')) { return true} else {return false} } )(), 'message: findNoteAndCoins(7202) should return [1,2,0,2,0,0,0,0,2,0]');"
     ],
     "type": "waypoint",
-    "isRequired": true,
+    "isRequired": false,
     "solutions": [
     ],
     "MDNlinks": [
@@ -4490,7 +4490,7 @@
       "assert( (function(){ var tmp = [{\"yom\" : \"2013\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"mazda\"}]; var ancer = findMatches([{\"yom\" : \"2010\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"toyota\"}, {\"yom\" : \"2012\", \"capacity\" : \"1500\",\"weight\" : \"1000\", \"make\" : \"nissan\"}, {\"yom\" : \"2013\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"mazda\"}], {\"yom\" : \"2013\"}); var flag = false; for (var i = 0; i < ancer.lenght; i++ ){  flag = false; for(var c =0; c < tmp.lenght; c++){ if(JSON.stringify(tmp[c]) === JSON.stringify(ancer[i])){ flag = true; } } } return flag;})(), 'message: Should equal to [{\"yom\" : \"2013\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"mazda\"}]');"
       ],
     "type": "waypoint",
-    "isRequired": true,
+    "isRequired": false,
     "solutions": [
     ],
     "MDNlinks": [
@@ -4520,7 +4520,7 @@
         "assert(isPrimeFactorLargerThanFive(13) == false, 'message: ');"
       ],
       "type": "algorithms",
-      "isRequired": true,
+      "isRequired": false,
       "solutions": [],
       "MDNlinks": [],
       "challengeType": 1,
@@ -4549,7 +4549,7 @@
         "assert(makeAlphabetSentenceSort(\"he was curious about how it would taste, so he took a small bite.\") == \"a eh it os eh how asw koot .beit allms dlouw abotu ,aestt ciorsuu\", 'message: ');"
       ],
       "type": "waypoint",
-      "isRequired": true,
+      "isRequired": false,
       "solutions": [],
       "MDNlinks": [],
       "challengeType": 1,
@@ -4584,7 +4584,7 @@
         "assert(getNthPosition(\"abc\",\"435d\",100) == \"b\", 'message: Should equal to b');"
       ],
       "type": "waypoint",
-      "isRequired": true,
+      "isRequired": false,
       "solutions": [],
       "MDNlinks": [],
       "challengeType": 1,
@@ -4613,7 +4613,7 @@
         "assert((function(){ var ancermatch = true; var data = [\"BETTY BOTTER BUTTER\",\"BOTTER BETTY BUTTER\",\"BUTTER BETTY BOTTER\",\"BETTY BUTTER BOTTER\",\"BOTTER BUTTER BETTY\",\"BUTTER BOTTER BETTY\"]; var ancers  = getPermutations(\"BETTY BOTTER BOUGHT SOME BUTTER\", \"TT\"); for(i = 0 ; i< ancer.permutations.lenght; i++){ vat tmp = ancer.permutations[i].join(\" \"); if( !ancers.include(tmp)){ ancermatch = false; } } if ( ancer.words.sort().join(\" \") == [\"BETTY\", \"BOTTER\", \"BUTTER\"].sort().join(\" \") &&  ancermatch){ return true} else { return false})(), 'message: ');"
       ],
       "type": "waypoint",
-      "isRequired": true,
+      "isRequired": false,
       "solutions": [],
       "MDNlinks": [],
       "challengeType": 1,
@@ -4643,7 +4643,7 @@
         "assert(findNthLargest([1,2,3,5,7,4,9,6], 8) == 0, 'message: Should equal to 0');"
       ],
       "type": "waypoint",
-      "isRequired": true,
+      "isRequired": false,
       "solutions": [
       ],
       "MDNlinks": [
@@ -4678,7 +4678,7 @@
         "assert(getCount([0,4,8,0,6,0,6,6], 12) == 4, 'message: Should equal to 4');"
       ],
       "type": "waypoint",
-      "isRequired": true,
+      "isRequired": false,
       "solutions": [
       ],
       "MDNlinks": [
@@ -4711,7 +4711,7 @@
         "assert(longestUniqueString(\"qqplsdcgvd\") == 1, 'message: Should equal to 1.');"
       ],
       "type": "waypoint",
-      "isRequired": true,
+      "isRequired": false,
       "solutions": [
       ],
       "MDNlinks": [
@@ -4745,7 +4745,7 @@
         "assert( (function(){  var ancer = rearrange([5,6,4,2,3,8,7]); var ancer2 = rearrange([5,6,4,2,3,8,7,1]); if(ancer.join('') == [3,2,5,4,7,6,8].join('') && ancer2.join('') == [2,1,4,3,6,5,8,7].join('') ){ return true; } return false;  })(), 'message: rearrange([5,6,4,2,3,8,7]) should return [3,2,5,4,7,6,8]');"
       ],
       "type": "waypoint",
-      "isRequired": true,
+      "isRequired": false,
       "solutions": [
       ],
       "MDNlinks": [
@@ -4778,7 +4778,7 @@
       "assert((function(){ var ancer = NewSpread(15,50000); if(ancer.join('') == [364, \"10:30\"].join('')) { return true} else {return false} } )() , 'message:');"
     ],
     "type": "waypoint",
-    "isRequired": true,
+    "isRequired": false,
     "solutions": [
     ],
     "MDNlinks": [
@@ -4808,7 +4808,7 @@
       "assert((function(){ var ancer = VirusGuard(8*1024*1024,5.12*1024*1000,2.5); if(ancer.join('') == [true, 3.625].join('')) { return true} else {return false} } )(), 'message:');"
     ],
     "type": "waypoint",
-    "isRequired": true,
+    "isRequired": false,
     "solutions": [
     ],
     "MDNlinks": [
@@ -4885,7 +4885,7 @@
       "assert((function(){ var ancer = BestRoute(); if(ancer.join('') == [[\"A\",\"H\",\"N\"], [\"B\", \"I\", \"J\", \"P\"]].join('')) { return true} else {return false} } )(), 'message:');"
     ],
     "type": "waypoint",
-    "isRequired": true,
+    "isRequired": false,
     "solutions": [
     ],
     "MDNlinks": [
@@ -4915,7 +4915,7 @@
       "assert(hasLessPrimeFactor(20,7) == false, 'message: ');"
     ],
     "type": "algorithms",
-    "isRequired": true,
+    "isRequired": false,
     "solutions": [],
     "MDNlinks": [],
     "challengeType": 1,
@@ -4953,7 +4953,7 @@
         "assert(hasLessPrimeFactor(20,7) == false, 'message: ');"
       ],
       "type": "algorithms",
-      "isRequired": true,
+      "isRequired": false,
       "solutions": [],
       "MDNlinks": [],
       "challengeType": 1,
