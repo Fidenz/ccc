@@ -144,6 +144,11 @@
       "description": "The challenge last visited by the user",
       "default": ""
     },
+    "userrole": {
+      "type": "string",
+      "description": "The challenge last visited by the user",
+      "default": "camper"
+    },
     "currentChallenge": {
       "type": {},
       "description": "deprecated"

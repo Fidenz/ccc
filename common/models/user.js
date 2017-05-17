@@ -5,6 +5,7 @@ import dedent from 'dedent';
 import debugFactory from 'debug';
 import { isEmail } from 'validator';
 import path from 'path';
+import loopback from 'loopback';
 
 import { saveUser, observeMethod } from '../../server/utils/rx';
 import { blacklistedUsernames } from '../../server/utils/constants';
@@ -213,19 +214,37 @@ module.exports = function(User) {
     // the temp access token to allow password reset
     debug(info.accessToken.id);
     // requires AccessToken.belongsTo(User)
+//    var mailOptions = {
+//      to: info.email,
+//      from: process.env.INFO_EMAIL,
+//      subject: 'Password Reset Request',
+//      text: `
+//        Hi!,\n
+//        This email is confirming that you requested to reset your password for your codeCampChallenge account.
+//        Go to below url to reset your password.
+//        ${ url }
+//        \n
+//        Happy Coding!
+//      `
+//    };
+    const renderNotifyEmail = loopback.template(path.join(
+        __dirname,
+        '..',
+        'views',
+        'emails',
+        'a-extend-user-reset.ejs'
+      ));
     var mailOptions = {
-      to: info.email,
-      from: process.env.INFO_EMAIL,
-      subject: 'Password Reset Request',
-      text: `
-        Hi!,\n
-        This email is confirming that you requested to reset your password for your codeCampChallenge account.
-        Go to below url to reset your password.
-        ${ url }
-        \n
-        Happy Coding!
-      `
-    };
+              type: 'email',
+              to: info.email,
+              from: process.env.INFO_EMAIL,
+              subject: 'Password Reset Request' ,
+              protocol: isDev ? null : 'https',
+              host: isDev ? devHost : process.env.INFO_EMAIL_HOST,
+              port: isDev ? null : 443,
+              html: renderNotifyEmail({url }),
+              redirect: '/email-signin'
+            };
 
     return User.app.models.Email.send(mailOptions, function(err) {
       if (err) { console.error(err); }

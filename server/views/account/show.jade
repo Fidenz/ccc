@@ -22,7 +22,7 @@ block content
             h1.flat-top.wrappable= name
             h1.flat-top.wrappable= location
             p.flat-top.bio= bio
-            h1.flat-top.text-primary= "[ " + (progressTimestamps.length - 1) + " ]"
+            h1.flat-top.text-primary= "[ " + (progressTimestamps.length) + " ]"
             if pledge
                 .spacer
                   h4
@@ -90,6 +90,14 @@ block content
                               tr
                                   th.col-xs-5 Projects
                                   th.col-xs-2.hidden-xs Completed
+                                  th.col-xs-2.hidden-xs Last Updated
+                          for challenge in projects
+                              tr
+                                  td.col-xs-5.hidden-xs
+                                    a(href='/challenges/#{challenge.block}/#{challenge.dashedName}', target='_blank')= challenge.name
+                                  td.col-xs-2.hidden-xs= challenge.completedDate ? challenge.completedDate : 'Not Available'
+                                  td.col-xs-2.hidden-xs= challenge.lastUpdated ? challenge.lastUpdated : ''
+                                 
               if (algorithms.length > 0)
                   .col-sm-12
                       table.table.table-striped
@@ -97,10 +105,13 @@ block content
                               tr
                                   th.col-xs-5 Algorithms
                                   th.col-xs-2.hidden-xs Completed
+                                  th.col-xs-2.hidden-xs Last Updated
                           for challenge in algorithms
                               tr
                                   td.col-xs-5.hidden-xs= challenge.name
                                   td.col-xs-2.hidden-xs= challenge.completedDate ? challenge.completedDate : 'Not Available'
+                                  td.col-xs-2.hidden-xs= challenge.lastUpdated ? challenge.lastUpdated : ''
+
               if (challenges.length > 0)
                   .col-sm-12
                       table.table.table-striped
@@ -108,7 +119,10 @@ block content
                               tr
                                   th.col-xs-5 Challenges
                                   th.col-xs-2.hidden-xs Completed
+                                  th.col-xs-2.hidden-xs Last Updated
                           for challenge in challenges
                               tr
                                   td.col-xs-5.hidden-xs= challenge.name
                                   td.col-xs-2.hidden-xs= challenge.completedDate ? challenge.completedDate : 'Not Available'
+                                  td.col-xs-2.hidden-xs= challenge.lastUpdated ? challenge.lastUpdated : ''
+

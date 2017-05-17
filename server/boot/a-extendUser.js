@@ -58,38 +58,38 @@ module.exports = function(app) {
       debug(req.body);
       if(!req.body.userexists)
       {
-           debug('user created, sending email');
-            if (!user.email || !isEmail(user.email)) { return next(); }
-            const redirect = req.session && req.session.returnTo ?
-              req.session.returnTo :
-              '/';
-            var mailOptions = {
-              type: 'email',
-              to: user.email,
-              from: 'Team@codecampchallenge.com',
-              subject: 'Welcome to CodeCampChallenge' ,
-              protocol: isDev ? null : 'https',
-              host: isDev ? devHost : 'cccstaging.heroku.com',
-              port: isDev ? null : 443,
-              template: path.join(
-                __dirname,
-                '..',
-                'views',
-                'emails',
-                'a-extend-user-welcome.ejs'
-              ),
-              redirect: '/email-signin'
-            };
-
-            debug('sending welcome email');
-            return user.verify(mailOptions, function(err) {
-              if (err) { return next(err); }
-              req.flash('success', {
-                msg: [ 'Congratulations ! We\'ve created your account. '
-                     ].join('')
-              });
-              return res.redirect('/email-signin');
+            req.flash('success', {
+              msg: [ 'Congratulations ! We\'ve created your account. '
+                   ].join('')
             });
+            return res.redirect('/email-signin');
+//            var mailOptions = {
+//              type: 'email',
+//              to: user.email,
+//              from: 'Team@codecampchallenge.com',
+//              subject: 'Welcome to CodeCampChallenge' ,
+//              protocol: isDev ? null : 'https',
+//              host: isDev ? devHost : 'cccstaging.heroku.com',
+//              port: isDev ? null : 443,
+//              template: path.join(
+//                __dirname,
+//                '..',
+//                'views',
+//                'emails',
+//                'a-extend-user-welcome.ejs'
+//              ),
+//              redirect: '/email-signin'
+//            };
+//
+//            debug('sending welcome email');
+//            return user.verify(mailOptions, function(err) {
+//              if (err) { return next(err); }
+//              req.flash('success', {
+//                msg: [ 'Congratulations ! We\'ve created your account. '
+//                     ].join('')
+//              });
+//              return res.redirect('/email-signin');
+//            });
       }
    
   });
