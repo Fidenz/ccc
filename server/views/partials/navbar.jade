@@ -11,11 +11,16 @@ nav.navbar.navbar-default.navbar-static-top.nav-height
             ul.nav.navbar-nav.navbar-right.hamburger-dropdown
                 if !user
                     li
+                        a.top-nav-text(href='/user-guide') Instructions
+                    li
                         a.top-nav-text(href='/signup') Sign Up
                     li
                         a.top-nav-text(href='/email-signin') Sign In
+                    
 
                 else
+                    li
+                        a.top-nav-text(href='/user-guide') Instructions
                     li.avatar-points
                         span.brownie-points-nav
                           span.hidden-md.hidden-lg #{user.username}

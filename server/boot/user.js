@@ -171,6 +171,7 @@ module.exports = function(app) {
   router.get('/email-signin', getEmailSignin);
   router.get('/deprecated-signin', getDepSignin);
   router.get('/update-email', getUpdateEmail);
+  router.get('/user-guide', getUserGuide);
   router.get(
     '/delete-my-account',
     sendNonUserToMap,
@@ -271,6 +272,12 @@ module.exports = function(app) {
     }
     return res.render('account/update-email', {
       title: 'Update your Email'
+    });
+  }
+  
+  function getUserGuide(req, res) {
+    return res.render('resources/user-guide', {
+      title: 'Instructions'
     });
   }
 
