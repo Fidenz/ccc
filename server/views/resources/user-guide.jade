@@ -1,12 +1,12 @@
 extends ../layout
 block content
     .text-center
-        h1.landing-heading codeCampChallenge Instructions.        
+        h3.landing-heading codeCampChallenge Instructions.        
         .col-xs-12.col-sm-8.col-sm-offset-2.text-left.large-p
             ul.guildlinelist
                 li
                   | Before participating, you should register yourselves with the competition using your order reference number in the ticket. 
-                  a(href='http://codeblooded.mic.lk', traget='_blan') http://codeblooded.mic.lk
+                  a(href="http://codeblooded.mic.lk")
                 li Competition will end at 1.30 a.m. on 18th May 2017.
                 li Your registration information will be tracked by the organising committee.
                 li
@@ -26,8 +26,12 @@ block content
                 li
                   | Decision of the organizing committee will be the final decision in any conflict resolution.
 
+        h3.landing-heading Connectivity Details.
+        div(style='font-size:20px')
+          b SSID :
+          |  CodeCamp_IO17SL
+        div(style='font-size:20px')
+          b Password :
+          |  ccc@io#2017
         hr
-        h3.landing-heading
-        | Connectivity Details.
-        div SSID : CodeCamp_IO17SL
-        div Password : @io#2017
+
