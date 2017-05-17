@@ -6,7 +6,7 @@
     display: block;
     width: 100vw;
     height: 100vh;
-    background: url('http://www.rspb.org.uk/community/resized-image.ashx/__size/550x0/__key/telligent-evolution-components-attachments/13-12261-00-00-00-77-29-48/500x500.gif');
+    /*background: url('http://www.rspb.org.uk/community/resized-image.ashx/__size/550x0/__key/telligent-evolution-components-attachments/13-12261-00-00-00-77-29-48/500x500.gif');*/
     background-repeat: no-repeat;
     background-size: 75%;
     background-position: center;
@@ -16,16 +16,17 @@
 
   .small-screen-img-text {
     font-family: 'Open Sans', sans-serif;
-    font-size: 40px;
+    font-size: 25px;
     text-align: center;
-    line-height: 100vh;
+    line-height: 30px;
+    padding: 40vh 0;
   }
 }
-/*@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 781px) {
   .small-screen-msg {
     display: none;
   }
-}*/
+}
 
 
 /*.nav-header-items {
