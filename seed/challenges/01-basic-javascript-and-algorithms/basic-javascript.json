@@ -1,6 +1,6 @@
 {
   "name": "Challenges",
-  "time": "5 hours",
+  "time": "4 hours",
   "order": 1,
   "helpRoom": "HelpJavaScript",
   "challenges": [
@@ -979,7 +979,7 @@
         "<blockquote>'My name is Alan,' + ' I concatenate.'</blockquote>",
         "<strong>Note</strong><br>Watch out for spaces. Concatenation does not add spaces between concatenated strings, so you'll need to add them yourself.",
         "<hr>",
-        "Build <code>myStr</code> from the strings <code>\"This is the start. \"</code> and <code>\"This is the end.\"</code> using the <code>+</code> operator."
+        "Build <code>myStr</code> from the strings <code>\"This is the start sentence. \"</code> and <code>\"This is the end sentence.\"</code> using the <code>+</code> operator."
       ],
       "releasedOn": "January 1, 2016",
       "challengeSeed": [
@@ -1033,7 +1033,7 @@
         "We can also use the <code>+=</code> operator to <dfn>concatenate</dfn> a string onto the end of an existing string variable. This can be very helpful to break a long string over several lines.",
         "<strong>Note</strong><br>Watch out for spaces. Concatenation does not add spaces between concatenated strings, so you'll need to add them yourself.",
         "<hr>",
-        "Build <code>myStr</code> over several lines by concatenating these two strings: <code>\"This is the first sentence. \"</code> and <code>\"This is the second sentence.\"</code> using the <code>+=</code> operator. Use the <code>+=</code> operator similar to how it is shown in the editor. Start by assigning the first string to <code>myStr</code>, then add on the second string."
+        "Build <code>myStr</code> over several lines by concatenating these two strings: <code>\"This is the first sentence. \"</code> , <code>\"This is the second sentence.\"</code> and <code>\" This is the third sentence.\"</code> using the <code>+=</code> operator. Use the <code>+=</code> operator similar to how it is shown in the editor. Start by assigning the first string to <code>myStr</code>, then add on the second string."
       ],
       "releasedOn": "January 1, 2016",
       "challengeSeed": [
@@ -4372,7 +4372,7 @@
     "id": "bd7158d2c442eddfbeb5bd1f",
     "title": "Challenge - 81",
     "description": [
-      "Return the number of words in this sentence which has number of characters between param 2(min) and 3(max).",
+      "Return the number of words in this sentence which has number of characters between param min (2) and max (3).",
       "Length could include both min & max"
     ],
     "challengeSeed": [
@@ -4384,11 +4384,10 @@
     ],
     "tests": [
       "assert( typeof findWordsWithLengthRange(\"The quick brown fox jumped over the lazy dog\", 2,4) ==  \"number\", 'message: Return type should be a number.');",
-      "assert(findWordsWithLengthRange(\"The quick brown fox jumped over the lazy dog\", 2,4) == 6, 'message: Should equal to 6');",
-      "assert(findWordsWithLengthRange(\"American election is over\", 1,1) == 0, 'message: Should equal to 4');",
-      "assert(findWordsWithLengthRange(\"Life is about making an impact, not making an income\", 6,8) == 4, 'message: Should equal to 4');",
-      "assert(findWordsWithLengthRange(\" We become what we think about\", 8,10) == 0, 'message: Should equal to 0');",
-      "assert(findWordsWithLengthRange(\" I am not a product of my circumstances. I am a product of my decisions\", 15,17) == 0, 'message: Should equal to 0');"
+      "assert(findWordsWithLengthRange(\"The quick brown fox jumped over the lazy dog\", 2,4) == 6, 'message: findWordsWithLengthRange(\"The quick brown fox jumped over the lazy dog\", 2,4) Return value should equal to 6');",
+      "assert(findWordsWithLengthRange(\"American election is over\", 1,1) == 0, 'message: findWordsWithLengthRange(\"American election is over\", 1,1) return value should equal to 4');",
+      "assert(findWordsWithLengthRange(\"Life is about making an impact, not making an income\", 6,8) == 4, 'message: findWordsWithLengthRange(\"Life is about making an impact, not making an income\", 6,8) Return value should equal to 4');",
+      "assert(findWordsWithLengthRange(\" We become what we think about\", 8,10) == 0 && findWordsWithLengthRange(\" I am not a product of my circumstances. I am a product of my decisions\", 15,17) == 0, 'message: Answer should be valid for any given input.');"
     ],
     "type": "waypoint",
     "isRequired": false,
@@ -4418,12 +4417,11 @@
       "encrypt('ABC', 4);"
     ],
     "tests": [
-      "assert( typeof encrypt('ABC', 4) ==  \"string\", 'message: Return type should be a string.');",
-      "assert(encrypt('ABC', 4)  == \"EFG\", 'message: encrypt('ABC', 4) Should equal to “EFG” ');",
-      "assert(encrypt('AB C', 2) == \"CD E\", 'message: encrypt('AB C', 2) Should equal to “CD E”');",
-      "assert(encrypt('ABC DEF', 2) == \"CDE FGH\", 'message: encrypt('ABC DEF', 2) Should equal to “CDE FGH”');",
-      "assert(encrypt('CODE CAMP CHALLENGE', 15) == \"RDST RPBE RWPAATCVT\", 'message: encrypt('CODE CAMP CHALLENGE', 15) Should equal to “MYNO MKWZ MRKVVOXQO”');",
-      "assert(encrypt('TEST THIS STRING', 15) == \"ITHI IWXH HIGXCV\", 'message: encrypt('TEST THIS STRING', 15) Should equal to “ITHI IWXH HIGXCV”');"
+      "assert( typeof encrypt(\"ABC\", 4) ==  \"string\", 'message: Return type should be a string.');",
+      "assert(encrypt(\"ABC\", 4)  == \"EFG\", 'message: encrypt(\"ABC\", 4) Should equal to “EFG” ');",
+      "assert(encrypt(\"AB C\", 2) == \"CD E\", 'message: encrypt(\"AB C\", 2) Should equal to “CD E”');",
+      "assert(encrypt(\"ABC DEF\", 2) == \"CDE FGH\", 'message: encrypt(\"ABC DEF\", 2) Should equal to “CDE FGH”');",
+      "assert(encrypt(\"CODE CAMP CHALLENGE\", 15) == \"RDST RPBE RWPAATCVT\" && encrypt(\"TEST THIS STRING\", 15) == \"ITHI IWXH HIGXCV\", 'message: Answer should be valid for any given input.');"
     ],
     "type": "waypoint",
     "isRequired": false,
@@ -4441,6 +4439,7 @@
     "description": [
       "Write an algorithm to identify what notes you need.",
       "Notes/Coins available <code>5000,1000,500,100,50,20,10,5,2,1</code>",
+      "Please give priority to larger notes.",
       "Example :",
       "Inputs <code>salary = 2316</code>",
       "Output = Count of each notes/Coins used. (respective to index notes/Coins) <code>[0,2,0,3,0,0,1,1,0,1]</code>"
@@ -4457,8 +4456,7 @@
       "assert((function(){ var ancer = findNoteAndCoins(2316); if(ancer.join('') == [0,2,0,3,0,0,1,1,0,1].join('')) { return true} else {return false} } )(), 'message: findNoteAndCoins(2316) should return [0,2,0,3,0,0,1,1,0,1] ');",
       "assert((function(){ var ancer = findNoteAndCoins(2100); if(ancer.join('') == [0,2,0,1,0,0,0,0,0,0].join('')) { return true} else {return false} } )(), 'message: findNoteAndCoins(2100) should return [0,2,0,1,0,0,0,0,0,0]');",
       "assert((function(){ var ancer = findNoteAndCoins(3200); if(ancer.join('') == [0,3,0,2,0,0,0,0,0,0].join('')) { return true} else {return false} } )(), 'message: findNoteAndCoins(3200) should return [0,3,0,2,0,0,0,0,0,0]');",
-      "assert((function(){ var ancer = findNoteAndCoins(5366); if(ancer.join('') == [1,0,0,3,1,0,1,1,0,1].join('')) { return true} else {return false} } )(), 'message: findNoteAndCoins(5366) should return [1,0,0,3,1,0,1,1,0,1]');",
-      "assert((function(){ var ancer = findNoteAndCoins(7202); if(ancer.join('') == [1,2,0,2,0,0,0,0,1,0].join('')) { return true} else {return false} } )(), 'message: findNoteAndCoins(7202) should return [1,2,0,2,0,0,0,0,2,0]');"
+      "assert((function(){ var ancer = findNoteAndCoins(5366); var ancer2 = findNoteAndCoins(7202); if(ancer.join('') == [1,0,0,3,1,0,1,1,0,1].join('') && ancer2 == [1,2,0,2,0,0,0,0,2,0].join('') ) { return true} else {return false} } )(), 'message: Answer should be valid for any given input.');"
     ],
     "type": "waypoint",
     "isRequired": false,
@@ -4474,7 +4472,7 @@
     "id": "a302f7aae1aa3152a5b413bc",
     "title": "Challenge - 84",
     "description": [
-      "Write a function to identify objects in first array, which matches all key/value pairs in second object."
+      "Write a function to identify objects in first array, which matches all the attribute and value pairs in second object."
     ],
     "challengeSeed": [
       "function findMatches(arr,obj) {",
@@ -4485,9 +4483,8 @@
     ],
     "tests": [
       "assert(typeof findMatches([{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"2\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}],{\"X\":\"1\", \"Y\":\"2\"}) ==  \"object\", 'message: Return type should be a array.');",
-      "assert( (function(){ var tmp = [{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"}, {\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}]; var ancer = findMatches([{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"2\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}],{\"X\":\"1\", \"Y\":\"2\"}); var flag = false; for (var i = 0; i < ancer.lenght; i++ ){  flag = false; for(var c =0; c < tmp.lenght; c++){ if(JSON.stringify(tmp[c]) === JSON.stringify(ancer[i])){ flag = true; } } } return flag;})(), 'message: Should equal to [{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"}, {\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}]');",
-      "assert((function(){ var tmp = [{\"leg\" : \"10\", \"hand\" : \"8\",\"neck\" : \"8\", \"chest\" : \"32\"}, {\"leg\" : \"12\", \"hand\" : \"9\",\"neck\" : \"8\", \"chest\" : \"32\"}]; var ancer = findMatches([{\"leg\" : \"12\", \"hand\" : \"9\",\"neck\" : \"8\", \"chest\" : \"32\"}, {\"leg\" : \"12\", \"hand\" : \"12\",\"neck\" : \"8\", \"chest\" : \"40\"},{\"leg\" : \"10\", \"hand\" : \"8\",\"neck\" : \"8\", \"chest\" : \"32\"}], {\"neck\" : \"8\", \"chest\" : \"32\"}); var flag = false; for (var i = 0; i < ancer.lenght; i++ ){  flag = false; for(var c =0; c < tmp.lenght; c++){ if(JSON.stringify(tmp[c]) === JSON.stringify(ancer[i])){ flag = true; } } } return flag;})(), 'message: Should equal to [{\"leg\" : \"10\", \"hand\" : \"8\",\"neck\" : \"8\", \"chest\" : \"32\"}, {\"leg\" : \"12\", \"hand\" : \"9\",\"neck\" : \"8\", \"chest\" : \"32\"}]');",
-      "assert( (function(){ var tmp = [{\"yom\" : \"2013\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"mazda\"}]; var ancer = findMatches([{\"yom\" : \"2010\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"toyota\"}, {\"yom\" : \"2012\", \"capacity\" : \"1500\",\"weight\" : \"1000\", \"make\" : \"nissan\"}, {\"yom\" : \"2013\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"mazda\"}], {\"yom\" : \"2013\"}); var flag = false; for (var i = 0; i < ancer.lenght; i++ ){  flag = false; for(var c =0; c < tmp.lenght; c++){ if(JSON.stringify(tmp[c]) === JSON.stringify(ancer[i])){ flag = true; } } } return flag;})(), 'message: Should equal to [{\"yom\" : \"2013\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"mazda\"}]');"
+      "assert( (function(){ var tmp = [{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"}, {\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}]; var ancer = findMatches([{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"2\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}],{\"X\":\"1\", \"Y\":\"2\"}); var flag = false; for (var i = 0; i < ancer.length; i++ ){  flag = false; for(var c =0; c < tmp.length; c++){ if(JSON.stringify(tmp[c]) === JSON.stringify(ancer[i])){ flag = true; } } } return flag;})(), 'message: findMatches([{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"2\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"},{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}],{\"X\":\"1\", \"Y\":\"2\"}) Should return [{\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"4\", \"P\" : \"5\"}, {\"X\" : \"1\", \"Y\" : \"2\",\"Z\" : \"9\", \"P\" : \"6\"}]');",
+      "assert((function(){ var tmp = [{\"leg\" : \"10\", \"hand\" : \"8\",\"neck\" : \"8\", \"chest\" : \"32\"}, {\"leg\" : \"12\", \"hand\" : \"9\",\"neck\" : \"8\", \"chest\" : \"32\"}]; var ancer = findMatches([{\"leg\" : \"12\", \"hand\" : \"9\",\"neck\" : \"8\", \"chest\" : \"32\"}, {\"leg\" : \"12\", \"hand\" : \"12\",\"neck\" : \"8\", \"chest\" : \"40\"},{\"leg\" : \"10\", \"hand\" : \"8\",\"neck\" : \"8\", \"chest\" : \"32\"}], {\"neck\" : \"8\", \"chest\" : \"32\"}); var flag = false; for (var i = 0; i < ancer.length; i++ ){  flag = false; for(var c =0; c < tmp.length; c++){ if(JSON.stringify(tmp[c]) === JSON.stringify(ancer[i])){ flag = true; } } } return flag;})() && (function(){ var tmp = [{\"yom\" : \"2013\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"mazda\"}]; var ancer = findMatches([{\"yom\" : \"2010\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"toyota\"}, {\"yom\" : \"2012\", \"capacity\" : \"1500\",\"weight\" : \"1000\", \"make\" : \"nissan\"}, {\"yom\" : \"2013\", \"capacity\" : \"2000\",\"weight\" : \"1000\", \"make\" : \"mazda\"}], {\"yom\" : \"2013\"}); var flag = false; for (var i = 0; i < ancer.length; i++ ){  flag = false; for(var c =0; c < tmp.length; c++){ if(JSON.stringify(tmp[c]) === JSON.stringify(ancer[i])){ flag = true; } } } return flag;})(), 'message: Answer should be valid for any given input.');"
       ],
     "type": "waypoint",
     "isRequired": false,
@@ -4516,8 +4513,9 @@
       ],
       "tests": [
         "assert( typeof isPrimeFactorLargerThanFive(10) ==  \"boolean\", 'message: Return type should be a boolean.');",
-        "assert(isPrimeFactorLargerThanFive(10) == true, 'message: ');",
-        "assert(isPrimeFactorLargerThanFive(13) == false, 'message: ');"
+        "assert(isPrimeFactorLargerThanFive(10) == true, 'message: isPrimeFactorLargerThanFive(10) Should return true');",
+        "assert(isPrimeFactorLargerThanFive(13) == false, 'message: isPrimeFactorLargerThanFive(13) should return false');"
+        "assert(isPrimeFactorLargerThanFive(5) == true && sPrimeFactorLargerThanFive(7) == false, 'message: Answer should be valid for any given input.');"
       ],
       "type": "algorithms",
       "isRequired": false,
@@ -4530,7 +4528,9 @@
       "id": "a789b3483989747d63b0e427",
       "title": "Challenge - 86",
       "description": [
-        "Write a function which take a sentence as an input and output a sorted sentence output should give a sentence with the words sorted according to the count of their letters and each letter in each word should then again sorted in alphabetical order.",
+        "Write a function which take a sentence as an input and output a sorted sentence.",
+        "<code>1.Each character of the word should be arranged in alphabetical order</code>",
+        "<code>2. Words should be arranged in asscending order depending on its character count</code>"
         "Note :- Word only can have lowercase letters",
         "Example :",
         "Inputs <code>str = \"she lives with him in a small apartment\"</code>",
@@ -4545,8 +4545,8 @@
       ],
       "tests": [
         "assert( typeof makeAlphabetSentenceSort(\"she lives with him in a small apartment\") ==  \"string\", 'message: Return type should be a string.');",
-        "assert(makeAlphabetSentenceSort(\"she lives with him in a small apartment\") == \"a in ehs him hitw eilsv allms aaemnprtt\", 'message: ');",
-        "assert(makeAlphabetSentenceSort(\"he was curious about how it would taste, so he took a small bite.\") == \"a eh it os eh how asw koot .beit allms dlouw abotu ,aestt ciorsuu\", 'message: ');"
+        "assert(makeAlphabetSentenceSort(\"she lives with him in a small apartment\") == \"a in ehs him hitw eilsv allms aaemnprtt\", 'message: makeAlphabetSentenceSort(\"she lives with him in a small apartment\") Return should equal to \"a in ehs him hitw eilsv allms aaemnprtt\"');",
+        "assert(makeAlphabetSentenceSort(\"he was curious about how it would taste, so he took a small bite.\") == \"a eh it os eh how asw koot .beit allms dlouw abotu ,aestt ciorsuu\" && makeAlphabetSentenceSort(\"this is test message tes\") == \"is est hist estt aeegmss\", 'message: Answer should be valid for any given input.');"
       ],
       "type": "waypoint",
       "isRequired": false,
@@ -4560,15 +4560,15 @@
       "title": "Challenge - 87",
       "description": [
         "For any two string variables, A and B, we define F<sub>A,B</sub> to be the sequence (A,B,AB,BAB,ABBAB,...) in which each term is the concatenation of the previous two.",
-        "Further, we define D<sub>A,B</sub>(n) to be the n<sup>th</sup> digit in the first term of FA,B that contains at least n digits.",
+        "Further, we define D<sub>A,B</sub>(n) to be the n<sup>th</sup> digit in the first term of F<sub>A,B</sub> that contains at least n digits.",
         "Example :",
         "Let A=\"1415\", B=\"8979\". n = 10 We wish to find D<sub>A,B</sub>(n), say.",
         "The first few terms of FA,B are:",
         "\"1415\"",
         "\"8979\"",
         "\"14158979\"",
-        "\"897914158<code>9</code>78\"",
-        "\"<code>9</code>\" is the answer",
+        "\"897914158<code>9</code>79\"",
+        "\"<code>9</code>\" is the ancer",
         "Write a algorithm to find the n<sup>th</sup> character of D<sub>A,B</sub>(n) "
       ],
       "challengeSeed": [
@@ -4580,8 +4580,9 @@
       ],
       "tests": [
         "assert( typeof getNthPosition(\"1415\",\"8979\",10) ==  \"string\", 'message: Return type should be a string.');",
-        "assert(getNthPosition(\"1415\",\"8979\",10); == \"9\", 'message: Should equal to 9');",
-        "assert(getNthPosition(\"abc\",\"435d\",100) == \"b\", 'message: Should equal to b');"
+        "assert(getNthPosition(\"1415\",\"8979\",10) == \"9\", 'message: getNthPosition(\"1415\",\"8979\",10) Should equal to 9');",
+        "assert(getNthPosition(\"abc\",\"435d\",100) == \"b\", 'message: getNthPosition(\"abc\",\"435d\",100) Should equal to b');",
+        "assert(getNthPosition(\"sdadede\",\"8979\",51) == \"7\" && getNthPosition(\"sdadede\",\"8979\",100) == \"a\", 'message: Answer should be valid for any given input.');"
       ],
       "type": "waypoint",
       "isRequired": false,
@@ -4609,8 +4610,8 @@
       ],
       "tests": [
         "assert( typeof getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\") ==  \"object\", 'message: Return type should be a object.');",
-        "assert((function(){ var ancermatch = true; var data = [\"THIS IS ISSUE\", \"IS THIS ISSUE\", \"ISSUE THIS IS\", \"THIS ISSUE IS\", \"IS ISSUE THIS\", \"ISSUE IS THIS\"]; var ancers  = getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\"); for(i = 0 ; i< ancer.permutations.lenght; i++){ vat tmp = ancer.permutations[i].join(\" \"); if( !ancers.include(tmp)){ ancermatch = false; } } if ( ancer.words.sort().join(\" \") == [\"THIS\", \"IS\", \"ISSUE\"].sort().join(\" \") &&  ancermatch){ return true} else { return false})(), 'message: ');",
-        "assert((function(){ var ancermatch = true; var data = [\"BETTY BOTTER BUTTER\",\"BOTTER BETTY BUTTER\",\"BUTTER BETTY BOTTER\",\"BETTY BUTTER BOTTER\",\"BOTTER BUTTER BETTY\",\"BUTTER BOTTER BETTY\"]; var ancers  = getPermutations(\"BETTY BOTTER BOUGHT SOME BUTTER\", \"TT\"); for(i = 0 ; i< ancer.permutations.lenght; i++){ vat tmp = ancer.permutations[i].join(\" \"); if( !ancers.include(tmp)){ ancermatch = false; } } if ( ancer.words.sort().join(\" \") == [\"BETTY\", \"BOTTER\", \"BUTTER\"].sort().join(\" \") &&  ancermatch){ return true} else { return false})(), 'message: ');"
+        "assert((function(){ var ancermatch = true; var data = [\"THIS IS ISSUE\", \"IS THIS ISSUE\", \"ISSUE THIS IS\", \"THIS ISSUE IS\", \"IS ISSUE THIS\", \"ISSUE IS THIS\"]; var ancers  = getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\"); for(i = 0 ; i< ancer.permutations.length; i++){ vat tmp = ancer.permutations[i].join(\" \"); if( !ancers.include(tmp)){ ancermatch = false; } } if ( ancer.words.sort().join(\" \") == [\"THIS\", \"IS\", \"ISSUE\"].sort().join(\" \") &&  ancermatch){ return true} else { return false})(), 'message: getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\") Should return  { \"word\" : [\"THIS\",\"IS\",\"ISSUE\"], \"permutations\" : [[\"THIS\",\"IS\",\"ISSUE\"], [\"IS\",\"THIS\",\"ISSUE\"], [\"ISSUE\", \"THIS\", \"IS\"], [\"THIS\", \"ISSUE\", \"IS\"], [\"IS\", \"ISSUE\", \"THIS\"], [\"ISSUE\",\"IS\",\"THIS\"]]}');",
+        "assert((function(){ var ancermatch = true; var data = [\"BETTY BOTTER BUTTER\",\"BOTTER BETTY BUTTER\",\"BUTTER BETTY BOTTER\",\"BETTY BUTTER BOTTER\",\"BOTTER BUTTER BETTY\",\"BUTTER BOTTER BETTY\"]; var ancers  = getPermutations(\"BETTY BOTTER BOUGHT SOME BUTTER\", \"TT\"); for(i = 0 ; i< ancer.permutations.length; i++){ vat tmp = ancer.permutations[i].join(\" \"); if( !ancers.include(tmp)){ ancermatch = false; } } if ( ancer.words.sort().join(\" \") == [\"BETTY\", \"BOTTER\", \"BUTTER\"].sort().join(\" \") &&  ancermatch){ return true} else { return false})() && (function(){ var ancermatch = true; var data = [\"THIS IS ISSUE\", \"IS THIS ISSUE\", \"ISSUE THIS IS\", \"THIS ISSUE IS\", \"IS ISSUE THIS\", \"ISSUE IS THIS\"]; var ancers  = getPermutations(\"THIS IS AN ISSUE FROM GIHAN\", \"IS\"); for(i = 0 ; i< ancer.permutations.length; i++){ vat tmp = ancer.permutations[i].join(\" \"); if( !ancers.include(tmp)){ ancermatch = false; } } if ( ancer.words.sort().join(\" \") == [\"THIS\", \"IS\", \"ISSUE\"].sort().join(\" \") &&  ancermatch){ return true} else { return false})(), 'message: Answer should be valid for any given input.');"
       ],
       "type": "waypoint",
       "isRequired": false,
@@ -4637,10 +4638,9 @@
       ],
       "tests": [
         "assert( typeof findNthLargest([1,2,3,5,7,4,9,6], 1) ==  \"number\", 'message: Return type should be a number.');",
-        "assert(findNthLargest([1,2,3,5,7,4,9,6], 1) == 6, 'message: Should equal to 6');",
-        "assert(findNthLargest([1,2,3,5,7,4,9,6], 2) == 4, 'message: Should equal to 4');",
-        "assert(findNthLargest([1,2,3,5,7,4,9,6], 3) == 7, 'message: Should equal to 7');",
-        "assert(findNthLargest([1,2,3,5,7,4,9,6], 8) == 0, 'message: Should equal to 0');"
+        "assert(findNthLargest([1,2,3,5,7,4,9,6], 1) == 6, 'message: findNthLargest([1,2,3,5,7,4,9,6], 1) Should return to 6');",
+        "assert(findNthLargest([1,2,3,5,7,4,9,6], 2) == 4, 'message: findNthLargest([1,2,3,5,7,4,9,6], 2) Should return to 4');",
+        "assert(findNthLargest([1,2,3,5,7,4,9,6], 3) == 7 && findNthLargest([1,2,3,5,7,4,9,6], 8) == 0, 'message: Answer should be valid for any given input.');",
       ],
       "type": "waypoint",
       "isRequired": false,
@@ -4671,11 +4671,10 @@
       ],
       "tests": [
         "assert( typeof getCount([1,2,3,12,3,4,9,6],19) ==  \"number\", 'message: Return type should be a number.');",
-        "assert(getCount([1,2,3,12,3,4,9,6],19) == 2, 'message: Should equal to 2');",
-        "assert(getCount([3,6,3,3,8], 9) == 0, 'message: Should equal to 0');",
-        "assert(getCount([0,4,2,7,4,1,6], 6) == 1, 'message: Should equal to 1');",
-        "assert(getCount([0,4,2,7,0,0,6], 6) == 2, 'message: Should equal to 2');",
-        "assert(getCount([0,4,8,0,6,0,6,6], 12) == 4, 'message: Should equal to 4');"
+        "assert(getCount([1,2,3,12,3,4,9,6],19) == 2, 'message: getCount([1,2,3,12,3,4,9,6],19) should equal to 2');",
+        "assert(getCount([3,6,3,3,8], 9) == 0, 'message: getCount([3,6,3,3,8], 9) should equal to 0');",
+        "assert(getCount([0,4,2,7,4,1,6], 6) == 1, 'message: getCount([0,4,2,7,4,1,6], 6) should equal to 1');",
+        "assert(getCount([0,4,2,7,0,0,6], 6) == 2 && getCount([0,4,8,0,6,0,6,6], 12) == 4, 'message: Answer should be valid for any given input.');"
       ],
       "type": "waypoint",
       "isRequired": false,
@@ -4705,10 +4704,9 @@
       ],
       "tests": [
         "assert( typeof longestUniqueString(\"asdgplmnbvgc\") ==  \"number\", 'message: Return type should be a number.');",
-        "assert(longestUniqueString(\"asdgplmnbvgc\") == 10, 'message: Should equal to 10.');",
-        "assert(longestUniqueString(\"tyht\") == 3, 'message: Should equal to 3.');",
-        "assert(longestUniqueString(\"plkgsjj\") == 6, 'message: Should equal to 6.');",
-        "assert(longestUniqueString(\"qqplsdcgvd\") == 1, 'message: Should equal to 1.');"
+        "assert(longestUniqueString(\"asdgplmnbvgc\") == 10, 'message: longestUniqueString(\"asdgplmnbvgc\") should equal to 10.');",
+        "assert(longestUniqueString(\"tyht\") == 3, 'message: longestUniqueString(\"tyht\") should equal to 3.');",
+        "assert(longestUniqueString(\"plkgsjj\") == 6 && longestUniqueString(\"qqplsdcgvd\") == 1, 'message: Answer should be valid for any given input.');",
       ],
       "type": "waypoint",
       "isRequired": false,
@@ -4742,7 +4740,7 @@
       "tests": [
         "assert( typeof rearrange([1,2,3,4,5,6]) == \"object\", 'message: Return type should be a number.');",
         "assert( (function(){  var ancer = rearrange([6,5,4,3,2,1]); if(ancer.join('') == [2,1,4,3,6,5].join('')){ return true; } return false;  })(), 'message: rearrange([6,5,4,3,2,1]) should return [2,1,4,3,6,5]');",
-        "assert( (function(){  var ancer = rearrange([5,6,4,2,3,8,7]); var ancer2 = rearrange([5,6,4,2,3,8,7,1]); if(ancer.join('') == [3,2,5,4,7,6,8].join('') && ancer2.join('') == [2,1,4,3,6,5,8,7].join('') ){ return true; } return false;  })(), 'message: rearrange([5,6,4,2,3,8,7]) should return [3,2,5,4,7,6,8]');"
+        "assert( (function(){  var ancer = rearrange([5,6,4,2,3,8,7]); var ancer2 = rearrange([5,6,4,2,3,8,7,1]); if(ancer.join('') == [3,2,5,4,7,6,8].join('') && ancer2.join('') == [2,1,4,3,6,5,8,7].join('') ){ return true; } return false;  })() && (function(){  var ancer = rearrange([6,5,4,3,2,1]); if(ancer.join('') == [2,1,4,3,6,5].join('')){ return true; } return false;  })(), 'message: Answer should be valid for any given input.');"
       ],
       "type": "waypoint",
       "isRequired": false,
@@ -4760,7 +4758,7 @@
     "description": [
       "<b>News Spread</b>",
       "There is a small town with <code>50,000</code> people living in it. A person came to the town at <code>0800</code> with a news. Within <code>15</code> minutes, he managed to tell that news to <code>3</code> people. Assuming that each person will tell that news to another <code>3</code> personals and it take <code>15</code> minutes to tell the news, calculate;",
-      "<ol><li>Number of people know the new at 0915.</li><li>At what time will the whole town know of this news?</li></ol>"
+      "<ol><li>Number of people knows the new at 0915.</li><li>At what time will the whole town know of this news?</li></ol>"
     ],
     "challengeSeed": [
       "function NewSpread(speed,population) {",
@@ -4775,7 +4773,9 @@
     ],
     "tests": [
       "assert( typeof NewSpread(15,50000) ==  \"object\", 'message: Return type should be a array.');",
-      "assert((function(){ var ancer = NewSpread(15,50000); if(ancer.join('') == [364, \"10:30\"].join('')) { return true} else {return false} } )() , 'message:');"
+      "assert( NewSpread(15,50000) == [364, \"10:30\"].join('') , 'message: NewSpread(15,50000) should return [364, \"10:30\"]');",
+      "assert( NewSpread(25,55000) == [40, \"12:10.000000000000018\"].join('') , 'message: NewSpread(15,50000) should return [364, \"10:30\"]');",
+      "assert( NewSpread(25,55000) == [40, \"12:10.000000000000018\"].join('') && NewSpread(36,40000) == [13, \"14:0\"].join('') , 'message: Answer should be valid for any given input.');"
     ],
     "type": "waypoint",
     "isRequired": false,
@@ -4793,7 +4793,7 @@
     "description": [
       "<b>The Virus</b>",
       "There is an isolated sector in a disk of size <code>1</code> mb where a virus has corrupted all the data. An antivirus program starts to run on this sector which rectify the corrupted data at a rate of 5 kbits in <code>2^-7</code> seconds. The behavior of the virus is to replicate its current corrupted bits by <code>2.5</code> times per second; Find",
-      "<ol><li>Will antivirus program be able to beat the virus?</li><li>If so, how long will it take the antivirus to clean the sector?</li></ol>"
+      "<ol><li>How long will it take the antivirus to clean the sector?</li></ol>"
     ],
     "challengeSeed": [
       "function VirusGuard(sectorzies,cleanrate,replicationrate) {",
@@ -4805,84 +4805,8 @@
     ],
     "tests": [
       "assert( typeof VirusGuard() ==  \"object\", 'message: Return type should be a array.');",
-      "assert((function(){ var ancer = VirusGuard(8*1024*1024,5.12*1024*1000,2.5); if(ancer.join('') == [true, 3.625].join('')) { return true} else {return false} } )(), 'message:');"
-    ],
-    "type": "waypoint",
-    "isRequired": false,
-    "solutions": [
-    ],
-    "MDNlinks": [
-    ],
-    "challengeType": 1,
-    "translations": {
-    }
-  },
-  {
-    "id": "a24c1a4622e3c05097f71d67",
-    "title": "Challenge - 95",
-    "description": [
-      "<b>Show me the way</b>",
-      "Peter bought a new car from the dealership. And it came equipped with a GPS system. So when Peter want's to go from point A to point B, all he has to do was key in the destination and it will automatically calculate the best route for him (\"technology\" ha). But before he has to do a one time setup on the device. That is enter his car economy and cost per liter of gas. For his can it will be; ",
-      "<ul><li>if driving less than 60 KmpH, car will go 20 Km per Liter.</li><li>if driving at 60 KmpH, car will go 28 Km per Liter.</li><li>if driving more than 60 KmpH, car will go 25 Km per Liter.</li></ul>",
-      "And cost for 1 Liter of gas is 150/-",
-      "Considering the below route plan, write an algorithm to find the best route from point X to point Y for Peter.",
-      "<img  src=\"http://mauction.fidenz.info/assets/img/Path.jpg\">",
-      "Red lines are unidirectional routes, so you can't go back. Blue lines are bidirectional routes (a.k.k shortcuts), which allow Peter to go in any direction.",
-      "<ol><li>Assuming Peter is in a hurry, find the fastest possible route for him.</li><li>Assuming Peter is in no rush and want to save some money, calculate the most cost effective route.</li>"
-    ],
-    "challengeSeed": [
-      "function BestRoute() {",
-      "  var _cost_per_leter = 150;",
-      "  var _routes = [",
-      "   [\"A\", \"H\", \"N\"],",
-      "   [\"A\", \"H\", \"O\", \"P\"],",
-      "   [\"A\", \"E\", \"J\", \"O\", \"N\"],",
-      "   [\"A\", \"E\", \"J\", \"P\"],",
-      "   [\"B\", \"I\", \"J\", \"P\"],",
-      "   [\"B\", \"I\", \"J\", \"O\", \"N\"],",
-      "   [\"B\", \"I\", \"E\", \"H\", \"N\"],",
-      "   [\"B\", \"I\", \"E\", \"H\", \"O\", \"P\"],",
-      "   [\"B\", \"F\", \"L\"],",
-      "   [\"C\", \"K\", \"L\"],",
-      "   [\"C\", \"K\", \"F\", \"I\", \"J\", \"P\"],",
-      "   [\"C\", \"K\", \"F\", \"I\", \"E\", \"H\", \"N\"],",
-      "   [\"C\", \"K\", \"F\", \"I\", \"E\", \"H\", \"O\", \"P\"],",
-      "   [\"C\", \"K\", \"F\", \"I\", \"J\", \"O\", \"N\"],",
-      "   [\"D\", \"M\"],",
-      "   [\"D\", \"G\", \"K\", \"L\"],",
-      "   [\"D\", \"G\", \"K\", \"F\", \"I\", \"J\", \"P\"],",
-      "   [\"D\", \"G\", \"K\", \"F\", \"I\", \"J\", \"O\", \"N\"],",
-      "   [\"D\", \"G\", \"K\", \"F\", \"I\", \"E\", \"H\", \"N\"],",
-      "   [\"D\", \"G\", \"K\", \"F\", \"I\", \"E\", \"H\", \"O\", \"P\"],",
-      " ];",
-      "",
-      " var _route_attributes = {",
-      "   \"A\": {\"distance\": 95, \"speed\": 120, \"toll\": 800, \"delay\": 0},",
-      "   \"B\": {\"distance\": 45, \"speed\": 60, \"toll\": 590, \"delay\": 0},",
-      "   \"C\": {\"distance\": 80, \"speed\": 55, \"toll\": 500, \"delay\": 0},",
-      "   \"D\": {\"distance\": 100, \"speed\": 100, \"toll\": 1000, \"delay\": 0},",
-      "   \"E\": {\"distance\": 25, \"speed\": 100, \"toll\": 0, \"delay\": 0},",
-      "   \"F\": {\"distance\": 45, \"speed\": 80, \"toll\": 860, \"delay\": 0},",
-      "   \"G\": {\"distance\": 15, \"speed\": 55, \"toll\": 0, \"delay\": 5},",
-      "   \"H\": {\"distance\": 90, \"speed\": 120, \"toll\": 800, \"delay\": 0},",
-      "   \"I\": {\"distance\": 15, \"speed\": 40, \"toll\": 0, \"delay\": 5},",
-      "   \"J\": {\"distance\": 30, \"speed\": 60, \"toll\": 0, \"delay\": 5},",
-      "   \"K\": {\"distance\": 30, \"speed\": 55, \"toll\": 0, \"delay\": 0},",
-      "   \"L\": {\"distance\": 80, \"speed\": 55, \"toll\": 550, \"delay\": 5},",
-      "   \"M\": {\"distance\": 150, \"speed\": 120, \"toll\": 1500, \"delay\": 10},",
-      "   \"N\": {\"distance\": 35, \"speed\": 65, \"toll\": 0, \"delay\": 10},",
-      "   \"O\": {\"distance\": 15, \"speed\": 55, \"toll\": 0, \"delay\": 20},",
-      "  \"P\": {\"distance\": 35, \"speed\": 40, \"toll\": 0, \"delay\": 30}",
-      " };",
-      "  var result = [];",
-      "  return result;",
-      "}",
-      "",
-      "BestRoute();"
-    ],
-    "tests": [
-      "assert( typeof BestRoute() ==  \"object\", 'message: Return type should be a array.');",
-      "assert((function(){ var ancer = BestRoute(); if(ancer.join('') == [[\"A\",\"H\",\"N\"], [\"B\", \"I\", \"J\", \"P\"]].join('')) { return true} else {return false} } )(), 'message:');"
+      "assert( VirusGuard(8*1024*1024,5.12*1024*1000,2.5) == 3.625 , 'message: VirusGuard(8*1024*1024,5.12*1024*1000,2.5) should equal to 3.625');",
+      "assert( VirusGuard(8*1024*1024,5.12*1024*1000,2.5) == 3.625 , 'message: VirusGuard(8*1024*1024,5.12*1024*1000,2.5) should equal to 3.625');"
     ],
     "type": "waypoint",
     "isRequired": false,
@@ -4896,7 +4820,7 @@
   },
    {
     "id": "af2170cad53daa0770fabdea",
-    "title": "Challenge - 96",
+    "title": "Challenge - 95",
     "description": [
       "Write a function to take a positive integer and a prime number as a input and return true if the prime factors of the given positive integer are less than the given prime number",
       "Example :",
@@ -4911,8 +4835,9 @@
     ],
     "tests": [
       "assert( typeof hasLessPrimeFactor(20,5) ==  \"boolean\", 'message: Return type should be a boolean.');",
-      "assert(hasLessPrimeFactor(20,5) == true, 'message: ');",
-      "assert(hasLessPrimeFactor(20,7) == false, 'message: ');"
+      "assert(hasLessPrimeFactor(20,5) == true, 'message: hasLessPrimeFactor(20,5) should return true');",
+      "assert(hasLessPrimeFactor(20,7) == false, 'message: hasLessPrimeFactor(20,7) should return false');",
+      "assert(hasLessPrimeFactor(25,7) == true && hasLessPrimeFactor(30,3) == false, 'message: Answer should be valid for any given input.');"
     ],
     "type": "algorithms",
     "isRequired": false,
@@ -4923,9 +4848,10 @@
    },
     {
       "id": "a9bd25c716030ec90084d8a1",
-      "title": "Challenge - 97",
+      "title": "Challenge - 96",
       "description": [
         "Construct the following pattern in a X by X grid(Multidimensional array)",
+        "X should be an odd number",
         "ooxoo",
         "oxxxo",
         "xxxxx",
@@ -4948,8 +4874,8 @@
       ],
       "tests": [
         "assert( typeof drowPattern(5) ==  \"object\", 'message: Return type should be a object.');",
-        "assert((function(){var tmp =[[\"o\",\"o\",\"x\",\"o\",\"o\"],[\"o\",\"x\",\"x\",\"x\",\"o\"],[\"x\",\"x\",\"x\",\"x\",\"x\"],[\"o\",\"x\",\"x\",\"x\",\"o\"],[\"o\",\"o\",\"x\",\"o\",\"o\"]];  var ancer = drowPattern(5); var flag = true; for(var i = 0; i < ancer.lenght; i++){ if(tmp[i].join('').toLowerCase() != ancer[i].join('').toLowerCase()){ flag = false; break;}} if(ancer.lenght > 0){ return flag } return false })(), 'message: ');",
-        "assert((function(){var tmp =[[\"o\",\"o\",\"o\",\"x\",\"o\",\"o\",\"o\"], [\"o\",\"o\",\"x\",\"x\",\"x\",\"o\",\"o\"], [\"o\",\"x\",\"x\",\"x\",\"x\",\"x\",\"o\"], [\"x\",\"x\",\"x\",\"x\",\"x\",\"x\",\"x\"], [\"o\",\"x\",\"x\",\"x\",\"x\",\"x\",\"o\"], [\"o\",\"o\",\"x\",\"x\",\"x\",\"o\",\"o\"], [\"o\",\"o\",\"o\",\"x\",\"o\",\"o\",\"o\"]];  var ancer = drowPattern(7); var flag = true; for(var i = 0; i < ancer.lenght; i++){ if(tmp[i].join('').toLowerCase() != ancer[i].join('').toLowerCase()){ flag = false; break;}} if(ancer.lenght > 0){ return flag } return false })(), 'message: ');",
+        "assert((function(){var tmp =[[\"o\",\"o\",\"x\",\"o\",\"o\"],[\"o\",\"x\",\"x\",\"x\",\"o\"],[\"x\",\"x\",\"x\",\"x\",\"x\"],[\"o\",\"x\",\"x\",\"x\",\"o\"],[\"o\",\"o\",\"x\",\"o\",\"o\"]];  var ancer = drowPattern(5); var flag = true; for(var i = 0; i < ancer.length; i++){ if(tmp[i].join('').toLowerCase() != ancer[i].join('').toLowerCase()){ flag = false; break;}} if(ancer.length > 0){ return flag } return false })(), 'message: drowPattern(5) should return [[\"o\",\"o\",\"x\",\"o\",\"o\"],[\"o\",\"x\",\"x\",\"x\",\"o\"],[\"x\",\"x\",\"x\",\"x\",\"x\"],[\"o\",\"x\",\"x\",\"x\",\"o\"],[\"o\",\"o\",\"x\",\"o\",\"o\"]]');",
+        "assert((function(){var tmp =[[\"o\",\"o\",\"o\",\"x\",\"o\",\"o\",\"o\"], [\"o\",\"o\",\"x\",\"x\",\"x\",\"o\",\"o\"], [\"o\",\"x\",\"x\",\"x\",\"x\",\"x\",\"o\"], [\"x\",\"x\",\"x\",\"x\",\"x\",\"x\",\"x\"], [\"o\",\"x\",\"x\",\"x\",\"x\",\"x\",\"o\"], [\"o\",\"o\",\"x\",\"x\",\"x\",\"o\",\"o\"], [\"o\",\"o\",\"o\",\"x\",\"o\",\"o\",\"o\"]];  var ancer = drowPattern(7); var flag = true; for(var i = 0; i < ancer.length; i++){ if(tmp[i].join('').toLowerCase() != ancer[i].join('').toLowerCase()){ flag = false; break;}} if(ancer.length > 0){ return flag } return false })(), 'message: Answer should be valid for any given input.');",
         "assert(hasLessPrimeFactor(20,7) == false, 'message: ');"
       ],
       "type": "algorithms",
