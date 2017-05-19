@@ -62,6 +62,16 @@
       },
       "require": true
     },
+    "phoneno": {
+      "type": "string",
+      "index": {
+        "mongodb": {
+          "unique": true,
+          "background": true
+        }
+      },
+      "require": false
+    },
     "githubURL": {
       "type": "string"
     },
