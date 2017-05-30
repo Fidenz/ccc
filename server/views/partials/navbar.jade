@@ -13,7 +13,7 @@ nav.navbar.navbar-default.navbar-static-top.nav-height
                     li
                         a.top-nav-text(href='/user-guide') Instructions
                     li
-                        a.top-nav-text(href='/signup') Sign Up
+                        a.top-nav-text(href='#', data-toggle='modal', data-target='#myModal') Sign Up
                     li
                         a.top-nav-text(href='/email-signin') Sign In
                     
@@ -27,4 +27,11 @@ nav.navbar.navbar-default.navbar-static-top.nav-height
                           span.brownie-points [&thinsp;#{user.points}&thinsp;]
                         span.hidden-xs.hidden-sm.avatar
                           img.profile-picture.float-right(src='#{user.picture}')
+#myModal.modal.fade(role='dialog')
+  .modal-dialog
+    // Modal content
+    .modal-content
+      .modal-body
+        button.close(type='button', data-dismiss='modal') ×
+        p No live competition available.
                           

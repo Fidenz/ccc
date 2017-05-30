@@ -28,7 +28,17 @@
   }
 }
 
+#myModal .modal-dialog p{
+  margin: 0;
+  padding-left: 10px;
+}
+#myModal .modal-dialog .modal-body{
+  padding: 0;
+}
 
+#myModal .modal-dialog .modal-body .close{
+  padding: 5px;
+}
 /*.nav-header-items {
   max-width: 1000px;
   margin: 0 auto;
